@@ -1,0 +1,75 @@
+*,
+*:before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	margin: 0;
+	color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+	cursor: default;
+}
+
+button {
+	font-family: inherit;
+	border: none;
+	background: none;
+	padding: 0;
+}
+
+img,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+textarea {
+	resize: none;
+}
+
+span,
+div {
+    cursor: default;
+}
+
+input {
+	outline: none;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
