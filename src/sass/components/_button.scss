@@ -1,0 +1,26 @@
+@use "var";
+
+.button {
+	width: 250px;
+	height: 60px;
+	font-size: 0.8333rem;
+	padding: 0.5rem 1rem;
+	border: 1px solid var.$white;
+	text-align: center;
+}
+
+.select {
+	position: relative;
+	border: 1px solid var.$white;
+	padding: 20px;
+	cursor: pointer;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 30px;
+		height: 20px;
+		cursor: pointer;
+		background-image: url("../../icons/arrow.svg") 0 0 no-repeat;
+	}
+}

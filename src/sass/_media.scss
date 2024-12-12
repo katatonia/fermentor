@@ -1,0 +1,88 @@
+@use "var";
+
+@media (max-width: var.$desktop) {
+	html,
+	body {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: var.$tablet) {
+	html,
+	body {
+		font-size: 18px;
+	}
+
+	.container {
+		padding: 0 20px;
+	}
+
+	.header {
+		&__burger {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			z-index: 3;
+			gap: 10px;
+			cursor: pointer;
+			z-index: 3;
+
+			span {
+				display: block;
+				width: 30px;
+				height: 2px;
+				background-color: var.$white;
+				transition: all 0.2s ease;
+				cursor: pointer;
+				text-align: center;
+				border-radius: 2px;
+			}
+
+			&_active {
+				span {
+					text-align: center;
+					position: absolute;
+
+					&:first-child {
+						transform: rotate(45deg);
+					}
+
+					&:last-child {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+
+		&__nav {
+			position: fixed;
+			top: 80px;
+			right: -100%;
+			width: 75%;
+			height: 100%;
+			padding: 20px;
+			background-color: var.$black;
+			backdrop-filter: blur(2px);
+			text-align: right;
+			color: var.$white;
+			transition: all 0.3s ease;
+			overflow: auto;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-start;
+
+			&_active {
+				right: 0;
+			}
+		}
+
+		&__menu-link_logo img {
+			width: 160px;
+			height: 60px;
+		}
+	}
+}
