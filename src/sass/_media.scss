@@ -18,7 +18,11 @@
 	}
 
 	.header {
-		&__burger {
+		&__body {
+			justify-content: flex-end;
+		}
+
+		&__hamburger {
 			position: relative;
 			width: 40px;
 			height: 40px;
@@ -30,10 +34,15 @@
 			gap: 10px;
 			cursor: pointer;
 			z-index: 3;
+			transition: 0.3s;
+
+			&:hover {
+				opacity: 0.7;
+			}
 
 			span {
 				display: block;
-				width: 30px;
+				width: 40px;
 				height: 2px;
 				background-color: var.$white;
 				transition: all 0.2s ease;
@@ -58,31 +67,58 @@
 			}
 		}
 
-		&__nav {
-			position: fixed;
-			top: 80px;
-			right: -100%;
-			width: 75%;
-			height: 100%;
-			padding: 20px;
-			background-color: var.$black;
-			backdrop-filter: blur(2px);
-			text-align: right;
-			color: var.$white;
-			transition: all 0.3s ease;
-			overflow: auto;
-			display: flex;
-			justify-content: flex-end;
-			align-items: flex-start;
+		&__logo {
+			display: block;
+			z-index: 2;
+			// opacity: 1;
 
-			&_active {
-				right: 0;
+			// &_hidden {
+			// 	opacity: 0;
+			// }
+
+			img {
+				display: block;
+				width: 160px;
+				height: 60px;
+				cursor: pointer;
 			}
 		}
 
-		&__menu-link_logo img {
-			width: 160px;
-			height: 60px;
+		&__nav {
+			position: fixed;
+			top: 100px;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			height: 100vh;
+			padding: 20px;
+			background-color: var.$black;
+			overflow-y: auto;
+			display: flex;
+			align-items: flex-start;
+			opacity: 0;
+
+			&_active {
+				opacity: 1;
+				z-index: 2;
+			}
+		}
+
+		&__menu {
+			flex-direction: column;
+		}
+
+		&__menu-item {
+			margin: 20px;
+		}
+
+		&__menu-link_logo {
+			margin: 10px;
+
+			img {
+				width: 160px;
+				height: 60px;
+			}
 		}
 	}
 }

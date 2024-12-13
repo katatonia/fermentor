@@ -1,3 +1,3 @@
-import { burger } from "./modules/burger.js";
+import { hamburger } from "./modules/hamburger.js";
 
-burger();
+hamburger();

@@ -20,13 +20,16 @@
 
 	&__body {
 		display: flex;
-		height: 80px;
+		align-items: center;
+		height: 100px;
 	}
+
+	// &__logo {
+	// 	display: none;
+	// }
 
 	&__nav {
 		width: 100%;
-		display: flex;
-		align-content: center;
 		justify-content: space-between;
 	}
 

@@ -1,12 +1,13 @@
-@import '_reboot.scss';
-@import '_fonts.scss';
-@import '_general.scss';
-@import '_media.scss';
-@import '_mixins.scss';
-@import '_var.scss';
 
 // Components
 @import "components/_button.scss";
 
 // Blocks
 @import "blocks/_header.scss";
+
+@import '_reboot.scss';
+@import '_fonts.scss';
+@import '_general.scss';
+@import '_media.scss';
+@import '_mixins.scss';
+@import '_var.scss';
