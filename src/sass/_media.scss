@@ -5,6 +5,12 @@
 	body {
 		font-size: 22px;
 	}
+
+	.footer {
+		&__wrapper {
+			gap: 2.0833rem;
+		}
+	}
 }
 
 @media (max-width: var.$tablet) {
@@ -34,11 +40,6 @@
 			gap: 10px;
 			cursor: pointer;
 			z-index: 3;
-			transition: 0.3s;
-
-			&:hover {
-				opacity: 0.7;
-			}
 
 			span {
 				display: block;
@@ -85,6 +86,7 @@
 		}
 
 		&__nav {
+			display: none;
 			position: fixed;
 			top: 100px;
 			right: 0;
@@ -94,12 +96,10 @@
 			padding: 20px;
 			background-color: var.$black;
 			overflow-y: auto;
-			display: flex;
 			align-items: flex-start;
-			opacity: 0;
 
 			&_active {
-				opacity: 1;
+				display: flex;
 				z-index: 2;
 			}
 		}
@@ -119,6 +119,16 @@
 				width: 160px;
 				height: 60px;
 			}
+		}
+	}
+
+	.footer {
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+
+		&__col-2 {
+			margin: 2.0833rem;
 		}
 	}
 }

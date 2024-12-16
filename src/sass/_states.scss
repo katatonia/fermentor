@@ -1,0 +1,8 @@
+.header__menu-item,
+.header__hamburger,
+.footer__tel,
+.footer__logo,
+.footer__menu-item {
+	transition: .3s;
+	@include hover;
+}
