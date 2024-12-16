@@ -3,3 +3,10 @@
 		opacity: 0.7;
 	}
 }
+
+@mixin flex-center($direction) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: center;
+	justify-content: center;
+}
