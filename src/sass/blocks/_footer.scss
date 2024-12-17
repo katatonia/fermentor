@@ -7,7 +7,9 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		padding: 8.3333rem 0;
+		padding: size(200px) 0;
+
+
 	}
 
 	&__col-1 {
@@ -23,7 +25,7 @@
 	&__contacts {
 		@include flex-center(column);
 
-		gap: 1.0417rem;
+		gap: size(40px);
 
 		span {
 			display: block;
@@ -33,7 +35,7 @@
 
 	&__menu {
 		@include flex-center(column);
-		gap: 1.0417rem;
+		gap: size(40px)
 	}
 
 	&__tel {
@@ -44,7 +46,7 @@
 		@include flex-center(row);
 
 		flex-wrap: wrap;
-		gap: 1.0417rem;
+		gap: size(40px);
 	}
 
 	&__social-link {

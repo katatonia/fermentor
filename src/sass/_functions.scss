@@ -1,17 +1,17 @@
 @use "_var.scss";
 
 @function size($size-in-px) {
-	@return calc($size-in-px / $fz-default * 1rem);
-  }
+	@return calc($size-in-px / var.$fz-default * 1rem);
+}
 
-  @function size-desktop($size-in-px) {
-	@return calc($size-in-px / $vp-1512 * 100vw);
-  }
+@function size-desktop($size-in-px) {
+	@return calc($size-in-px / 1920px * 100vw);
+}
 
-  @function size-tablet($size-in-px) {
-	@return calc($size-in-px / ($vp-375 * 0.8) * 100vw);
-  }
+@function size-tablet($size-in-px) {
+	@return calc($size-in-px / var.$vp-1024 * 100vw);
+}
 
-  @function size-mobile($size-in-px) {
-	@return calc($size-in-px / $vp-375 * 100vw);
-  }
+@function size-mobile($size-in-px) {
+	@return calc($size-in-px / var.$vp-720 * 100vw);
+}

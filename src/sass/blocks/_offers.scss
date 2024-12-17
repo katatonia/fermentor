@@ -16,16 +16,20 @@
 	&__title {
 		font: {
 			family: var.$ff-roboto-slab;
-			size: var.$fs-title;
-		};
+			size: var.$fz-title;
+		}
 
 		text-transform: uppercase;
 	}
 
 	&__content {
 		display: grid;
-		grid-template-columns: minmax(320px, 710px) 1fr;
+		grid-template-columns: minmax(size(320px), size(710px)) 1fr;
 		gap: 5.8333rem;
+
+		@include vp-719 {
+			grid-template-columns: minmax(size(280px), size(680px));
+		}
 	}
 
 	&__desc {
@@ -36,7 +40,7 @@
 
 	&__photo {
 		width: 100%;
-		max-width: 710px;
+		max-width: size(710px);
 
 		img {
 			width: 100%;

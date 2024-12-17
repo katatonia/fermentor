@@ -1,4 +1,5 @@
 @import '_mixins.scss';
+@import '_functions.scss';
 
 // Components
 @import "components/_button.scss";
@@ -14,6 +15,5 @@
 @import '_utils.scss';
 @import '_fonts.scss';
 @import '_general.scss';
-@import '_media.scss';
 @import '_var.scss';
 @import '_states.scss';

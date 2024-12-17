@@ -21,16 +21,54 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		height: 100px;
+		height: size(100px);
+
+		@include vp-719 {
+			justify-content: flex-end;
+		}
 	}
 
-	// &__logo {
-	// 	display: none;
-	// }
+	&__logo {
+		@include vp-719 {
+			display: block;
+			z-index: 2;
+			// opacity: 1;
+
+			// &_hidden {
+			// 	opacity: 0;
+			// }
+
+			img {
+				display: block;
+				width: size(160px);
+				height: size(60px);
+				cursor: pointer;
+			}
+		}
+	}
 
 	&__nav {
 		width: 100%;
 		justify-content: space-between;
+
+		@include vp-719 {
+			display: none;
+			position: fixed;
+			top: size(100px);
+			right: 0;
+			left: 0;
+			bottom: 0;
+			height: 100vh;
+			padding: size(20px);
+			background-color: var.$black;
+			overflow-y: auto;
+			align-items: flex-start;
+
+			&_active {
+				display: flex;
+				z-index: 2;
+			}
+		}
 	}
 
 	&__menu {
@@ -41,11 +79,70 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
+		@include vp-719 {
+			flex-direction: column;
+		}
+	}
+
+	&__menu-item {
+		@include vp-719 {
+			margin: size(20px);
+		}
 	}
 
 	&__menu-link {
 		&_logo {
 			display: block;
+
+			@include vp-719 {
+				margin: size(10px);
+
+				img {
+					width: size(160px);
+					height: size(60px);
+				}
+			}
+		}
+	}
+
+	&__hamburger {
+		@include vp-719 {
+			@include flex-center(column);
+
+			position: relative;
+			width: 40px;
+			height: 40px;
+			z-index: 3;
+			gap: 10px;
+			cursor: pointer;
+			z-index: 3;
+
+			span {
+				display: block;
+				width: 40px;
+				height: 2px;
+				background-color: var.$white;
+				transition: all 0.2s ease;
+				cursor: pointer;
+				text-align: center;
+				border-radius: 2px;
+			}
+
+			&_active {
+				span {
+					text-align: center;
+					position: absolute;
+
+					&:first-child {
+						transform: rotate(45deg);
+					}
+
+					&:last-child {
+						transform: rotate(-45deg);
+					}
+				}
+			}
 		}
 	}
 }
