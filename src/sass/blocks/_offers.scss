@@ -1,0 +1,48 @@
+@use "_var.scss";
+
+.offers {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 6.25rem;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	&__title {
+		font: {
+			family: var.$ff-roboto-slab;
+			size: var.$fs-title;
+		};
+
+		text-transform: uppercase;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: minmax(320px, 710px) 1fr;
+		gap: 5.8333rem;
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__photo {
+		width: 100%;
+		max-width: 710px;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			display: block;
+		}
+	}
+}

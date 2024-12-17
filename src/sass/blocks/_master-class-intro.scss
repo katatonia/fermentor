@@ -1,1 +1,15 @@
 @use "_var.scss";
+
+.master-class-intro {
+	&__wrapper {
+		padding-top: 12.5rem;
+		padding-bottom: 8.3333rem ;
+		display: flex;
+		flex-direction: column;
+		gap: 1.6667rem;
+	}
+
+	&__text {
+		text-align: center;
+	}
+}

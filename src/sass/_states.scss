@@ -3,7 +3,8 @@
 .footer__tel,
 .footer__logo,
 .footer__menu-item,
-.footer__social-link svg {
+.footer__social-link svg,
+.button {
 	transition: .3s;
 	@include hover;
 }

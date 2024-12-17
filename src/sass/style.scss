@@ -5,9 +5,13 @@
 
 // Blocks
 @import "blocks/_header.scss";
+@import "blocks/_master-class-intro.scss";
+@import "blocks/_contract-brewing-intro.scss";
+@import "blocks/_offers.scss";
 @import "blocks/_footer.scss";
 
 @import '_reboot.scss';
+@import '_utils.scss';
 @import '_fonts.scss';
 @import '_general.scss';
 @import '_media.scss';
