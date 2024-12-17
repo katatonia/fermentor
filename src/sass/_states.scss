@@ -5,6 +5,7 @@
 .footer__menu-item,
 .footer__social-link svg,
 .button {
-	transition: .3s;
 	@include hover;
+
+	transition: .3s;
 }

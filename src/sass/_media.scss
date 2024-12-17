@@ -120,6 +120,12 @@
 		}
 	}
 
+	.offers {
+		&__content {
+			grid-template-columns: minmax(280px, 680px);
+		}
+	}
+
 	.footer {
 		&__wrapper {
 			grid-template-columns: 1fr;
