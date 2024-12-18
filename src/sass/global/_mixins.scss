@@ -1,4 +1,4 @@
-@use "_var.scss";
+@use "global/_var.scss";
 
 @mixin vp-719 {
 	@media (max-width: (var.$vp-720 - 1px)) {

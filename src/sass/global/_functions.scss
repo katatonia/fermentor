@@ -1,4 +1,4 @@
-@use "_var.scss";
+@use "global/_var.scss";
 
 @function size($size-in-px) {
 	@return calc($size-in-px / var.$fz-default * 1rem);
