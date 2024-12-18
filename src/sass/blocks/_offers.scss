@@ -1,16 +1,21 @@
 @use "global/_var.scss";
 
 .offers {
+	&__title {
+		padding-bottom: size(15px);
+		border-bottom: size(1px) solid var.$white;
+	}
+
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 6.25rem;
+		gap: size(100px);
 	}
 
 	&__item {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
+		gap: size(50px);
 	}
 
 	&__content {

@@ -64,19 +64,19 @@
 		@include flex-center(row);
 
 		flex-wrap: wrap;
-		gap: size(30px);
+		gap: size(20px);
 	}
 
 	&__social-link {
 		@include flex-center(row);
 
 		fill: var.$white;
-		width: size(30px);
-		height: size(30px);
+		width: size(25px);
+		height: size(25px);
 
 		svg {
-			width: size(30px);
-			height: size(30px);
+			width: size(25px);
+			height: size(25px);
 		}
 	}
 }
