@@ -1,0 +1,10 @@
+@use "_var.scss";
+
+.intro {
+	padding-top: size(200px);
+	padding-bottom: size(200px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: size(40px);
+}

@@ -6,6 +6,12 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
+	border-bottom: size(1px) solid var.$white;
+	height: size(100px);
+
+	@include vp-719 {
+		border-bottom: none;
+	}
 
 	&::before {
 		position: absolute;
@@ -25,25 +31,6 @@
 
 		@include vp-719 {
 			justify-content: flex-end;
-		}
-	}
-
-	&__logo {
-		@include vp-719 {
-			display: block;
-			z-index: 2;
-			// opacity: 1;
-
-			// &_hidden {
-			// 	opacity: 0;
-			// }
-
-			img {
-				display: block;
-				width: size(160px);
-				height: size(60px);
-				cursor: pointer;
-			}
 		}
 	}
 
@@ -92,16 +79,16 @@
 	}
 
 	&__menu-link {
-		&_logo {
+		&__logo {
 			display: block;
+			padding: 0 size(80px);
+
+			img {
+				width: 100%;
+			}
 
 			@include vp-719 {
 				margin: size(10px);
-
-				img {
-					width: size(160px);
-					height: size(60px);
-				}
 			}
 		}
 	}

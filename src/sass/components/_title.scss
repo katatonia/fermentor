@@ -1,0 +1,10 @@
+@use "_var.scss";
+
+.title {
+	font: {
+		family: var.$ff-roboto-slab;
+		size: size(var.$fz-title);
+	}
+
+	text-transform: uppercase;
+}

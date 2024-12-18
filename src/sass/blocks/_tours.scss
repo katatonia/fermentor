@@ -1,0 +1,53 @@
+@use "_var.scss";
+
+.tours {
+	&__wrapper {
+		padding-top: size(200px);
+		padding-bottom: size(200px);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: size(150px);
+	}
+
+	&__title {
+		text-align: center;
+		padding-bottom: size(150px);
+	}
+
+	&__item {
+		display: grid;
+		gap: size(100px);
+		grid-template-columns: 1fr minmax(size(320px), size(710px));
+
+		&_2,
+		&_4 {
+			grid-template-columns: minmax(size(320px), size(710px)) 1fr;
+
+			.info-box__desc {
+				order: 2;
+			}
+
+			.info-box__img {
+				order: 1;
+			}
+		}
+
+		@include vp-719 {
+			grid-template-columns: minmax(size(280px), size(680px));
+
+			&_2,
+			&_4 {
+				.info-box__desc {
+					order: 1;
+				}
+
+				.info-box__img {
+					order: 2;
+				}
+			}
+		}
+	}
+}

@@ -3,12 +3,16 @@
 
 // Components
 @import "components/_button.scss";
+@import "components/_title.scss";
+@import "components/_intro.scss";
+@import "components/_info-box.scss";
 
 // Blocks
 @import "blocks/_header.scss";
-@import "blocks/_master-class-intro.scss";
-@import "blocks/_contract-brewing-intro.scss";
+@import "blocks/_master-class.scss";
+@import "blocks/_contract-brewing.scss";
 @import "blocks/_offers.scss";
+@import "blocks/_tours.scss";
 @import "blocks/_footer.scss";
 
 @import '_reboot.scss';

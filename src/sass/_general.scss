@@ -6,13 +6,17 @@ html, body {
     font-family: "MyriadPro", "Arial", sans-serif;
     font-size: size-desktop(24px);
     font-weight: 400;
-	line-height: size(24px);
+	line-height: normal;
     font-style: normal;
 	text-transform: lowercase;
     scroll-behavior: smooth;
     background-color: var.$black;
     color: var.$white;
     scrollbar-width: none;
+
+	@media (max-width: 1919px) {
+		font-size: 24px;
+	  }
 
 	@include vp-1023 {
 		font-size: size-tablet(var.$fz-default);
@@ -42,6 +46,7 @@ html, body {
 
 .page  {
     flex: 1 1 auto;
+	padding-top: size(100px);
 }
 
 footer {

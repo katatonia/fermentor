@@ -13,19 +13,10 @@
 		gap: 4rem;
 	}
 
-	&__title {
-		font: {
-			family: var.$ff-roboto-slab;
-			size: var.$fz-title;
-		}
-
-		text-transform: uppercase;
-	}
-
 	&__content {
 		display: grid;
 		grid-template-columns: minmax(size(320px), size(710px)) 1fr;
-		gap: 5.8333rem;
+		gap: size(100px);
 
 		@include vp-719 {
 			grid-template-columns: minmax(size(280px), size(680px));
@@ -38,7 +29,7 @@
 		justify-content: space-between;
 	}
 
-	&__photo {
+	&__img {
 		width: 100%;
 		max-width: size(710px);
 

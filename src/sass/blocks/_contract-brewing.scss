@@ -1,0 +1,11 @@
+@use "_var.scss";
+
+.contract-brewing {
+	&__text {
+		text-align: center;
+	}
+
+	&__button {
+		margin-top: size(60px);
+	}
+}
