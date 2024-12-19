@@ -1,0 +1,12 @@
+@use "global/_var.scss";
+
+.services {
+	&__wrapper {
+		position: relative;
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+	}
+}

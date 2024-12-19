@@ -15,15 +15,27 @@
 @import "components/_info-box.scss";
 
 // Blocks
+
+// common
 @import "blocks/_header.scss";
-@import "blocks/_master-class.scss";
+@import "blocks/_footer.scss";
+
+// index.html
+@import "blocks/_preview.scss";
+@import "blocks/_services.scss";
+
+// contact-brewing.html
+@import "blocks/_about.scss";
 @import "blocks/_contract-brewing.scss";
+@import "blocks/_mission.scss";
+@import "blocks/_feedback.scss";
+
+// master-class.html
+@import "blocks/_master-class.scss";
 @import "blocks/_offers.scss";
 @import "blocks/_tours.scss";
-@import "blocks/_about.scss";
-@import "blocks/_mission.scss";
 @import "blocks/_booking.scss";
-@import "blocks/_feedback.scss";
 @import "blocks/_contacts.scss";
 @import "blocks/_selects.scss";
-@import "blocks/_footer.scss";
+
+// about.html
