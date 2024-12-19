@@ -1,0 +1,23 @@
+@use "global/_var.scss";
+
+.selects {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: size(40px);
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		border: size(1px) solid var.$white;
+		padding: size(20px) size(30px);
+		height: size(70px);
+		cursor: pointer;
+
+		label {
+			cursor: pointer;
+		}
+
+
+	}
+}

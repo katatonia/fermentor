@@ -1,0 +1,32 @@
+@use "global/_var.scss";
+
+.contacts {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: size(40px);
+
+	&__item {
+		display: grid;
+		height: size(70px);
+		grid-template-columns: 100% 1fr;
+		border-bottom: size(1px) solid var.$white;
+		padding-bottom: size(20px);
+
+		label {
+			width: fit-content;
+			padding-right: size(20px);
+		}
+
+		input {
+			width: 100%;
+			font: {
+				family: var.$ff-myriad-pro;
+				size: var.$fz-default;
+			}
+			padding-right: size(10px);
+			background-color: transparent;
+			color: var.$white;
+		}
+	}
+}

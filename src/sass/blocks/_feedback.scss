@@ -1,0 +1,22 @@
+@use "global/_var.scss";
+
+.feedback {
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		gap: size(80px);
+
+		@include vp-719 {
+			flex-direction: column;
+		}
+	}
+
+	&__button {
+		font-size: size($fz-subtitle);
+		color: var.$white;
+		text-transform: lowercase;
+		cursor: pointer;
+		text-decoration: underline;
+		padding: size(40px) 0 size(100px);
+	}
+}
