@@ -1,0 +1,77 @@
+@use "global/_var.scss";
+
+.booking {
+	padding-bottom: size(200px);
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: size(50px);
+	}
+	&__title {
+		padding-bottom: size(15px);
+		border-bottom: size(1px) solid var.$white;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: size(100px);
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr minmax(size(320px), size(710px));
+		gap: size(100px);
+
+		@include vp-719 {
+			grid-template-columns: minmax(size(280px), size(680px));
+		}
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__images {
+		width: 100%;
+		max-width: size(710px);
+		display: flex;
+		gap: size(20px);
+	}
+
+	&__image {
+		width: 100%;
+		max-width: size(340px);
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	&__images-group {
+		width: 100%;
+		max-width: size(348px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-flex-group: size(20px);
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			display: block;
+		}
+	}
+}

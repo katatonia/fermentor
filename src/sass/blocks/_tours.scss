@@ -1,6 +1,8 @@
 @use "global/_var.scss";
 
 .tours {
+	padding-bottom: size(200px);
+
 	&__wrapper {
 		padding-top: size(200px);
 		padding-bottom: size(200px);
