@@ -1,27 +1,29 @@
 @use "global/_var.scss";
 
 .button {
-	width: size(250px);
-	font-size: size(22px);
-	padding: size(20px);
-	border: size(1px) solid var.$white;
+	width: 250px;
+	font-size: 22px;
+	padding: 20px;
+	border: 1px solid var.$white;
 	text-align: center;
 	color: var.$white;
 	text-transform: lowercase;
 	cursor: pointer;
+
+	@include hover;
 }
 
 .select {
 	position: relative;
-	border: size(1px) solid var.$white;
-	padding: size(20px);
+	border: 1px solid var.$white;
+	padding: 20px;
 	cursor: pointer;
 
 	&::after {
 		position: absolute;
 		content: "";
-		width: size(30px);
-		height: size(20px);
+		width: 30px;
+		height: 20px;
 		cursor: pointer;
 		background-image: url("../../icons/arrow.svg") 0 0 no-repeat;
 	}

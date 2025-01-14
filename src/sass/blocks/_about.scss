@@ -4,22 +4,22 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: size(150px);
+		gap: 150px;
 	}
 
 	&__title {
 		text-align: center;
-		padding-bottom: size(150px);
+		padding-bottom: 150px;
 	}
 
 	&__item {
 		display: grid;
-		gap: size(100px);
-		grid-template-columns: 1fr minmax(size(320px), size(710px));
+		gap: 100px;
+		grid-template-columns: 1fr minmax((320px), 710px);
 
 		&_2,
 		&_4 {
-			grid-template-columns: minmax(size(320px), size(710px)) 1fr;
+			grid-template-columns: minmax((320px), 710px) 1fr;
 
 			.info-box__desc {
 				order: 2;
@@ -31,7 +31,7 @@
 		}
 
 		@include vp-719 {
-			grid-template-columns: minmax(size(280px), size(680px));
+			grid-template-columns: minmax((280px), 680px);
 
 			&_2,
 			&_4 {

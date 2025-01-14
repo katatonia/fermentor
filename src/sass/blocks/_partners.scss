@@ -1,0 +1,31 @@
+@use "global/_var.scss";
+
+.partners {
+	padding-bottom: 200px;
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+		cursor: pointer;
+
+		&:first-child,
+		&:nth-child(2),
+		&:nth-child(4),
+		&:nth-child(5) {
+			border-right: 1px solid var.$white;
+		}
+
+		&:first-child,
+		&:nth-child(2),
+		&:nth-child(3) {
+			border-bottom: 1px solid var.$white;
+		}
+	}
+}

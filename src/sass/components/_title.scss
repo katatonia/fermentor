@@ -3,7 +3,7 @@
 .title {
 	font: {
 		family: var.$ff-roboto-slab;
-		size: size(var.$fz-title);
+		size: var.$fz-title;
 	}
 
 	text-transform: uppercase;

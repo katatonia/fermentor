@@ -6,8 +6,8 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
-	border-bottom: size(1px) solid var.$white;
-	height: size(100px);
+	border-bottom: 1px solid var.$white;
+	height: 100px;
 
 	@include vp-719 {
 		border-bottom: none;
@@ -74,21 +74,27 @@
 
 	&__menu-item {
 		@include vp-719 {
-			margin: size(20px);
+			margin: 20px;
 		}
 	}
 
 	&__menu-link {
-		&__logo {
+		@include hover;
+
+		&_logo {
 			display: block;
-			padding: 0 size(80px);
+			padding: 0 80px;
 
 			img {
 				width: 100%;
 			}
 
 			@include vp-719 {
-				margin: size(10px);
+				margin: 10px;
+			}
+
+			&:hover {
+				opacity: 1;
 			}
 		}
 	}

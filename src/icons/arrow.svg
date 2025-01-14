@@ -1,7 +1,6 @@
-<svg viewBox="0 0 30 21"
-	xmlns="http://www.w3.org/2000/svg" id="arrow">
-	<g opacity="0.5">
-		<line y1="-0.5" x2="25.2521" y2="-0.5" transform="matrix(0.613994 0.789311 -0.613994 0.789311 0 1)"/>
-		<line y1="-0.5" x2="24.2149" y2="-0.5" transform="matrix(0.592064 -0.805891 0.63576 0.771887 15.6631 21)"/>
-	</g>
+<svg width="28" height="21" viewBox="0 0 28 21" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<line y1="-0.5" x2="24.631" y2="-0.5" transform="matrix(0.587512 0.809216 -0.587512 0.809216 0 1)" stroke="white"/>
+<line y1="-0.5" x2="23.6616" y2="-0.5" transform="matrix(0.565515 -0.824738 0.609463 0.792814 14.6191 21)" stroke="white"/>
+</g>
 </svg>

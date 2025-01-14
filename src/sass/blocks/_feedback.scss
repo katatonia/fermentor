@@ -1,22 +1,24 @@
 @use "global/_var.scss";
 
 .feedback {
+	padding-bottom: 200px;
+
 	&__form {
-		display: flex;
-		justify-content: space-between;
-		gap: size(80px);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
 
 		@include vp-719 {
-			flex-direction: column;
+			grid-template-columns: 1fr;
 		}
 	}
 
-	&__button {
-		font-size: size($fz-subtitle);
+	&__subtitle {
+		display: block;
+		font-size: $fz-subtitle;
 		color: var.$white;
 		text-transform: lowercase;
 		cursor: pointer;
-		text-decoration: underline;
-		padding: size(40px) 0 size(100px);
+		padding: 25px 0 100px;
 	}
 }

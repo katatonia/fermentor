@@ -4,18 +4,18 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: size(40px);
+	gap: 40px;
 
 	&__item {
-		display: grid;
-		height: size(70px);
-		grid-template-columns: 100% 1fr;
-		border-bottom: size(1px) solid var.$white;
-		padding-bottom: size(20px);
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		height: 80px;
+		border-bottom: 1px solid var.$white;
 
 		label {
 			width: fit-content;
-			padding-right: size(20px);
+			padding-right: 20px;
 		}
 
 		input {
@@ -24,7 +24,7 @@
 				family: var.$ff-myriad-pro;
 				size: var.$fz-default;
 			}
-			padding-right: size(10px);
+			padding-right: 10px;
 			background-color: transparent;
 			color: var.$white;
 		}

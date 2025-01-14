@@ -1,22 +1,22 @@
 @use "global/_var.scss";
 
 .booking {
-	padding-bottom: size(200px);
+	padding-bottom: 200px;
 
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: size(50px);
+		gap: 50px;
 	}
 	&__title {
-		padding-bottom: size(15px);
-		border-bottom: size(1px) solid var.$white;
+		padding-bottom: 15px;
+		border-bottom: 1px solid var.$white;
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: size(100px);
+		gap: 100px;
 	}
 
 	&__desc {
@@ -26,11 +26,11 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: 1fr minmax(size(320px), size(710px));
-		gap: size(100px);
+		grid-template-columns: 1fr minmax((320px), (710px));
+		gap: 100px;
 
 		@include vp-719 {
-			grid-template-columns: minmax(size(280px), size(680px));
+			grid-template-columns: minmax((280px), (680px));
 		}
 	}
 
@@ -42,14 +42,14 @@
 
 	&__images {
 		width: 100%;
-		max-width: size(710px);
+		max-width: 710px;
 		display: flex;
-		gap: size(20px);
+		gap: 20px;
 	}
 
 	&__image {
 		width: 100%;
-		max-width: size(340px);
+		max-width: 340px;
 
 		img {
 			width: 100%;
@@ -61,11 +61,11 @@
 
 	&__images-group {
 		width: 100%;
-		max-width: size(348px);
+		max-width: 348px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		box-flex-group: size(20px);
+		box-flex-group: 20px;
 
 		img {
 			width: 100%;

@@ -1,0 +1,85 @@
+@use "global/_var.scss";
+
+.preview-photo {
+	position: relative;
+
+	&:hover {
+		& > .preview-photo__title {
+			display: none;
+		}
+
+		& > .preview-photo__content-wrapper {
+		display: flex;
+		}
+	}
+
+	&_big {
+		.preview-photo__content {
+			position: absolute;
+			bottom: 40px;
+			max-width: 550px;
+		}
+
+		.preview-photo__content-title {
+			font-size: var.$fz-title;
+		}
+
+		.preview-photo__text {
+			font-size: var.$fz-default;
+		}
+
+		.preview-photo__button {
+			width: 250px;
+			font-size: 22px;
+			padding: 20px;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 0;
+		padding: 30px;
+		background-color: rgba(0, 0, 0, 0.7);
+		width: 100%;
+	}
+
+	&__content-wrapper {
+		display: none;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	&__content {
+		max-width: 420px;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: auto 0;
+		margin-left: 40px;
+	}
+
+	&__content-title {
+		font: {
+			size: var.$fz-default;
+			family: var.$ff-roboto-slab;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__button {
+		display: block;
+		font-size: 18px;
+		padding: 10px;
+	}
+}
