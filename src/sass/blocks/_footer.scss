@@ -2,27 +2,33 @@
 
 .footer {
 	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
+	justify-content: space-between;
 	padding-bottom: 100px;
 
 	&__col-1 {
-		text-transform: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 		gap: 20px;
 	}
 
-	&__col-1,
-	&__col-2,
-	&__col-3 {
-		@include flex-center(column);
-		justify-content: space-between;
+	&__col-2 {
+		display: flex;
 		flex-direction: column;
-		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__col-3 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	&__contacts {
-		@include flex-center(column);
-
 		gap: 10px;
 
 		span {
@@ -50,26 +56,24 @@
 
 	&__logo {
 		display: block;
-		padding: 0 80px;
 
 		img {
 			width: 100%;
+			max-width: 250px;
 		}
 
-		@include vp-719 {
+		@include vp-767 {
 			margin: 10px;
 		}
 	}
 
 	&__social-list {
-		@include flex-center(row);
-
+		display: flex;
 		flex-wrap: wrap;
 		gap: 20px;
 	}
 
 	&__social-link {
-		@include flex-center(row);
 		@include hover;
 
 		fill: var.$white;

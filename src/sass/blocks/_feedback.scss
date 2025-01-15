@@ -8,7 +8,7 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 80px;
 
-		@include vp-719 {
+		@include vp-767 {
 			grid-template-columns: 1fr;
 		}
 	}
@@ -18,7 +18,6 @@
 		font-size: $fz-subtitle;
 		color: var.$white;
 		text-transform: lowercase;
-		cursor: pointer;
 		padding: 25px 0 100px;
 	}
 }

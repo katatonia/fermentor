@@ -29,7 +29,7 @@
 		grid-template-columns: 1fr minmax((320px), (710px));
 		gap: 100px;
 
-		@include vp-719 {
+		@include vp-767 {
 			grid-template-columns: minmax((280px), (680px));
 		}
 	}

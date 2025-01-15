@@ -9,7 +9,10 @@
 	}
 
 	&__desc {
-		@include flex-center(column);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 	&__divider {
@@ -19,9 +22,13 @@
 		margin: 15px 0;
 	}
 
+	&__subtitle {
+		text-align: center;
+	}
+
 	&__img {
 		width: 100%;
-		max-width: 710px;
+		max-width: 560px;
 
 		img {
 			width: 100%;

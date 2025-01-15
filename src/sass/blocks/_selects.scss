@@ -45,8 +45,17 @@
 		top: 100%;
 		background-color: var.$white;
 		color: var.$black;
-		overflow: auto;
+		overflow-y: scroll;
 		outline: 1px solid var.$white;
+
+		&::-webkit-scrollbar {
+			background-color: var.$night-rider;
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var.$very-light-grey;
+		}
 	}
 
 	&__list.active {

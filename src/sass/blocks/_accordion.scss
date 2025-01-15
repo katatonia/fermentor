@@ -13,6 +13,7 @@
 	}
 
 	&__header {
+		position: relative;
 		padding: 20px 20px 20px 0;
 		cursor: pointer;
 		display: flex;
@@ -20,7 +21,6 @@
 		align-items: center;
 		transition: background-color 0.3s;
 		font-family: var.$ff-roboto-slab;
-		cursor: pointer;
 	}
 
 	&__content {

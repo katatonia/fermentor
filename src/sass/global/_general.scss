@@ -13,16 +13,32 @@ html, body {
     background-color: var.$black;
     color: var.$white;
     scrollbar-width: none;
+
+	@include vp-1365 {
+		font-size: 22px;
+	}
+
+	@include vp-1023 {
+		font-size: 20px;
+	}
+
+	@include vp-767 {
+		font-size: 18px;
+	}
 }
 
 .container {
 	width: 100%;
-	max-width: 1440px;
+	max-width: 1640px;
 	margin: 0 auto;
 	padding: 0 100px;
 
 	@include vp-1023 {
-	  padding: 0 20px;
+		padding: 0 40px;
+	}
+
+	@include vp-767 {
+		padding: 0 20px;
 	}
   }
 

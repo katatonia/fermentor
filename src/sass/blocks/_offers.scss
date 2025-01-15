@@ -22,11 +22,11 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: minmax((320px), 710px) 1fr;
-		gap: 100px;
+		grid-template-columns: minmax((320px), 560px) 1fr;
+		gap: 40px;
 
-		@include vp-719 {
-			grid-template-columns: minmax((280px), 680px);
+		@include vp-767 {
+			grid-template-columns: minmax((280px), 560px);
 		}
 	}
 
@@ -38,7 +38,7 @@
 
 	&__img {
 		width: 100%;
-		max-width: 710px;
+		max-width: 560px;
 
 		img {
 			width: 100%;
