@@ -1,7 +1,7 @@
 @use "global/_var.scss";
 
 .accordion {
-	padding-bottom: 200px;
+	padding-bottom: 8.3333rem;
 
 	&__title {
 		padding-bottom: 50px;
@@ -14,11 +14,8 @@
 
 	&__header {
 		position: relative;
-		padding: 20px 20px 20px 0;
+		padding: 20px 30px 20px 0;
 		cursor: pointer;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		transition: background-color 0.3s;
 		font-family: var.$ff-roboto-slab;
 	}
@@ -43,10 +40,13 @@
 	}
 
 	&__plus {
-		position: relative;
+		position: absolute;
 		width: 25px;
 		height: 1px;
+		right: 0;
 		background-color: var.$white;
+		top: 50%;
+		transform: translateY(-50%);
 
 		&::before {
 			content: "";

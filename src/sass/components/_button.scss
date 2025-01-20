@@ -1,9 +1,9 @@
 @use "global/_var.scss";
 
 .button {
-	width: 250px;
+	max-width: 300px;
 	display: block;
-	font-size: 20px;
+	font-size: 0.8333rem;
 	padding: 10px;
 	border: 1px solid var.$white;
 	text-align: center;

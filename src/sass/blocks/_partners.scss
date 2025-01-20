@@ -1,16 +1,16 @@
 @use "global/_var.scss";
 
 .partners {
-	padding-bottom: 200px;
+	padding-bottom: 8.3333rem;
 
 	&__list {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 
-		// @include vp-767 {
-		// 	grid-template-columns: 1fr;
-		// }
+		@include vp-767 {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	&__item {
@@ -39,5 +39,9 @@
 				border: none;
 			}
 		}
+	}
+
+	&__link {
+		display: flex;
 	}
 }

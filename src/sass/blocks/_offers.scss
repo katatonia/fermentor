@@ -1,7 +1,7 @@
 @use "global/_var.scss";
 
 .offers {
-	padding-bottom: 200px;
+	padding-bottom: 8.3333rem;
 
 	&__title {
 		padding-bottom: 15px;
@@ -11,7 +11,7 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 100px;
+		gap: 4.1667rem;
 	}
 
 	&__item {
@@ -34,6 +34,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		gap: 20px;
 	}
 
 	&__img {

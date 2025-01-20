@@ -1,20 +1,20 @@
 @use "global/_var.scss";
 
 .tours {
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 8.3333rem;
+	padding-bottom: 8.3333rem;
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 150px;
+		gap: 6.25rem;
 		max-width: 1200px;
 		margin: 0 auto;
 	}
 
 	&__title {
 		text-align: center;
-		padding-bottom: 150px;
+		padding-bottom: 6.25rem;
 	}
 
 	&__item {
