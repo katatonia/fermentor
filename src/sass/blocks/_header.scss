@@ -41,14 +41,14 @@
 		@include vp-767 {
 			display: none;
 			position: fixed;
-			top: size(100px);
+			top: 0;
 			right: 0;
 			left: 0;
 			bottom: 0;
 			height: 100vh;
-			padding: size(20px);
+			padding: 20px;
 			background-color: var.$black;
-			overflow-y: auto;
+			overflow-y: hidden;
 			align-items: flex-start;
 
 			&_active {
@@ -69,6 +69,8 @@
 
 		@include vp-767 {
 			flex-direction: column;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 

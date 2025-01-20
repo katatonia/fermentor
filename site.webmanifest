@@ -1,21 +1,21 @@
 {
-  "name": "ferMentor",
-  "short_name": "ferMentor",
+  "name": "ferMENTOR",
+  "short_name": "ferM",
   "icons": [
     {
-      "src": "/android-192x192.png",
+      "src": "src/icons/favicons/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/android-512x512.png",
+      "src": "src/icons/favicons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#000000",
   "background_color": "#ffffff",
   "display": "standalone"
 }
