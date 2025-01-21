@@ -11,6 +11,7 @@
 @import "components/_title.scss";
 @import "components/_intro.scss";
 @import "components/_info-box.scss";
+@import "components/_accordion.scss";
 
 // Blocks
 @import "blocks/_header.scss";
@@ -24,7 +25,12 @@
 @import "blocks/_offers.scss";
 @import "blocks/_tours.scss";
 @import "blocks/_booking.scss";
-@import "blocks/_modal.scss";
+@import "blocks/_calendar.scss";
 @import "blocks/_contacts.scss";
 @import "blocks/_selects.scss";
-@import "blocks/_accordion.scss";
+@import "blocks/_program.scss";
+
+// Modals
+@import "modals/_booking-modal.scss";
+@import "modals/_calendar-modal.scss";
+

@@ -1,0 +1,50 @@
+@use "global/_var.scss";
+
+.calendar-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+	color: var.$black;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+
+	&.visible {
+		display: flex;
+	}
+
+	&__wrapper {
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		gap: 1.6667rem;
+		padding: 3.3333rem 1.6667rem 1.6667rem;
+		background-color: var.$white;
+	}
+
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: none;
+		border: none;
+		font-size: 1.5rem;
+		color: var.$black;
+		cursor: pointer;
+	}
+
+	&__footer {
+		margin-top: auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		background-color: var.$black;
+	}
+}

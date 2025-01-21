@@ -1,10 +1,10 @@
 export let thumbnails = () => {
 	// Элементы модального окна
 	const modal = document.getElementById("imageModal");
-	const modalContent = modal.querySelector(".modal__content");
-	const modalImage = modal.querySelector(".modal__image");
-	const closeButton = modal.querySelector(".modal__close");
-	const overlay = modal.querySelector(".modal__overlay");
+	const modalContent = modal.querySelector(".booking-modal__content");
+	const modalImage = modal.querySelector(".booking-modal__image");
+	const closeButton = modal.querySelector(".booking-modal__close");
+	const overlay = modal.querySelector(".booking-modal__overlay");
 
 	// Миниатюры галереи
 	const thumbnails = document.querySelectorAll(".booking__thumbnail");
