@@ -22,7 +22,7 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: 1fr 1fr; // Равные колонки для текста и изображения
+		grid-template-columns: 1fr 1fr;
 		gap: 1.6667rem;
 		align-items: stretch;
 
@@ -38,7 +38,6 @@
 	&__desc {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		gap: 0.8333rem;
 	}
 
