@@ -62,6 +62,48 @@
 
 		<main class="page">
 
+			<section class="booking container">
+				<div class="booking__wrapper">
+					<h2 class="booking__title title">Забронируйте экскурсию</h2>
+					<div class="booking__content">
+						<div class="booking__desc">
+							<p class="booking__text">
+								соберите своих друзей, членов семьи или коллег
+								на авторскую экскурсию по пивоварне <span class="text-normal">ferMENTOR</span>
+							</p>
+							<p class="booking__text">
+								почувствуйте атмосферу действующего производства, узнайте секреты приготовления пива
+								и попробуйте современный питерский крафт
+								от <span class="text-normal">Plague Brew!</span>
+							</p>
+							<button class="booking__button button" type="button"
+								aria-label="button">Забронировать</button>
+						</div>
+						<div class="booking__images">
+							<div class="booking__image">
+								<img class="booking__thumbnail" src="img/booking/booking-1.jpg" alt="Миниатюра 1"
+									data-full="img/booking/booking-1.jpg" width="1920" height="1080">
+							</div>
+							<div class="booking__images-group">
+								<img class="booking__thumbnail" src="img/booking/booking-2.jpg" alt="Миниатюра 2"
+									data-full="img/booking/booking-2.jpg" width="1920" height="1080">
+								<img class="booking__thumbnail" src="img/booking/booking-3.jpg" alt="Миниатюра 3"
+									data-full="img/booking/booking-3.jpg" width="1920" height="1080">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal" id="imageModal" aria-hidden="true">
+					<div class="modal__overlay"></div>
+					<div class="modal__content">
+						<img class="modal__image" src="" alt="Увеличенное изображение">
+						<button class="modal__close" aria-label="Закрыть модальное окно">&times;</button>
+					</div>
+				</div>
+
+			</section>
+
 			<section class="tours container">
 				<h2 class="tours__title title">Ежедневные туры</h2>
 				<ul class="tours__list">
@@ -108,36 +150,6 @@
 				</ul>
 			</section>
 
-			<section class="booking container">
-				<div class="booking__wrapper">
-					<h2 class="booking__title title">Забронируйте экскурсию</h2>
-					<div class="booking__content">
-						<div class="booking__desc">
-							<p class="booking__text">
-								соберите своих друзей, членов семьи или коллег
-								на авторскую экскурсию по пивоварне <span class="text-normal">ferMENTOR</span>
-							</p>
-							<p class="booking__text">
-								почувствуйте атмосферу действующего производства, узнайте секреты приготовления пива
-								и попробуйте современный питерский крафт
-								от <span class="text-normal">Plague Brew!</span>
-							</p>
-							<button class="booking__button button" type="button"
-								aria-label="button">Забронировать</button>
-						</div>
-						<div class="booking__images">
-							<div class="booking__image">
-								<img src="img//booking/booking-1.jpg" alt="" width="340" height="460">
-							</div>
-							<div class="booking__images-group">
-								<img src="img//booking/booking-2.jpg" alt="" width="348" height="220">
-								<img src="img//booking/booking-3.jpg" alt="" width="348" height="220">
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
 			<section class="accordion container">
 				<h2 class="accordion__title title">Отвечаем на частые вопросы</h2>
 				<div class="accordion__item">
@@ -181,7 +193,6 @@
 					<div class="accordion__content">
 						<p>
 							В экскурсионной группе может быть от 2 до 10 человек<br>
-
 							Если вы хотите эксклюзивную экскурсию без посторонних, пожалуйста, предупредите нас об этом
 							заранее по телефону: +7 981 762 47 43
 						</p>
@@ -230,7 +241,7 @@
 					</div>
 					<div class="accordion__content">
 						<p>
-							Мы варим полную линейку пива для <span class="text-normal">Plague Brew,</span><br>
+							Мы варим полную линейку пива для <span class="text-normal">Plague Brew,</span>
 							а также в качестве контрактной пивоварни
 							производим напитки для таких пивоварен как
 							<span class="uppercase">Russian North, Pivoteka, Switch, Time Bomb,

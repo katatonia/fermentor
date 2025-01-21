@@ -11,22 +11,27 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 4.1667rem;
+		gap: 6.25rem;
 	}
 
 	&__item {
 		display: flex;
 		flex-direction: column;
-		gap: 50px;
+		gap: 2.0833rem;
 	}
 
 	&__content {
 		display: grid;
-		grid-template-columns: minmax((320px), 560px) 1fr;
-		gap: 40px;
+		grid-template-columns: 1fr 1fr; // Равные колонки для текста и изображения
+		gap: 1.6667rem;
+		align-items: stretch;
+
+		@include vp-1023 {
+			grid-template-columns: 1fr minmax(280px, 330px);
+		}
 
 		@include vp-767 {
-			grid-template-columns: minmax((280px), 560px);
+			grid-template-columns: 1fr;
 		}
 	}
 
@@ -34,16 +39,17 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		gap: 20px;
+		gap: 0.8333rem;
 	}
 
 	&__img {
 		width: 100%;
-		max-width: 560px;
+		height: 100%;
+
 
 		img {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			object-fit: cover;
 			display: block;
 		}

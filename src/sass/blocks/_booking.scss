@@ -1,7 +1,7 @@
 @use "global/_var.scss";
 
 .booking {
-	padding-bottom: 8.3333rem;
+	padding-top: 8.3333rem;
 
 	&__wrapper {
 		display: flex;
@@ -27,34 +27,36 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: 1fr minmax((320px), (710px));
-		gap: 100px;
+		grid-template-columns: 430px 1fr;
+		gap: 1.6667rem;
+
+		@include vp-1023 {
+			grid-template-columns: minmax(280px, 330px) 1fr;
+		}
 
 		@include vp-767 {
-			grid-template-columns: minmax((280px), (680px));
+			grid-template-columns: 1fr;
 		}
 	}
 
 	&__desc {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 	}
 
 	&__images {
 		width: 100%;
-		max-width: 710px;
 		display: flex;
 		gap: 20px;
 	}
 
 	&__image {
 		width: 100%;
-		max-width: 340px;
 
 		img {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			object-fit: cover;
 			display: block;
 		}
@@ -62,7 +64,6 @@
 
 	&__images-group {
 		width: 100%;
-		max-width: 348px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -70,9 +71,23 @@
 
 		img {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			object-fit: cover;
 			display: block;
+		}
+	}
+
+	&__thumbnail {
+		width: 150px;
+		height: auto;
+		transition: transform 0.3s ease;
+
+		&:hover {
+		  transform: scale(1.05);
+		}
+
+		@include vp-767 {
+			cursor: pointer;
 		}
 	}
 }
