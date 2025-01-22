@@ -1,7 +1,6 @@
 export let thumbnails = () => {
 	// Элементы модального окна
 	const modal = document.getElementById("imageModal");
-	const modalContent = modal.querySelector(".booking-modal__content");
 	const modalImage = modal.querySelector(".booking-modal__image");
 	const closeButton = modal.querySelector(".booking-modal__close");
 	const overlay = modal.querySelector(".booking-modal__overlay");
@@ -27,6 +26,7 @@ export let thumbnails = () => {
 					// Показываем модальное окно
 					modal.setAttribute("aria-hidden", "false");
 					modal.classList.add("visible");
+					document.body.style.overflow = "hidden";
 				}
 			}
 		});
@@ -37,6 +37,7 @@ export let thumbnails = () => {
 		modal.setAttribute("aria-hidden", "true");
 		modal.classList.remove("visible");
 		modalImage.src = ""; // Очищаем src
+		document.body.style.overflow = "";
 	}
 
 	// Обработчики закрытия модального окна

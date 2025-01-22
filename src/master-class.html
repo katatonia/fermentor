@@ -98,7 +98,7 @@
 									пивом
 								</p>
 								<p>Стоимость в группе до 5 человек — 5000 ₽</p>
-								<button id="calendarButton" class="offers__button button" type="button"
+								<button id="calendarButtonOffers-1" class="offers__button button" type="button"
 									aria-label="button">Забронировать</button>
 							</div>
 						</div>
@@ -120,7 +120,7 @@
 									пиво у себя дома
 								</p>
 								<p>Стоимость в группе до 2 человек — 15000 ₽</p>
-								<button id="calendarButton"  class="offers__button button" type="button"
+								<button id="calendarButtonOffers-2" class="offers__button button" type="button"
 									aria-label="button">Забронировать</button>
 							</div>
 						</div>
@@ -145,12 +145,298 @@
 								<p>
 									стоимость для 1 человека — 25 000 ₽
 								</p>
-								<button id="calendarButton"  class="offers__button button" type="button"
+								<button id="calendarButtonOffers-3" class="offers__button button" type="button"
 									aria-label="button">Забронировать</button>
 							</div>
 						</div>
 					</li>
 				</ul>
+
+				<div class="calendar-modal" id="calendarModalOffers-1">
+					<div class="calendar-modal__overlay"></div>
+					<div class="calendar-modal__wrapper">
+						<button class="calendar-modal__close" id="closeModal">&times;</button>
+						<div class="calendar-modal__program program">
+							<h2 class="program__title title">Мастер-класс по пивоварению</h2>
+							<p class="program__desc">
+								Групповой практический мастер-класс на оборудовании для домашнего пивоварения. Включает
+								в себя лекционную и практическую части, а также дегустацию 4 сортов пива и
+								гастрономического сета. Все участвуют в процессе варки, распределяя этапы между друг
+								другом. Через 2-3 недели вы сможете забрать 1 литр сваренного вами пива.
+							</p>
+							<ul class="program__list">
+								<li class="program__item">
+									— Техника безопасности;
+								</li>
+								<li class="program__item">
+									— Обзорная экскурсия по пивоварне, знакомство с оборудованием;
+								</li>
+								<li class="program__item">
+									— Выбор и составление рецепта;
+								</li>
+								<li class="program__item">
+									Помол солода: подготовка солода и воды;
+								</li>
+								<li class="program__item">
+									— Затирание и фильтрация;
+								</li>
+								<li class="program__item">
+									— Дегустации 4 сортов и гастрономического сета закусок;
+								</li>
+								<li class="program__item">
+									— Кипячение сусла;
+								</li>
+								<li class="program__item">
+									— Охлаждение сусла, перекачка в ЦКТ, задача дрожжей;
+								</li>
+							</ul>
+							<ul class="program__details">
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#clock"></use>
+									</svg>
+									Длительность: от 4 до 5-ти часов
+								</li>
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#user"></use>
+									</svg>
+									Группы: от 3 до 5-ти человек
+								</li>
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#check"></use>
+									</svg>
+									Стоимость: 5000₽/чел
+								</li>
+							</ul>
+						</div>
+						<div class="calendar">
+							<div class="calendar__wrapper">
+								<div class="calendar__header">
+									<h2 class="calendar__title">Выберите дату</h2>
+								</div>
+								<div class="calendar__navigation">
+									<button class="calendar__nav-button" id="prevMonth">&#8592;</button>
+									<span id="currentMonth">Январь 2025</span>
+									<button class="calendar__nav-button" id="nextMonth">&#8594;</button>
+								</div>
+								<div class="calendar__list" id="calendarDays">
+									<div class="calendar__day">Пн</div>
+									<div class="calendar__day">Вт</div>
+									<div class="calendar__day">Ср</div>
+									<div class="calendar__day">Чт</div>
+									<div class="calendar__day">Пт</div>
+									<div class="calendar__day">Сб</div>
+									<div class="calendar__day">Вс</div>
+
+									<div class="calendar__date">1</div>
+									<div class="calendar__date">2</div>
+									<div class="calendar__date">3</div>
+									<div class="calendar__date">4</div>
+									<div class="calendar__date">5</div>
+									<div class="calendar__date">6</div>
+									<div class="calendar__date">7</div>
+								</div>
+							</div>
+							<button class="calendar-modal__button button">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+				<div class="calendar-modal" id="calendarModalOffers-2">
+					<div class="calendar-modal__overlay"></div>
+					<div class="calendar-modal__wrapper">
+						<button class="calendar-modal__close" id="closeModal">&times;</button>
+						<div class="calendar-modal__program program">
+							<h2 class="program__title title">Индивидуальный мастер-класс по домашнему пивоварению</h2>
+							<p class="program__desc">
+								Индивидуальная программа, где вы сможете выбрать любой сорт для варки и самостоятельно
+								сварить пиво на оборудовании для домашнего пивоварения под наблюдением опытного
+								пивовара. Мастер-класс включает в себя лекционную и практическую части, а также
+								дегустацию 4 сортов пива и гастрономического сета. Через 3 недели вы сможете забрать 30
+								литров готового пива.
+							</p>
+							<ul class="program__list">
+								<li class="program__item">
+									— Техника безопасности;
+								</li>
+								<li class="program__item">
+									— Обзорная экскурсия по пивоварне, знакомство с оборудованием;
+								</li>
+								<li class="program__item">
+									— Экстрактное и зерновое пивоварение;
+								</li>
+								<li class="program__item">
+									— Выбор и составление рецепта;
+								</li>
+								<li class="program__item">
+									Помол солода: подготовка солода и воды;
+								</li>
+								<li class="program__item">
+									— Затирание и фильтрация;
+								</li>
+								<li class="program__item">
+									— Дегустации 4 сортов и гастрономического сета закусок;
+								</li>
+								<li class="program__item">
+									— Кипячение сусла;
+								</li>
+								<li class="program__item">
+									— Охлаждение сусла, перекачка в ЦКТ, задача дрожжей;
+								</li>
+							</ul>
+							<ul class="program__details">
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#clock"></use>
+									</svg>
+									Длительность: от 4 до 5-ти часов
+								</li>
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#user"></use>
+									</svg>
+									Количество участников: 1 человек (+ можно пригласить 1 человека по желанию
+									бесплатно)
+								</li>
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#check"></use>
+									</svg>
+									Стоимость: 20000₽
+								</li>
+							</ul>
+						</div>
+						<div class="calendar">
+							<div class="calendar__wrapper">
+								<div class="calendar__header">
+									<h2 class="calendar__title">Выберите дату</h2>
+								</div>
+								<div class="calendar__navigation">
+									<button class="calendar__nav-button" id="prevMonth">&#8592;</button>
+									<span id="currentMonth">Январь 2025</span>
+									<button class="calendar__nav-button" id="nextMonth">&#8594;</button>
+								</div>
+								<div class="calendar__list" id="calendarDays">
+									<div class="calendar__day">Пн</div>
+									<div class="calendar__day">Вт</div>
+									<div class="calendar__day">Ср</div>
+									<div class="calendar__day">Чт</div>
+									<div class="calendar__day">Пт</div>
+									<div class="calendar__day">Сб</div>
+									<div class="calendar__day">Вс</div>
+
+									<div class="calendar__date">1</div>
+									<div class="calendar__date">2</div>
+									<div class="calendar__date">3</div>
+									<div class="calendar__date">4</div>
+									<div class="calendar__date">5</div>
+									<div class="calendar__date">6</div>
+									<div class="calendar__date">7</div>
+								</div>
+							</div>
+							<button class="calendar-modal__button button">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+				<div class="calendar-modal" id="calendarModalOffers-3">
+					<div class="calendar-modal__overlay"></div>
+					<div class="calendar-modal__wrapper">
+						<button class="calendar-modal__close" id="closeModal">&times;</button>
+						<div class="calendar-modal__program program">
+							<h2 class="program__title title">Индивидуальный мастер-класс по профессиональному
+								пивоварению</h2>
+							<p class="program__desc">
+								Индивидуальная программа с контрактной варкой 200л, на котором вы сможете сварить свое
+								пиво на профессиональном оборудовании под руководством опытного пивовара. Мастер-класс
+								включает в себя лекционную и практическую части, а также дегустацию 4 сортов пива и
+								гастрономического сета. Через 3-4 недели вы сможете разлить пиво по банкам/бутылкам,
+								создать авторскую этикетку, а также провести презентацию вашего пива в баре Plague
+								Arena.
+							</p>
+							<ul class="program__list">
+								<li class="program__item">
+									— Техника безопасности;
+								</li>
+								<li class="program__item">
+									— Обзорная экскурсия по пивоварне, знакомство с оборудованием;
+								</li>
+								<li class="program__item">
+									— Экстрактное и зерновое пивоварение;
+								</li>
+								<li class="program__item">
+									— Выбор и составление рецепта;
+								</li>
+								<li class="program__item">
+									Помол солода: подготовка солода и воды;
+								</li>
+								<li class="program__item">
+									— Затирание и фильтрация;
+								</li>
+								<li class="program__item">
+									— Дегустации 4 сортов и гастрономического сета закусок;
+								</li>
+								<li class="program__item">
+									— Кипячение сусла;
+								</li>
+								<li class="program__item">
+									— Охлаждение сусла, перекачка в ЦКТ, задача дрожжей;
+								</li>
+							</ul>
+							<ul class="program__details">
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#clock"></use>
+									</svg>
+									Длительность: от 4 до 5-ти часов
+								</li>
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#user"></use>
+									</svg>
+									Количество участников: 1 человек (+ можно пригласить 1 человека по желанию
+									бесплатно)
+								</li>
+								<li class="program__details-item">
+									<svg>
+										<use xlink:href="icons/sprite.svg#check"></use>
+									</svg>
+									Стоимость: договорная
+								</li>
+							</ul>
+						</div>
+						<div class="calendar">
+							<div class="calendar__wrapper">
+								<div class="calendar__header">
+									<h2 class="calendar__title">Выберите дату</h2>
+								</div>
+								<div class="calendar__navigation">
+									<button class="calendar__nav-button" id="prevMonth">&#8592;</button>
+									<span id="currentMonth">Январь 2025</span>
+									<button class="calendar__nav-button" id="nextMonth">&#8594;</button>
+								</div>
+								<div class="calendar__list" id="calendarDays">
+									<div class="calendar__day">Пн</div>
+									<div class="calendar__day">Вт</div>
+									<div class="calendar__day">Ср</div>
+									<div class="calendar__day">Чт</div>
+									<div class="calendar__day">Пт</div>
+									<div class="calendar__day">Сб</div>
+									<div class="calendar__day">Вс</div>
+
+									<div class="calendar__date">1</div>
+									<div class="calendar__date">2</div>
+									<div class="calendar__date">3</div>
+									<div class="calendar__date">4</div>
+									<div class="calendar__date">5</div>
+									<div class="calendar__date">6</div>
+									<div class="calendar__date">7</div>
+								</div>
+							</div>
+							<button class="calendar-modal__button button">Подтвердить</button>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<section class="accordion container">

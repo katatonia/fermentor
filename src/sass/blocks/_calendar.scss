@@ -3,6 +3,9 @@
 .calendar {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	gap: 1.6667rem;
+	height: 100%;
 
 	&__wrapper {
 		display: flex;

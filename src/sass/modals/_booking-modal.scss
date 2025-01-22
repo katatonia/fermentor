@@ -4,20 +4,22 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	display: none;
 	align-items: center;
 	justify-content: center;
 	z-index: 1000;
+	overflow: auto;
+	padding: 0.8333rem;
 
 	&__overlay {
-		position: absolute;
+		position: fixed;
 		display: flex;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 100vh;
 		background: transparent;
 		background-color: rgba(0, 0, 0, .7);
 	}
@@ -32,6 +34,14 @@
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	&__close {
+		color: var.$white;
+		top: -35px;
+		position: absolute;
+		right: 0;
+		font-size: 1.25rem;
 	}
 
 	&[aria-hidden="false"] {
