@@ -21,7 +21,7 @@
 		width: 100vw;
 		height: 100vh;
 		background: transparent;
-		background-color: rgba(0, 0, 0, .7);
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	&__content {
@@ -34,14 +34,18 @@
 		width: 100%;
 		height: auto;
 		display: block;
+		max-width: 100vw;
+		max-height: 100vh;
+		object-fit: contain;
 	}
 
 	&__close {
 		color: var.$white;
-		top: -35px;
+		top: 0;
 		position: absolute;
-		right: 0;
-		font-size: 1.25rem;
+		right: -30px;
+		font-size: 1.5rem;
+		cursor: pointer;
 	}
 
 	&[aria-hidden="false"] {

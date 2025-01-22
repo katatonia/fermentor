@@ -62,6 +62,10 @@ export const calendar = () => {
 			modalId: "calendarModalTours",
 		},
 		{
+			buttonId: "calendarButtonToursQuestion",
+			modalId: "calendarModalTours",
+		},
+		{
 			buttonId: "calendarButtonOffers-1",
 			modalId: "calendarModalOffers-1",
 		},
@@ -81,7 +85,6 @@ export const calendar = () => {
 
 		// Проверяем наличие кнопки и модального окна
 		if (!button || !modal) {
-			console.warn(`Не удалось найти кнопку с id "${buttonId}" или модальное окно с id "${modalId}".`);
 			return;
 		}
 

@@ -27,12 +27,8 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: 1fr 430px ;
+		grid-template-columns: 1fr 1fr;
 		gap: 1.6667rem;
-
-		@include vp-1023 {
-			grid-template-columns: 1fr minmax(280px, 330px) ;
-		}
 
 		@include vp-767 {
 			grid-template-columns: 1fr;
@@ -42,6 +38,7 @@
 	&__desc {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__images {
@@ -58,6 +55,7 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
+			cursor: pointer;
 		}
 	}
 
@@ -73,6 +71,7 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
+			cursor: pointer;
 		}
 	}
 

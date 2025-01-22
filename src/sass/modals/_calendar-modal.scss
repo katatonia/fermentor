@@ -38,7 +38,6 @@
 		overflow-y: auto;
 		padding: 3.3333rem 1.6667rem 1.6667rem;
 		background-color: var.$white;
-		border-radius: 8px;
 
 		@include vp-767 {
 			grid-template-columns: 1fr;

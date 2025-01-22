@@ -1,33 +1,31 @@
 export let thumbnails = () => {
-	// Элементы модального окна
+	// Проверяем, есть ли модальное окно и миниатюры на странице
 	const modal = document.getElementById("imageModal");
+	const thumbnails = document.querySelectorAll(".booking__thumbnail");
+
+	// Если модального окна или миниатюр нет, прерываем выполнение
+	if (!modal || thumbnails.length === 0) {
+		return;
+	}
+
+	// Элементы модального окна
 	const modalImage = modal.querySelector(".booking-modal__image");
 	const closeButton = modal.querySelector(".booking-modal__close");
 	const overlay = modal.querySelector(".booking-modal__overlay");
 
-	// Миниатюры галереи
-	const thumbnails = document.querySelectorAll(".booking__thumbnail");
-
-	// Функция для проверки ширины экрана
-	function isMobileScreen() {
-		return window.innerWidth <= 767;
-	}
-
 	// Открытие модального окна
 	thumbnails.forEach((thumbnail) => {
 		thumbnail.addEventListener("click", (event) => {
-			if (isMobileScreen()) {
-				const fullImageUrl = event.target.dataset.full;
+			const fullImageUrl = event.target.dataset.full;
 
-				if (fullImageUrl) {
-					// Устанавливаем src для увеличенного изображения
-					modalImage.src = fullImageUrl;
+			if (fullImageUrl) {
+				// Устанавливаем src для увеличенного изображения
+				modalImage.src = fullImageUrl;
 
-					// Показываем модальное окно
-					modal.setAttribute("aria-hidden", "false");
-					modal.classList.add("visible");
-					document.body.style.overflow = "hidden";
-				}
+				// Показываем модальное окно
+				modal.setAttribute("aria-hidden", "false");
+				modal.classList.add("visible");
+				document.body.style.overflow = "hidden";
 			}
 		});
 	});
@@ -51,3 +49,4 @@ export let thumbnails = () => {
 		}
 	});
 };
+

@@ -11,6 +11,13 @@
 	}
 
 	&__block-1 {
+		@media (min-width: 1024px) {
+			.preview__image-title {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
 		@include vp-1023 {
 			display: flex;
 			flex-direction: column;
@@ -21,9 +28,30 @@
 		display: flex;
 		gap: 20px;
 
+		.preview__content {
+			max-width: 90%;
+			padding: 0.8333rem;
+		}
+
+		.preview__title {
+			font-size: var.$fz-subtitle;
+		}
+
+		@include vp-1023 {
+			.preview__content {
+				max-width: 100%;
+				height: 100%;
+			}
+		}
+
 		@include vp-767 {
 			flex-direction: column;
 			gap: 6.25rem;
+
+			.preview__content {
+				max-width: 100%;
+				height: 100%;
+			}
 		}
 	}
 
@@ -44,6 +72,7 @@
 		display: none;
 
 		@media (min-width: 1024px) {
+			display: block;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
@@ -55,9 +84,11 @@
 	&__content-wrapper {
 		position: relative;
 		overflow: hidden;
+		cursor: pointer;
+		width: 100%;
 
 		@media (min-width: 1024px) {
-			&:hover .preview__content {
+			&:hover .preview__overlay {
 				transform: translateY(0);
 				z-index: 2;
 			}
@@ -66,29 +97,46 @@
 				display: none;
 			}
 		}
-
 	}
 
-	&__content {
+	&__overlay {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		gap: 20px;
-		padding: 4.1667rem;
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		bottom: 0;
-		transform: translateY(100%);
+		transform: translateY(200%);
 		transition: transform 0.3s ease-in-out;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.8);
+		align-items: center;
 
 		@include vp-1023 {
-			padding: 20px;
-			max-width: 600px;
+			padding: 0;
+			max-width: 100%;
 			position: relative;
 			transform: translateY(0);
-			height: fit-content;
+			height: auto;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		transition: transform 0.3s ease-in-out;
+		border: 1px solid var.$white;
+		width: 100%;
+		padding: 1.6667rem;
+		max-width: 600px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 1.6667rem;
+
+		@include vp-1023 {
+			position: relative;
+			padding: 20px;
+			max-width: 100%;
 		}
 	}
 
