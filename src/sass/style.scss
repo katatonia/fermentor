@@ -12,6 +12,7 @@
 @import "components/_intro.scss";
 @import "components/_info-box.scss";
 @import "components/_accordion.scss";
+@import "components/_video.scss";
 
 // Blocks
 @import "blocks/_header.scss";
@@ -29,8 +30,9 @@
 @import "blocks/_contacts.scss";
 @import "blocks/_selects.scss";
 @import "blocks/_program.scss";
+@import "blocks/_gallery.scss";
 
 // Modals
-@import "modals/_booking-modal.scss";
+@import "modals/_thumbnail-modal.scss";
 @import "modals/_calendar-modal.scss";
 

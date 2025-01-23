@@ -28,7 +28,7 @@
 <body>
 	<div class="wrapper">
 
-		<header class="header">
+		<header class="header" id="header">
 			<div class="container">
 				<div class="header__body">
 					<button class="header__hamburger" type="button" aria-label="menu-button">
@@ -61,6 +61,18 @@
 		</header>
 
 		<main class="page">
+
+			<section class="video" id="target-block">
+				<div class="video__body">
+					<h2 class="video__title title">Контрактная пивоварня<br>в Санкт-Петербурге</h2>
+					<span>поможем воплотить ваше пиво в реальность</span>
+					<a class="button" href="#contract-brewing">Сварить пиво с нами</a>
+				</div>
+				<video class="video__video" playsinline loop muted autoplay preload="auto">
+					<source src="video/contract-brewing/contract-brewing.webm" type="video/webm">
+					<source src="video/contract-brewing/contract-brewing.mp4" type="video/mp4">
+				</video>
+			</section>
 
 			<section class="contract-brewing container">
 				<div class="intro">
@@ -191,7 +203,7 @@
 				</ul>
 			</section>
 
-			<section class="feedback container">
+			<section class="feedback container" id="contract-brewing">
 				<div class="feedback__wrapper">
 					<h2 class="feedback__title title">Готовы сварить своё пиво или другой крафтовый напиток?</h2>
 					<span class="feedback__subtitle">Заполните форму обратной связи</span>

@@ -28,7 +28,7 @@
 <body>
 	<div class="wrapper">
 
-		<header class="header">
+		<header class="header" id="header">
 			<div class="container">
 				<div class="header__body">
 					<button class="header__hamburger" type="button" aria-label="menu-button">
@@ -62,7 +62,19 @@
 
 		<main class="page">
 
-			<section class="preview container">
+			<section class="video" id="target-block">
+				<div class="video__body">
+					<h2 class="video__title title">Лаборатория крафтовых напитков</h2>
+					<span class="video__subtitle title">since 2018</span>
+					<span id="text-container" class="video__subtitle title">Ваш рецепт</span>
+				</div>
+				<video class="video__video" playsinline loop muted autoplay preload="auto">
+					<source src="video/index/index.webm" type="video/webm">
+					<source src="video/index/index.mp4" type="video/mp4">
+				</video>
+			</section>
+
+			<section class="preview">
 				<div class="preview__block-1">
 					<div class="preview__content-wrapper">
 						<div class="preview__image">

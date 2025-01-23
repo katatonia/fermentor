@@ -5,9 +5,12 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 100;
-	border-bottom: 1px solid var.$white;
+	z-index: 4;
 	height: 100px;
+
+	&.scrolled {
+		background-color: rgba(0, 0, 0, .7);
+	}
 
 	@include vp-767 {
 		border-bottom: none;
@@ -20,7 +23,6 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var.$black;
 		z-index: 2;
 	}
 

@@ -1,0 +1,35 @@
+@use "global/_var.scss";
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8333rem;
+	padding-bottom: 8.333rem;
+
+	&__block-1 {
+		display: flex;
+		gap: 0.8333rem;
+	}
+
+	&__block-2 {
+		display: flex;
+		gap: 0.8333rem;
+	}
+
+	&__block-3 {
+		display: flex;
+		gap: 0.8333rem;
+	}
+
+	&__photo {
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			cursor: pointer;
+		}
+	}
+}

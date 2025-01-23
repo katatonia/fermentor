@@ -12,7 +12,7 @@
 	align-items: center;
 	z-index: 1000;
 	padding: 0.8333rem;
-	overflow: hidden; // Для предотвращения прокрутки вне модального окна
+	overflow: hidden;
 
 	&.visible {
 		display: flex;

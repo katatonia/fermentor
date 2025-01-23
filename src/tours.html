@@ -28,7 +28,7 @@
 <body>
 	<div class="wrapper">
 
-		<header class="header">
+		<header class="header" id="header">
 			<div class="container">
 				<div class="header__body">
 					<button class="header__hamburger" type="button" aria-label="menu-button">
@@ -62,281 +62,295 @@
 
 		<main class="page">
 
-			<section class="booking container">
-				<div class="booking__wrapper">
-					<h2 class="booking__title title">Забронируйте экскурсию</h2>
-					<div class="booking__content">
-						<div class="booking__images">
-							<div class="booking__image">
-								<img class="booking__thumbnail" src="img/booking/booking-1.jpg" alt="Миниатюра 1"
-									data-full="img/booking/booking-1.jpg" width="1920" height="1080">
+			<div class="wrapper">
+
+				<section class="video" id="target-block">
+					<div class="video__body">
+						<h2 class="video__title title">Экскурсия на пивоварню с дегустацией<br> в Санкт-Петербурге
+						</h2>
+						<a class="button" href="#booking">Записаться на экскурсию</a>
+					</div>
+					<video class="video__video" playsinline loop muted autoplay preload="auto">
+						<source src="video/tours/tours.webm" type="video/webm">
+						<source src="video/tours/tours.mp4" type="video/mp4">
+					</video>
+				</section>
+
+				<section class="booking container" id="booking">
+					<div class="booking__wrapper">
+						<h2 class="booking__title title">Забронируйте экскурсию</h2>
+						<div class="booking__content">
+							<div class="booking__images">
+								<div class="booking__image">
+									<img class="booking__thumbnail" src="img/booking/booking-1.jpg" alt="Миниатюра 1"
+										data-full="img/booking/booking-1.jpg" width="1920" height="1080">
+								</div>
+								<div class="booking__images-group">
+									<img class="booking__thumbnail" src="img/booking/booking-2.jpg" alt="Миниатюра 2"
+										data-full="img/booking/booking-2.jpg" width="1920" height="1080">
+									<img class="booking__thumbnail" src="img/booking/booking-3.jpg" alt="Миниатюра 3"
+										data-full="img/booking/booking-3.jpg" width="1920" height="1080">
+								</div>
 							</div>
-							<div class="booking__images-group">
-								<img class="booking__thumbnail" src="img/booking/booking-2.jpg" alt="Миниатюра 2"
-									data-full="img/booking/booking-2.jpg" width="1920" height="1080">
-								<img class="booking__thumbnail" src="img/booking/booking-3.jpg" alt="Миниатюра 3"
-									data-full="img/booking/booking-3.jpg" width="1920" height="1080">
+							<div class="booking__desc">
+								<p class="booking__text"> соберите своих друзей, членов семьи или коллег
+									на&nbsp;авторскую
+									экскурсию по&nbsp;пивоварне <span class="text-normal">ferMENTOR</span> </p>
+								<p class="booking__text"> почувствуйте атмосферу действующего производства, узнайте
+									секреты
+									приготовления пива и&nbsp;попробуйте современный питерский крафт от&nbsp;<span
+										class="text-normal">Plague Brew!</span>
+								</p>
+								<button id="calendarButtonTours" class="booking__button button" type="button"
+									aria-label="button">Забронировать</button>
 							</div>
 						</div>
-						<div class="booking__desc">
-							<p class="booking__text"> соберите своих друзей, членов семьи или коллег на&nbsp;авторскую
-								экскурсию по&nbsp;пивоварне <span class="text-normal">ferMENTOR</span> </p>
-							<p class="booking__text"> почувствуйте атмосферу действующего производства, узнайте секреты
-								приготовления пива и&nbsp;попробуйте современный питерский крафт от&nbsp;<span
-									class="text-normal">Plague Brew!</span>
+					</div>
+
+					<div class="thumbnail-modal" id="imageModal" aria-hidden="true">
+						<div class="thumbnail-modal__overlay"></div>
+						<div class="thumbnail-modal__content">
+							<img class="thumbnail-modal__image" src="" alt="Увеличенное изображение">
+							<button class="thumbnail-modal__close" aria-label="Закрыть модальное окно">&times;</button>
+						</div>
+					</div>
+
+					<div class="calendar-modal" id="calendarModalTours">
+						<div class="calendar-modal__overlay"></div>
+						<div class="calendar-modal__wrapper">
+							<button class="calendar-modal__close" id="closeModal">&times;</button>
+							<div class="calendar-modal__program program">
+								<h2 class="program__title title">Программа экскурсии</h2>
+								<ul class="program__list">
+									<li class="program__item">
+										&mdash;&nbsp; Разогрев welcome-дринком и сетом закусок в баре;
+									</li>
+									<li class="program__item">
+										&mdash;&nbsp; Знакомство с винокуренным оборудованием и магией дистилляции;
+									</li>
+									<li class="program__item">
+										&mdash;&nbsp; Изучение процесса рождения пива — от солода до линии розлива;
+									</li>
+									<li class="program__item">
+										&mdash;&nbsp; Посещение одного из самых больших колд-румов в <span
+											class="normal-text">России;</span>
+									</li>
+									<li class="program__item">
+										&mdash;&nbsp; Дегустация пяти сортов пива и пива прямиком из танка;
+									</li>
+									<li class="program__item">
+										&mdash;&nbsp; А также множество редких фактов и разрушение мифов о любимом
+										напитке;
+									</li>
+								</ul>
+								<ul class="program__details">
+									<li class="program__details-item">
+										Длительность: 2 часа
+									</li>
+									<li class="program__details-item">
+										Группы: от 2 до 10 человек
+									</li>
+									<li class="program__details-item">
+										<span class="text-normal">ул. Комсомола, 1-3</span>
+									</li>
+									<li class="program__details-item">
+										Стоимость: 2500₽
+									</li>
+								</ul>
+							</div>
+							<div class="calendar">
+								<div class="calendar__wrapper">
+									<div class="calendar__header">
+										<h2 class="calendar__title">Выберите дату</h2>
+									</div>
+									<div class="calendar__navigation">
+										<button class="calendar__nav-button" id="prevMonth">&#8592;</button>
+										<span id="currentMonth">Январь 2025</span>
+										<button class="calendar__nav-button" id="nextMonth">&#8594;</button>
+									</div>
+									<div class="calendar__list" id="calendarDays">
+										<div class="calendar__day">Пн</div>
+										<div class="calendar__day">Вт</div>
+										<div class="calendar__day">Ср</div>
+										<div class="calendar__day">Чт</div>
+										<div class="calendar__day">Пт</div>
+										<div class="calendar__day">Сб</div>
+										<div class="calendar__day">Вс</div>
+
+										<div class="calendar__date">1</div>
+										<div class="calendar__date">2</div>
+										<div class="calendar__date">3</div>
+										<div class="calendar__date">4</div>
+										<div class="calendar__date">5</div>
+										<div class="calendar__date">6</div>
+										<div class="calendar__date">7</div>
+									</div>
+								</div>
+								<button class="calendar-modal__button button">Подтвердить</button>
+							</div>
+						</div>
+					</div>
+
+				</section>
+
+				<section class="tours container">
+					<h2 class="tours__title title">Ежедневные туры</h2>
+					<ul class="tours__list">
+						<li class="tours__item tours__item_1 info-box">
+							<div class="info-box__desc">
+								<span class="info-box__title">120 минут</span>
+								<div class="info-box__divider"></div>
+								<span class="info-box__subtitle">фактов, легенд, шуток и пива</span>
+							</div>
+							<div class="info-box__img">
+								<img src="img/tours/tours-1.jpg" alt="" width="700" height="394">
+							</div>
+						</li>
+						<li class="tours__item tours__item_2 info-box">
+							<div class="info-box__desc">
+								<span class="info-box__title">5 сортов и гастросет</span>
+								<div class="info-box__divider"></div>
+								<span class="info-box__subtitle">уже включены в стоимость</span>
+							</div>
+							<div class="info-box__img">
+								<img src="img/tours/tours-2.jpg" alt="" width="700" height="394">
+							</div>
+						</li>
+						<li class="tours__item tours__item_3 info-box">
+							<div class="info-box__desc">
+								<span class="info-box__title">до 10-ти человек</span>
+								<div class="info-box__divider"></div>
+								<span class="info-box__subtitle">в группе</span>
+							</div>
+							<div class="info-box__img">
+								<img src="img/tours/tours-3.jpg" alt="" width="700" height="394">
+							</div>
+						</li>
+						<li class="tours__item tours__item_4 info-box">
+							<div class="info-box__desc">
+								<span class="info-box__title">2500 ₽</span>
+								<div class="info-box__divider"></div>
+								<span class="info-box__subtitle">за персону</span>
+							</div>
+							<div class="info-box__img">
+								<img src="img/tours/tours-4.jpg" alt="" width="700" height="394">
+							</div>
+						</li>
+					</ul>
+				</section>
+
+				<section class="accordion container">
+					<h2 class="accordion__title title">Отвечаем на частые вопросы</h2>
+					<div class="accordion__item">
+						<div class="accordion__header">
+							Как купить билеты на экскурсию?
+							<div class="accordion__plus"></div>
+						</div>
+						<div class="accordion__content">
+							<p>Забронировать удобную дату и время и оплатить экскурсию можно на нашем сайте<br>
+								Нажмите
+								<span class="accordion__link" id="calendarButtonToursQuestion">здесь</span>
 							</p>
-							<button id="calendarButtonTours" class="booking__button button" type="button"
-								aria-label="button">Забронировать</button>
 						</div>
 					</div>
-				</div>
-
-				<div class="booking-modal" id="imageModal" aria-hidden="true">
-					<div class="booking-modal__overlay"></div>
-					<div class="booking-modal__content">
-						<img class="booking-modal__image" src="" alt="Увеличенное изображение">
-						<button class="booking-modal__close" aria-label="Закрыть модальное окно">&times;</button>
+					<div class="accordion__item">
+						<div class="accordion__header">
+							Как приобрести подарочный сертификат на экскурсию?
+							<div class="accordion__plus"></div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Вы можете приобрести физические подарочные сертификаты на экскурсию в нашем баре
+								<span class="text-normal">Hop Hunting Club</span>
+							</p>
+						</div>
 					</div>
-				</div>
-
-				<div class="calendar-modal" id="calendarModalTours">
-					<div class="calendar-modal__overlay"></div>
-					<div class="calendar-modal__wrapper">
-						<button class="calendar-modal__close" id="closeModal">&times;</button>
-						<div class="calendar-modal__program program">
-							<h2 class="program__title title">Программа экскурсии</h2>
-							<ul class="program__list">
-								<li class="program__item">
-									&mdash;&nbsp; Разогрев welcome-дринком и сетом закусок в баре;
+					<div class="accordion__item">
+						<div class="accordion__header">
+							Есть ли возрастные ограничения для участия в туре?
+							<div class="accordion__plus"></div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Все посетители на территории должны быть старше 18 лет
+							</p>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__header">
+							Есть ли ограничения по количеству участников в группе?
+							<div class="accordion__plus"></div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								В экскурсионной группе может быть от 2 до 10 человек<br>
+								Если вы хотите эксклюзивную экскурсию без посторонних, пожалуйста, предупредите нас об
+								этом
+								заранее по телефону: +7 981 762 47 43
+							</p>
+						</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__header">
+							Что включено в тур?
+							<div class="accordion__plus"></div>
+						</div>
+						<div class="accordion__content">Программа экскурсии:
+							<ul class="accordion__list">
+								<li>
+									&mdash;&nbsp; Welcome-дринк и сет закусок в баре <span class="text-normal">Hop
+										Hunting Club</span>
 								</li>
-								<li class="program__item">
-									&mdash;&nbsp; Знакомство с винокуренным оборудованием и магией дистилляции;
+								<li>
+									&mdash;&nbsp; Знакомство с пивоваренным оборудованием и процессом дистилляции в
+									шоуруме
+									<span class="text-normal">«Невской Винокурни»</span>
 								</li>
-								<li class="program__item">
-									&mdash;&nbsp; Изучение процесса рождения пива — от солода до линии розлива;
+								<li>
+									&mdash;&nbsp; Прогулка по пивоварне <span class="text-normal">ferMENTOR</span> и
+									знакомство со всеми
+									этапами рождения пива: от солода
+									до
+									линии розлива
 								</li>
-								<li class="program__item">
-									&mdash;&nbsp; Посещение одного из самых больших колд-румов в <span
-										class="normal-text">России;</span>
+								<li>
+									&mdash;&nbsp; Посещение одного из самых больших колдрумов в <span
+										class="text-normal">России</span>
 								</li>
-								<li class="program__item">
-									&mdash;&nbsp; Дегустация пяти сортов пива и пива прямиком из танка;
+								<li>
+									&mdash;&nbsp; Редкие факты и разрушение мифов о любимом напитке от нашего
+									экскурсовода
 								</li>
-								<li class="program__item">
-									&mdash;&nbsp; А также множество редких фактов и разрушение мифов о любимом напитке;
+								<li>
+									&mdash;&nbsp; Дегустация в процессе экскурсии 5 сортов пива и возможность
+									попробовать пиво прямиком
+									из
+									танка
 								</li>
 							</ul>
-							<ul class="program__details">
-								<li class="program__details-item">
-									<svg>
-										<use xlink:href="icons/sprite.svg#clock"></use>
-									</svg>
-									Длительность: 2 часа
-								</li>
-								<li class="program__details-item">
-									<svg>
-										<use xlink:href="icons/sprite.svg#user"></use>
-									</svg>
-									Группы: от 2 до 10 человек
-								</li>
-								<li class="program__details-item">
-									<svg>
-										<use xlink:href="icons/sprite.svg#location"></use>
-									</svg>
-									<span class="text-normal">ул. Комсомола, 1-3</span>
-								</li>
-								<li class="program__details-item">
-									<svg>
-										<use xlink:href="icons/sprite.svg#check"></use>
-									</svg>
-									Стоимость: 2500₽
-								</li>
-							</ul>
+							<br>
+							Отличное настроение и множество положительных эмоций гарантировано!
 						</div>
-						<div class="calendar">
-							<div class="calendar__wrapper">
-								<div class="calendar__header">
-									<h2 class="calendar__title">Выберите дату</h2>
-								</div>
-								<div class="calendar__navigation">
-									<button class="calendar__nav-button" id="prevMonth">&#8592;</button>
-									<span id="currentMonth">Январь 2025</span>
-									<button class="calendar__nav-button" id="nextMonth">&#8594;</button>
-								</div>
-								<div class="calendar__list" id="calendarDays">
-									<div class="calendar__day">Пн</div>
-									<div class="calendar__day">Вт</div>
-									<div class="calendar__day">Ср</div>
-									<div class="calendar__day">Чт</div>
-									<div class="calendar__day">Пт</div>
-									<div class="calendar__day">Сб</div>
-									<div class="calendar__day">Вс</div>
+					</div>
+					<div class="accordion__item">
+						<div class="accordion__header">
+							Какое пиво варит пивоварня <span class="text-normal">ferMENTOR</span>?
+							<div class="accordion__plus"></div>
+						</div>
+						<div class="accordion__content">
+							<p>
+								Мы варим полную линейку пива для <span class="text-normal">Plague Brew,</span>
+								а также в качестве контрактной пивоварни
+								производим напитки для таких пивоварен как
+								<span class="uppercase">Russian North, Pivoteka, Switch, Time Bomb,
+									Horror, Mitra
+								</span>
+							</p>
+						</div>
+					</div>
+				</section>
 
-									<div class="calendar__date">1</div>
-									<div class="calendar__date">2</div>
-									<div class="calendar__date">3</div>
-									<div class="calendar__date">4</div>
-									<div class="calendar__date">5</div>
-									<div class="calendar__date">6</div>
-									<div class="calendar__date">7</div>
-								</div>
-							</div>
-							<button class="calendar-modal__button button">Подтвердить</button>
-						</div>
-					</div>
-				</div>
-
-			</section>
-
-			<section class="tours container">
-				<h2 class="tours__title title">Ежедневные туры</h2>
-				<ul class="tours__list">
-					<li class="tours__item tours__item_1 info-box">
-						<div class="info-box__desc">
-							<span class="info-box__title">120 минут</span>
-							<div class="info-box__divider"></div>
-							<span class="info-box__subtitle">фактов, легенд, шуток и пива</span>
-						</div>
-						<div class="info-box__img">
-							<img src="img/tours/tours-1.jpg" alt="" width="700" height="394">
-						</div>
-					</li>
-					<li class="tours__item tours__item_2 info-box">
-						<div class="info-box__desc">
-							<span class="info-box__title">5 сортов и гастросет</span>
-							<div class="info-box__divider"></div>
-							<span class="info-box__subtitle">уже включены в стоимость</span>
-						</div>
-						<div class="info-box__img">
-							<img src="img/tours/tours-2.jpg" alt="" width="700" height="394">
-						</div>
-					</li>
-					<li class="tours__item tours__item_3 info-box">
-						<div class="info-box__desc">
-							<span class="info-box__title">до 10-ти человек</span>
-							<div class="info-box__divider"></div>
-							<span class="info-box__subtitle">в группе</span>
-						</div>
-						<div class="info-box__img">
-							<img src="img/tours/tours-3.jpg" alt="" width="700" height="394">
-						</div>
-					</li>
-					<li class="tours__item tours__item_4 info-box">
-						<div class="info-box__desc">
-							<span class="info-box__title">2500 ₽</span>
-							<div class="info-box__divider"></div>
-							<span class="info-box__subtitle">за персону</span>
-						</div>
-						<div class="info-box__img">
-							<img src="img/tours/tours-4.jpg" alt="" width="700" height="394">
-						</div>
-					</li>
-				</ul>
-			</section>
-
-			<section class="accordion container">
-				<h2 class="accordion__title title">Отвечаем на частые вопросы</h2>
-				<div class="accordion__item">
-					<div class="accordion__header">
-						Как купить билеты на экскурсию?
-						<div class="accordion__plus"></div>
-					</div>
-					<div class="accordion__content">
-						<p>Забронировать удобную дату и время и оплатить экскурсию можно на нашем сайте<br>
-							Нажмите
-							<span class="accordion__link" id="calendarButtonToursQuestion">здесь</span>
-						</p>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__header">
-						Как приобрести подарочный сертификат на экскурсию?
-						<div class="accordion__plus"></div>
-					</div>
-					<div class="accordion__content">
-						<p>
-							Вы можете приобрести физические подарочные сертификаты на экскурсию в нашем баре
-							<span class="text-normal">Hop Hunting Club</span>
-						</p>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__header">
-						Есть ли возрастные ограничения для участия в туре?
-						<div class="accordion__plus"></div>
-					</div>
-					<div class="accordion__content">
-						<p>
-							Все посетители на территории должны быть старше 18 лет
-						</p>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__header">
-						Есть ли ограничения по количеству участников в группе?
-						<div class="accordion__plus"></div>
-					</div>
-					<div class="accordion__content">
-						<p>
-							В экскурсионной группе может быть от 2 до 10 человек<br>
-							Если вы хотите эксклюзивную экскурсию без посторонних, пожалуйста, предупредите нас об этом
-							заранее по телефону: +7 981 762 47 43
-						</p>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__header">
-						Что включено в тур?
-						<div class="accordion__plus"></div>
-					</div>
-					<div class="accordion__content">Программа экскурсии:
-						<ul class="accordion__list">
-							<li>
-								&mdash;&nbsp; Welcome-дринк и сет закусок в баре <span class="text-normal">Hop Hunting Club</span>
-							</li>
-							<li>
-								&mdash;&nbsp; Знакомство с пивоваренным оборудованием и процессом дистилляции в шоуруме
-								<span class="text-normal">«Невской Винокурни»</span>
-							</li>
-							<li>
-								&mdash;&nbsp; Прогулка по пивоварне <span class="text-normal">ferMENTOR</span> и знакомство со всеми
-								этапами рождения пива: от солода
-								до
-								линии розлива
-							</li>
-							<li>
-								&mdash;&nbsp; Посещение одного из самых больших колдрумов в <span class="text-normal">России</span>
-							</li>
-							<li>
-								&mdash;&nbsp; Редкие факты и разрушение мифов о любимом напитке от нашего экскурсовода
-							</li>
-							<li>
-								&mdash;&nbsp; Дегустация в процессе экскурсии 5 сортов пива и возможность попробовать пиво прямиком
-								из
-								танка
-							</li>
-						</ul>
-						<br>
-						Отличное настроение и множество положительных эмоций гарантировано!
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__header">
-						Какое пиво варит пивоварня <span class="text-normal">ferMENTOR</span>?
-						<div class="accordion__plus"></div>
-					</div>
-					<div class="accordion__content">
-						<p>
-							Мы варим полную линейку пива для <span class="text-normal">Plague Brew,</span>
-							а также в качестве контрактной пивоварни
-							производим напитки для таких пивоварен как
-							<span class="uppercase">Russian North, Pivoteka, Switch, Time Bomb,
-								Horror, Mitra
-							</span>
-						</p>
-					</div>
-				</div>
-			</section>
+			</div>
 
 		</main>
 
