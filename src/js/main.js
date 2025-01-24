@@ -10,6 +10,6 @@ hamburger();
 selects();
 accordion();
 thumbnail();
-calendar();
+// calendar();
 stickyHeader();
 changeText();
