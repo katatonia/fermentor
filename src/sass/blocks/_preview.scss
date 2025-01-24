@@ -32,12 +32,17 @@
 		gap: 0.8333rem;
 
 		.preview__content {
-			max-width: 90%;
 			padding: 0.8333rem;
 		}
 
 		.preview__title {
 			font-size: var.$fz-subtitle;
+		}
+
+		@media (max-width: 1366px) {
+			.preview__content {
+				gap: 1rem;
+			}
 		}
 
 		@include vp-1023 {
