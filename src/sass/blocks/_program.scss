@@ -9,6 +9,12 @@
 		font-size: $fz-subtitle;
 	}
 
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		gap: 0.625rem;
+	}
+
 	&__list {
 		display: flex;
 		flex-direction: column;

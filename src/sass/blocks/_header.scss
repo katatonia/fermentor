@@ -6,7 +6,7 @@
 	top: 0;
 	left: 0;
 	z-index: 4;
-	height: 100px;
+	height: 4.1667rem;
 
 	&.scrolled {
 		background-color: rgba(0, 0, 0, .7);
@@ -29,7 +29,7 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		height: 100px;
+		height: 4.1667rem;
 
 		@include vp-767 {
 			justify-content: flex-end;
@@ -90,7 +90,7 @@
 
 			img {
 				width: 100%;
-				max-width: 250px;
+				max-width: 10.4167rem;
 			}
 
 			@include vp-767 {

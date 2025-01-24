@@ -44,17 +44,14 @@
 			.preview__content {
 				max-width: 100%;
 				height: 100%;
+				padding: 0;
+				padding-top: 0.8333rem;
 			}
 		}
 
 		@include vp-767 {
 			flex-direction: column;
 			gap: 6.25rem;
-
-			.preview__content {
-				max-width: 100%;
-				height: 100%;
-			}
 		}
 	}
 
@@ -138,14 +135,16 @@
 
 		@include vp-1023 {
 			position: relative;
-			padding: 20px;
+			padding: 0;
+			padding-top: 0.8333rem;
 			max-width: 100%;
+			border: none;
 		}
 	}
 
 	&__text {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 0.8333rem;
 	}
 }

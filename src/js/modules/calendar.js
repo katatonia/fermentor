@@ -42,13 +42,13 @@ export const calendar = () => {
 
 	function openModal(modal, calendarDaysElement, currentMonthElement) {
 		modal.classList.add("visible");
-		document.body.style.overflow = "hidden"; // Запрет прокрутки
+		document.body.classList.add('lock'); // Запрет прокрутки
 		renderCalendar(currentDate, calendarDaysElement, currentMonthElement);
 	}
 
 	function closeModal(modal) {
 		modal.classList.remove("visible");
-		document.body.style.overflow = ""; // Восстановление прокрутки
+		document.body.classList.remove('lock'); // Восстановление прокрутки
 	}
 
 	// Обработчик для всех кнопок и модальных окон

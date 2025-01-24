@@ -11,3 +11,9 @@
 .uppercase {
 	text-transform: uppercase;
 }
+
+.lock {
+	overflow: hidden;
+	-webkit-overflow-scrolling: none;
+	touch-action: none;
+}
