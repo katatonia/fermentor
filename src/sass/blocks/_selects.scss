@@ -7,6 +7,10 @@
 	justify-content: space-between;
 	gap: 1.6667rem;
 
+	&__title {
+		padding-left: 0.4167rem;
+	}
+
 	&__item {
 		height: 3.3333rem;
 		display: flex;
@@ -24,7 +28,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		padding: 5px 10px;
+		padding: 0.2083rem 0.8333rem 0.2083rem 0.4167rem;
 	}
 
 	&__list {
@@ -59,6 +63,11 @@
 		width: 100%;
 		cursor: pointer;
 		padding: 5px 10px;
+
+		&.selected {
+			background-color: #f0f0f0;
+			color: #000;
+		}
 	}
 
 	&__arrow {
