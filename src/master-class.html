@@ -108,8 +108,8 @@
 									<p> вы&nbsp;освоите каждый этап процесса и&nbsp;сможете удивить друзей
 										и&nbsp;близких собственным пивом </p>
 									<p>Стоимость в группе до 5 человек — 5000 ₽</p>
-									<button id="calendarButtonOffers-1" class="offers__button button" type="button"
-										aria-label="button">Забронировать</button>
+									<button class="offers__button button" type="button" aria-label="button"
+										data-modal="master-class-group">Забронировать</button>
 								</div>
 							</div>
 						</li>
@@ -130,8 +130,8 @@
 										но&nbsp;и&nbsp;с&nbsp;уверенностью, что можете сварить пиво у&nbsp;себя дома
 									</p>
 									<p>Стоимость в группе до 2 человек — 20000 ₽</p>
-									<button id="calendarButtonOffers-2" class="offers__button button" type="button"
-										aria-label="button">Забронировать</button>
+									<button class="offers__button button" type="button" aria-label="button"
+										data-modal="master-class-individual">Забронировать</button>
 								</div>
 							</div>
 						</li>
@@ -150,8 +150,8 @@
 									<p>
 										стоимость для 1 человека — договорная
 									</p>
-									<button id="calendarButtonOffers-3" class="offers__button button" type="button"
-										aria-label="button">Забронировать</button>
+									<button class="offers__button button" type="button" aria-label="button"
+										data-modal="master-class-day">Забронировать</button>
 								</div>
 							</div>
 						</li>
@@ -315,12 +315,11 @@
 		</footer>
 	</div>
 
-	<div class="calendar-modal" id="calendarModalOffers-1">
-		<div class="calendar-modal__overlay"></div>
-		<div class="calendar-modal__wrapper">
-			<button class="calendar-modal__close" id="closeModal">&times;</button>
-			<form class="calendar-modal__form" action="#" method="#">
-				<div class="calendar-modal__program program">
+	<div class="overlay">
+		<div class="modal" id="master-class-group">
+			<button class="modal__close" id="closeModal">&times;</button>
+			<form class="modal__form" action="#" method="#">
+				<div class="program">
 					<h2 class="program__title title">Мастер-класс<br>по пивоварению</h2>
 					<ul class="program__desc">
 						<li class="program__desc-item">
@@ -329,14 +328,13 @@
 						</li>
 						<li class="program__desc-item">
 							Включает в&nbsp;себя лекционную и&nbsp;практическую части, а&nbsp;также
-							дегустацию 4&nbsp;сортов пива&nbsp;и
-							гастрономического сета
+							дегустацию 4&nbsp;сортов пива&nbsp;и&nbsp;гастрономического сета
 						</li>
 						<li class="program__desc-item">
 							Все участвуют в&nbsp;процессе варки, распределяя этапы между друг другом
 						</li>
 						<li class="program__desc-item">
-							Через 2-3 недели вы сможете забрать 1 литр сваренного вами пива
+							Через 2-3 недели вы сможете забрать 1&nbsp;литр сваренного вами пива
 						</li>
 					</ul>
 					<ul class="program__list">
@@ -377,7 +375,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="calendar">
+				<!-- <div class="calendar">
 					<div class="calendar__wrapper">
 						<div class="calendar__header">
 							<h2 class="calendar__title">Выберите дату</h2>
@@ -405,18 +403,17 @@
 							<div class="calendar__date">7</div>
 						</div>
 					</div>
-					<button class="calendar-modal__button button">Подтвердить</button>
-				</div>
+					<button class="calendar__button button">Подтвердить</button>
+				</div> -->
+				<button class="modal__button button">Подтвердить</button>
 			</form>
 		</div>
-	</div>
-	<div class="calendar-modal" id="calendarModalOffers-2">
-		<div class="calendar-modal__overlay"></div>
-		<div class="calendar-modal__wrapper">
-			<button class="calendar-modal__close" id="closeModal">&times;</button>
-			<form class="calendar-modal__form" action="#" method="#">
-				<div class="calendar-modal__program program">
-					<h2 class="program__title title">Индивидуальный мастер-клас<br>по домашнему пивоварению
+
+		<div class="modal" id="master-class-individual">
+			<button class="modal__close" id="closeModal">&times;</button>
+			<form class="modal__form" action="#" method="#">
+				<div class="program">
+					<h2 class="program__title title">Индивидуальный мастер-класс<br>по домашнему пивоварению
 					</h2>
 					<ul class="program__desc">
 						<li class="program__desc-item">
@@ -478,7 +475,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="calendar">
+				<!-- <div class="calendar">
 					<div class="calendar__wrapper">
 						<div class="calendar__header">
 							<h2 class="calendar__title">Выберите дату</h2>
@@ -506,17 +503,15 @@
 							<div class="calendar__date">7</div>
 						</div>
 					</div>
-					<button class="calendar-modal__button button">Подтвердить</button>
-				</div>
+				</div> -->
+				<button class="modal__button button">Подтвердить</button>
 			</form>
 		</div>
-	</div>
-	<div class="calendar-modal" id="calendarModalOffers-3">
-		<div class="calendar-modal__overlay"></div>
-		<form class="calendar__form" action="#" method="#">
-		<div class="calendar-modal__wrapper">
-				<button class="calendar-modal__close" id="closeModal">&times;</button>
-				<div class="calendar-modal__program program">
+
+		<div class="modal" id="master-class-day">
+			<button class="modal__close" id="closeModal">&times;</button>
+			<form class="modal__form" action="#" method="#">
+				<div class="program">
 					<h2 class="program__title title">Индивидуальный мастер-класс по профессиональному
 						пивоварению
 					</h2>
@@ -576,7 +571,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="calendar">
+				<!-- <div class="calendar">
 					<div class="calendar__wrapper">
 						<div class="calendar__header">
 							<h2 class="calendar__title">Выберите дату</h2>
@@ -604,10 +599,12 @@
 							<div class="calendar__date">7</div>
 						</div>
 					</div>
-					<button class="calendar-modal__button button">Подтвердить</button>
-				</div>
+					<button class="calendar__button button">Подтвердить</button>
+				</div> -->
+				<button class="modal__button button">Подтвердить</button>
 			</form>
 		</div>
+
 	</div>
 
 	<script type="module" src="js/main.js"></script>
