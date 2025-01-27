@@ -8,15 +8,14 @@ export const changeText = () => {
 	  }
 
 	  const texts = [
-		"Ваш рецепт",
-		"Наше искусство",
-		"Ваш бренд",
+		"Ваши идеи",
+		"Наши возможности"
 	  ];
 	  let index = 0;
 
 	  setInterval(() => {
 		index = (index + 1) % texts.length; // Переход к следующему тексту (с зацикливанием)
 		textContainer.textContent = texts[index];
-	  }, 2000); // Интервал в 2 секунды
+	  }, 1000); // Интервал в 2 секунды
 	});
   };

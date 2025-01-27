@@ -16,7 +16,7 @@
 		justify-content: center;
 		gap: 20px;
 		padding: 40px 20px;
-		background-color: rgba(0, 0, 0, .7);
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	&__video {
@@ -38,5 +38,13 @@
 
 	&__text {
 		font-size: 0.8333rem;
+	}
+
+	&__logo {
+		display: none;
+
+		@include vp-767 {
+			display: block;
+		}
 	}
 }
