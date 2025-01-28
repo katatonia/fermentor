@@ -28,7 +28,7 @@
 <body>
 	<div class="wrapper">
 
-		<header class="header">
+		<header class="header" id="header">
 			<div class="container">
 				<div class="header__body">
 					<button class="header__hamburger" type="button" aria-label="menu-button">
@@ -62,10 +62,22 @@
 
 		<main class="page">
 
-			<section class="intro container">
+			<section class="video" id="target-block">
+				<div class="video__body">
+					<h2 class="video__title title">Контрактная пивоварня<br>в&nbsp;Санкт-Петербурге</h2>
+					<span>поможем воплотить ваше пиво в&nbsp;реальность</span>
+					<a class="button" href="#about">Сварить пиво с нами</a>
+				</div>
+				<video class="video__video" playsinline loop muted autoplay preload="auto">
+					<source src="video/about/about.webm" type="video/webm">
+					<source src="video/about/about.mp4" type="video/mp4">
+				</video>
+			</section>
+
+			<section class="intro container" id="target-block">
 				<img src="icons/logo.svg" alt="">
 				<p class="intro__text">
-					контрактная пивоварня, основанная в&nbsp;2018 году<br>в <span
+					контрактная пивоварня, основанная в&nbsp;2018 году<br>в&nbsp;<span
 						class="text-normal">Санкт-Петербурге</span> на&nbsp;территории исторического завода <span
 						class="text-normal">&laquo;Арсенал&raquo;</span><br>
 						Мы&nbsp;специализируемся на&nbsp;производстве крафтовых слабоалкогольных и&nbsp;безалкогольных&nbsp;напитков,<br>
@@ -82,7 +94,7 @@
 			<section class="gallery container">
 				<div class="gallery__block-1">
 					<div class="gallery__photo">
-						<img class="gallery__thumbnail" data-full="img/gallery/gallery-1.PNG"
+						<img class="gallery__thumbnail" data-full="img/gallery/gallery-1.png"
 							src="img/gallery/gallery-1.PNG" width="1280" height="1920" alt="">
 					</div>
 					<div class="gallery__photo">
