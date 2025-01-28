@@ -4,8 +4,7 @@
   "description": "ferMENTOR — лаборатория крафтовых напитков",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-		"deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "https://github.com/katatonia",
   "license": "ISC",
