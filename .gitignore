@@ -3,4 +3,4 @@ node_modules
 .idea
 .vscode
 Thumbs.db
-dist
+dist/
