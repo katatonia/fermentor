@@ -1,15 +1,19 @@
-import { hamburger } from "./modules/hamburger.js";
-import { selects } from "./modules/selects.js";
-import { accordion } from "./modules/accordion.js";
-import { thumbnail } from "./modules/thumbnail.js";
-import { stickyHeader } from "./modules/sticky-header.js";
-import { changeText } from "./modules/change-text.js";
-import { modal } from "./modules/modal.js";
+document.addEventListener("DOMContentLoaded", () => {
+    // Проверка наличия и вызов функций модулей
+    function safeCall(fnName) {
+        if (typeof window[fnName] === "function") {
+            window[fnName]();
+        } else {
+            console.error(`Ошибка: ${fnName}() не найдена.`);
+        }
+    }
 
-hamburger();
-selects();
-accordion();
-thumbnail();
-stickyHeader();
-changeText();
-modal();
+    // Вызываем все модули
+    safeCall("hamburger");
+    safeCall("selects");
+    safeCall("accordion");
+    safeCall("thumbnail");
+    safeCall("stickyHeader");
+    safeCall("changeText");
+    safeCall("modal");
+});
