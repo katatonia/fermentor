@@ -67,12 +67,15 @@
 		<main class="page">
 
 			<section class="video" id="target-block">
-				<iframe
-					src="https://www.youtube.com/embed/PkDxxcCM2EE?controls=0&autoplay=1&mute=1&modestbranding=1&rel=0&showinfo=0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-					loading="lazy">
-				</iframe>
+				<div class="video__body">
+					<h2 class="video__title title">Контрактная пивоварня<br>в&nbsp;Санкт-Петербурге</h2>
+					<span>поможем воплотить ваше пиво в&nbsp;реальность</span>
+					<a class="button" href="#contract-brewing">Сварить пиво с нами</a>
+				</div>
+				<video class="video__video" playsinline loop muted autoplay preload="auto">
+					<source src="video/contract-brewing/contract-brewing.webm" type="video/webm">
+					<source src="video/contract-brewing/contract-brewing.mp4" type="video/mp4">
+				</video>
 			</section>
 
 			<section class="intro container">
@@ -255,7 +258,7 @@
 		</div>
 	</div>
 
-	<script type="module" src="js/main.js" defer></script>
+	<script type="module" src="js/main.js"></script>
 
 </body>
 

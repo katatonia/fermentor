@@ -1,85 +1,127 @@
 const gulp = require("gulp");
-const browserSync = require("browser-sync");
+const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const clean = require("gulp-clean");
 
-gulp.task("server", function () {
-	browserSync({
-		server: {
-			baseDir: "src",
-		},
-	});
-
-	gulp.watch("src/*.html").on("change", browserSync.reload);
+// Очистка `dist/` перед сборкой
+gulp.task("clean", function () {
+    return gulp.src("dist", { allowEmpty: true }).pipe(clean());
 });
 
+// Компиляция SCSS → CSS
 gulp.task("styles", function () {
-	return gulp
-		.src("src/sass/**/*.+(scss|sass)")
-		.pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-		.pipe(rename({ suffix: ".min", prefix: "" }))
-		.pipe(autoprefixer())
-		.pipe(cleanCSS({ compatibility: "ie8" }))
-		.pipe(gulp.dest("src/css"))
-		.pipe(browserSync.stream());
+    return gulp
+        .src("src/sass/**/*.+(scss|sass)")
+        .pipe(sass().on("error", sass.logError)) // 📌 Dev: без сжатия
+        .pipe(gulp.dest("src/css")) // 📌 Dev: остается в `src/`
+        .pipe(browserSync.stream());
 });
 
-gulp.task("watch", function () {
-	gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel("styles"));
-	gulp.watch("src/*.html").on("change", gulp.parallel("html"));
+gulp.task("styles:build", function () {
+    return gulp
+        .src("src/sass/**/*.+(scss|sass)")
+        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError)) // 📌 Build: сжато
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(autoprefixer())
+        .pipe(cleanCSS({ compatibility: "ie8" }))
+        .pipe(gulp.dest("dist/css"));
 });
 
-gulp.task("html", function () {
-	return gulp
-		.src("src/*.html")
-		.pipe(htmlmin({ collapseWhitespace: true }))
-		.pipe(gulp.dest("dist/"));
+// Минификация HTML
+gulp.task("html:build", function () {
+    return gulp.src("src/*.html").pipe(htmlmin({ collapseWhitespace: true })).pipe(gulp.dest("dist/"));
 });
 
+// Минификация JS
 gulp.task("scripts", function () {
-	return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
+    return gulp.src("src/js/**/*.js").pipe(gulp.dest("src/js")).pipe(browserSync.stream());
 });
 
+gulp.task("scripts:build", function () {
+    return gulp
+        .src("src/js/main.js")
+        .pipe(terser())
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(gulp.dest("dist/js"));
+});
+
+// Копирование шрифтов
 gulp.task("fonts", function () {
-	return gulp
-		.src("src/fonts/**/*", { encoding: false })
-		.pipe(gulp.dest("dist/fonts"));
+    return gulp.src("src/fonts/**/*").pipe(gulp.dest("dist/fonts"));
 });
 
-gulp.task("videos", function () {
-	return gulp
-		.src("src/video/**/*", { encoding: false })
-		.pipe(gulp.dest("dist/video"));
+// Копирование видео
+gulp.task("copyVideos", function () {
+    return gulp.src("src/video/**/*").pipe(gulp.dest("dist/video"));
 });
 
-gulp.task("icons", function () {
-	return gulp
-		.src("src/icons/**/*", { encoding: false })
-		.pipe(gulp.dest("dist/icons"));
+// Копирование иконок (dev)
+gulp.task("copyIcons", function () {
+    return gulp.src("src/icons/**/*").pipe(gulp.dest("dist/icons"));
 });
 
-gulp.task("images", function () {
-	return gulp
-		.src("src/img/**/*", { encoding: false })
-		.pipe(imagemin())
-		.pipe(gulp.dest("dist/img"));
+// Оптимизация иконок (build)
+gulp.task("optimizeIcons", function () {
+    return gulp
+        .src("src/icons/**/*.{png,jpg,svg,gif,webp}")
+        .pipe(imagemin([
+            imagemin.svgo({ plugins: [{ removeViewBox: false }, { cleanupIDs: false }] }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.gifsicle({ interlaced: true })
+        ]))
+        .pipe(gulp.dest("dist/icons"));
 });
 
-gulp.task(
-	"default",
-	gulp.parallel(
-		"watch",
-		"server",
-		"styles",
-		"scripts",
-		"fonts",
-		"videos",
-		"icons",
-		"html",
-		"images"
-	)
-);
+// Копирование изображений (dev)
+gulp.task("copyImages", function () {
+    return gulp.src("src/img/**/*").pipe(gulp.dest("dist/img"));
+});
+
+// Оптимизация изображений (build)
+gulp.task("optimizeImages", function () {
+    return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
+});
+
+// Запуск локального сервера и отслеживание изменений
+gulp.task("server", function () {
+    browserSync.init({
+        server: {
+            baseDir: "src",
+        },
+    });
+
+    gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel("styles"));
+    gulp.watch("src/*.html").on("change", browserSync.reload);
+    gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
+    gulp.watch("src/fonts/**/*").on("change", browserSync.reload);
+    gulp.watch("src/video/**/*").on("change", browserSync.reload);
+    gulp.watch("src/icons/**/*").on("change", browserSync.reload);
+    gulp.watch("src/img/**/*").on("change", browserSync.reload);
+});
+
+// Dev-режим: просто отслеживает изменения без сжатия
+gulp.task("dev", gulp.series(
+    gulp.parallel("styles", "scripts"),
+    "server"
+));
+
+// Build-режим: очищает `dist/`, сжимает файлы и копирует
+gulp.task("build", gulp.series(
+    "clean",
+    gulp.parallel(
+        "styles:build",
+        "scripts:build",
+        "html:build",
+        "fonts",
+        "copyVideos",
+        "optimizeIcons",
+        "optimizeImages"
+    )
+));
