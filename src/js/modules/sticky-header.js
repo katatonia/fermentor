@@ -3,7 +3,6 @@ window.stickyHeader = function () {
     const header = document.getElementById("header");
 
     if (!targetBlock || !header) {
-        console.warn("Ошибка: `#target-block` или `#header` не найдены!");
         return;
     }
 

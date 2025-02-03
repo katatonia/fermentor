@@ -2,7 +2,6 @@ window.accordion = function () {
     const headers = document.querySelectorAll(".accordion__header");
 
     if (!headers.length) {
-        console.warn("Ошибка: .accordion__header не найден!");
         return;
     }
 

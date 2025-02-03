@@ -3,7 +3,6 @@ window.modal = function () {
     const overlay = document.querySelector(".overlay");
 
     if (!overlay) {
-        console.warn("Ошибка: Элемент `.overlay` не найден!");
         return;
     }
 

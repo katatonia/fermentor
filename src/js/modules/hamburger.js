@@ -6,7 +6,6 @@ window.hamburger = function () {
     const menuLinks = document.querySelectorAll(".header__nav a"); // Ссылки меню
 
     if (!hamburger || !nav || !header) {
-        console.warn("Ошибка: Элементы меню не найдены!");
         return;
     }
 

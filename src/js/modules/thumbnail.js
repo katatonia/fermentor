@@ -7,7 +7,6 @@ window.thumbnail = function () {
 
     // Если модального окна или миниатюр нет, прерываем выполнение
     if (!modal || thumbnails.length === 0) {
-        console.warn("Ошибка: `#imageModal` или `.booking__thumbnail, .gallery__thumbnail` не найдены!");
         return;
     }
 

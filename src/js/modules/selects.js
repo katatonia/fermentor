@@ -3,7 +3,6 @@ window.selects = function () {
     const selectItems = document.querySelectorAll(".selects__item");
 
     if (!selectItems.length) {
-        console.warn("Ошибка: .selects__item не найден!");
         return;
     }
 
