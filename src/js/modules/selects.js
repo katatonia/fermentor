@@ -1,67 +1,69 @@
 window.selects = function () {
-    // Находим все элементы селектов
     const selectItems = document.querySelectorAll(".selects__item");
 
-    if (!selectItems.length) {
-        return;
-    }
+    if (!selectItems.length) return;
 
     selectItems.forEach((selectItem) => {
         const current = selectItem.querySelector(".selects__current");
         const list = selectItem.querySelector(".selects__list");
+        const listItems = list.querySelectorAll(".selects__list-item");
+        const hiddenInput = selectItem.querySelector("input[type='hidden']");
+        const isMultiple = list.classList.contains("selects__list_multiple");
 
-        if (!current || !list) {
-            console.warn("Ошибка: Один из элементов селекта отсутствует в", selectItem);
+        if (!current || !list || !hiddenInput) {
+            console.warn("Ошибка: Не найден один из элементов в", selectItem);
             return;
         }
 
-        const listItems = list.querySelectorAll(".selects__list-item");
-        const isVolumeList = list.classList.contains("selects__list_volume");
+        // Закрываем список по умолчанию
+        list.classList.remove("active");
 
-        // Обработчик клика на текущий элемент
-        current.addEventListener("click", () => {
-            // Закрываем все открытые списки, кроме текущего
-            selectItems.forEach((item) => {
-                const otherList = item.querySelector(".selects__list");
-                if (item !== selectItem && otherList) {
+        // === ОТКРЫТИЕ / ЗАКРЫТИЕ СПИСКА ===
+        current.addEventListener("click", (event) => {
+            event.stopPropagation(); // Останавливаем всплытие
+            document.querySelectorAll(".selects__list").forEach((otherList) => {
+                if (otherList !== list) {
                     otherList.classList.remove("active");
                 }
             });
 
-            // Переключаем видимость текущего списка
             list.classList.toggle("active");
         });
 
-        // Обработчик клика на элемент списка
+        // === ВЫБОР ВАРИАНТА ===
         listItems.forEach((listItem) => {
-            listItem.addEventListener("click", () => {
-                if (isVolumeList) {
-                    // Для списка volume можно выбирать несколько вариантов
+            listItem.addEventListener("click", (event) => {
+                event.stopPropagation(); // Останавливаем всплытие
+
+                if (isMultiple) {
+                    // === МНОЖЕСТВЕННЫЙ ВЫБОР ===
                     listItem.classList.toggle("selected");
 
-                    // Обновляем отображение выбранных элементов в current
-                    const selectedItems = list.querySelectorAll(".selects__list-item.selected");
-                    const selectedText = Array.from(selectedItems)
-                        .map((item) => item.textContent)
-                        .join(", ");
-                    current.textContent = selectedText || "Выберите вариант";
-                } else {
-                    // Для обычных списков — один вариант
-                    current.textContent = listItem.textContent;
+                    // Формируем список выбранных элементов
+                    const selectedItems = Array.from(list.querySelectorAll(".selects__list-item.selected"))
+                        .map(item => item.textContent);
 
-                    // Закрываем список
+                    hiddenInput.value = selectedItems.join(", ");
+                    current.textContent = selectedItems.length ? selectedItems.join(", ") : "Выберите вариант";
+
+                    console.log("Множественный выбор, передано в input:", hiddenInput.value);
+                } else {
+                    // === ОДИНОЧНЫЙ ВЫБОР ===
+                    current.textContent = listItem.textContent;
+                    hiddenInput.value = listItem.textContent;
+
+                    console.log("Одиночный выбор, передано в input:", hiddenInput.value);
+
                     list.classList.remove("active");
                 }
             });
         });
-    });
 
-    // Закрытие селектов при клике вне области
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".selects__item")) {
-            document.querySelectorAll(".selects__list").forEach((list) => {
+        // === ЗАКРЫТИЕ СПИСКА ПРИ КЛИКЕ ВНЕ ===
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".selects__item")) {
                 list.classList.remove("active");
-            });
-        }
+            }
+        });
     });
 };
