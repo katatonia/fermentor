@@ -17,7 +17,6 @@ window.thumbnail = function () {
 
     // Проверяем, есть ли все элементы внутри модального окна
     if (!modalImage || !closeButton || !overlay) {
-        console.warn("Ошибка: Элементы модального окна отсутствуют в `#imageModal`!");
         return;
     }
 

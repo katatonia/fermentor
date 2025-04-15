@@ -1,47 +1,47 @@
 window.modal = function () {
     const body = document.body;
     const overlay = document.querySelector(".overlay");
+    if (!overlay) return;
 
-    if (!overlay) {
-        return;
-    }
+    const modalTriggers = document.querySelectorAll("[data-modal]");
+    const modals = document.querySelectorAll(".modal");
 
-    // Обработчик для открытия модального окна
-    const modalButtons = document.querySelectorAll("[data-modal]");
-    if (modalButtons.length) {
-        modalButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const modalId = button.getAttribute("data-modal");
+    if (modalTriggers.length) {
+        modalTriggers.forEach((trigger) => {
+            trigger.addEventListener("click", (event) => {
+                event.preventDefault(); // Предотвращаем стандартное поведение кнопки
+
+                const modalId = trigger.getAttribute("data-modal");
+
+                if (!modalId) {
+                    return;
+                }
+
+                // Закрываем все модальные окна перед открытием нужного
+                modals.forEach((modal) => modal.classList.remove("active"));
+
+                // Ищем нужное модальное окно и открываем его
                 const modal = document.getElementById(modalId);
+
                 if (modal) {
                     modal.classList.add("active");
                     overlay.classList.add("active");
                     body.classList.add("lock");
                 } else {
-                    console.warn(`Ошибка: Модальное окно с ID "${modalId}" не найдено.`);
+                    return;
                 }
             });
         });
     } else {
-        console.warn("Нет кнопок с атрибутом `data-modal`.");
+        return;
     }
 
-    // Обработчик для закрытия модального окна
-    overlay.addEventListener("click", (e) => {
-        if (
-            e.target.classList.contains("overlay") ||
-            e.target.classList.contains("modal__close")
-        ) {
-            closeModal();
+    // Закрытие модального окна по клику на overlay или кнопку закрытия
+    overlay.addEventListener("click", (event) => {
+        if (event.target.classList.contains("overlay") || event.target.classList.contains("modal__close")) {
+            modals.forEach((modal) => modal.classList.remove("active"));
+            overlay.classList.remove("active");
+            body.classList.remove("lock");
         }
     });
-
-    function closeModal() {
-        document.querySelectorAll(".modal.active").forEach((modal) => {
-            modal.classList.remove("active");
-        });
-        overlay.classList.remove("active");
-        body.classList.remove("lock");
-    }
 };
-

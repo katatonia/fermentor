@@ -11,7 +11,6 @@ window.accordion = function () {
             const plusIcon = header.querySelector(".accordion__plus");
 
             if (!content) {
-                console.warn("Ошибка: Следующий элемент после .accordion__header не найден!");
                 return;
             }
 

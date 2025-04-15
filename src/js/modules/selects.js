@@ -11,7 +11,6 @@ window.selects = function () {
         const isMultiple = list.classList.contains("selects__list_multiple");
 
         if (!current || !list || !hiddenInput) {
-            console.warn("Ошибка: Не найден один из элементов в", selectItem);
             return;
         }
 
@@ -45,14 +44,10 @@ window.selects = function () {
 
                     hiddenInput.value = selectedItems.join(", ");
                     current.textContent = selectedItems.length ? selectedItems.join(", ") : "Выберите вариант";
-
-                    console.log("Множественный выбор, передано в input:", hiddenInput.value);
                 } else {
                     // === ОДИНОЧНЫЙ ВЫБОР ===
                     current.textContent = listItem.textContent;
                     hiddenInput.value = listItem.textContent;
-
-                    console.log("Одиночный выбор, передано в input:", hiddenInput.value);
 
                     list.classList.remove("active");
                 }

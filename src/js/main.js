@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (typeof window[fnName] === "function") {
             window[fnName]();
         } else {
-            console.error(`Ошибка: ${fnName}() не найдена.`);
+            return;
         }
     }
 

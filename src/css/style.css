@@ -541,13 +541,13 @@ footer {
 
 .footer {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 100px;
 }
 @media (max-width: 767px) {
   .footer {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 .footer__col-1 {
