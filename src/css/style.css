@@ -483,6 +483,9 @@ footer {
   .header__menu-item {
     margin: 20px;
   }
+  .header__menu-item_logo {
+    margin: 0;
+  }
 }
 .header__menu-link:hover {
   opacity: 0.7;
@@ -497,7 +500,7 @@ footer {
 }
 @media (max-width: 767px) {
   .header__menu-link_logo {
-    margin: 10px;
+    display: none;
   }
 }
 .header__menu-link_logo:hover {

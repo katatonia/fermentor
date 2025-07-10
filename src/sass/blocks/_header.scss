@@ -79,6 +79,10 @@
 	&__menu-item {
 		@include vp-767 {
 			margin: 20px;
+
+			&_logo {
+				margin: 0;
+			}
 		}
 	}
 
@@ -94,7 +98,7 @@
 			}
 
 			@include vp-767 {
-				margin: 10px;
+				display: none;
 			}
 
 			&:hover {
