@@ -87,7 +87,7 @@
 	}
 
 	&__menu-link {
-		@include hover;
+		font-size: 1.1111rem;
 
 		&_logo {
 			display: block;
@@ -104,6 +104,12 @@
 			&:hover {
 				opacity: 1;
 			}
+		}
+
+		@include hover;
+
+		@include vp-767 {
+			font-size: 1.125rem;
 		}
 	}
 

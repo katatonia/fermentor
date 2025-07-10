@@ -20,12 +20,12 @@
 	&__item {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: minmax(320px, 400px) minmax(320px, 560px);
+		grid-template-columns: minmax(320px, 420px) minmax(320px, 420px);
 		margin: 0 auto;
 
 		&_2,
 		&_4 {
-			grid-template-columns: minmax(320px, 560px) minmax(320px, 400px);
+			grid-template-columns: minmax(320px, 420px) minmax(320px, 420px);
 
 			.info-box__desc {
 				order: 2;
