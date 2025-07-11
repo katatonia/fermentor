@@ -45,15 +45,15 @@
 		font-size: var.$fz-subtitle;
 	}
 
-	&__text {
-		font-size: 1.1111rem;
-	}
-
 	&__logo {
 		display: none;
 
 		@include vp-767 {
 			display: block;
 		}
+	}
+
+	&__button {
+		margin-top: 20px
 	}
 }

@@ -87,7 +87,10 @@
 	}
 
 	&__menu-link {
-		font-size: 1.1111rem;
+		font: {
+			family: var.$ff-bebas-neue-regular;
+			size: 1.1111rem;
+		}
 
 		&_logo {
 			display: block;

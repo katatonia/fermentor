@@ -23,13 +23,9 @@
 
 	&__content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: minmax(280px, 420px) 1fr;
 		gap: 1.6667rem;
 		align-items: stretch;
-
-		@include vp-1023 {
-			grid-template-columns: 1fr minmax(280px, 330px);
-		}
 
 		@include vp-767 {
 			grid-template-columns: 1fr;

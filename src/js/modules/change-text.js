@@ -5,7 +5,7 @@ window.changeText = function () {
         return;
     }
 
-    const texts = ["Ваши идеи", "Наши возможности"];
+    const texts = ["Your ideas", "Our capabilities"];
     let index = 0;
 
     function updateText() {

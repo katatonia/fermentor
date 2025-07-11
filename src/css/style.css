@@ -144,16 +144,29 @@ input[type=number] {
   font-display: swap;
   src: url("../fonts/RobotoSlab-Bold.woff") format("woff"), url("../fonts/RobotoSlab-Bold.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Rubik-Light";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Rubik-Light.woff") format("woff"), url("../fonts/Rubik-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "BebasNeue-Regular";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+}
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "MyriadPro", "Arial", sans-serif;
+  font-family: "Rubik-Light", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
   font-style: normal;
-  text-transform: lowercase;
   scroll-behavior: smooth;
   background-color: #000000;
   color: #FFFFFF;
@@ -203,17 +216,24 @@ footer {
   max-width: 300px;
   width: 100%;
   display: block;
-  font-size: 1rem;
+  font-size: 0.8889rem;
   padding: 10px;
   border: 1px solid #FFFFFF;
   text-align: center;
-  color: #FFFFFF;
   text-transform: lowercase;
   cursor: pointer;
+  transition: 0.3s;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 .button:hover {
-  opacity: 0.7;
-  transition: 0.3s;
+  color: #FFFFFF;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .button {
+    font-size: 0.875rem;
+  }
 }
 
 .select {
@@ -232,7 +252,7 @@ footer {
 }
 
 .title {
-  font-family: "RobotoSlab", "Arial", serif;
+  font-family: "BebasNeue-Regular", "Arial", serif;
   font-size: 1.5556rem;
   text-transform: uppercase;
 }
@@ -385,9 +405,6 @@ footer {
 .video__subtitle {
   font-size: 1.3333rem;
 }
-.video__text {
-  font-size: 1.1111rem;
-}
 .video__logo {
   display: none;
 }
@@ -395,6 +412,9 @@ footer {
   .video__logo {
     display: block;
   }
+}
+.video__button {
+  margin-top: 20px;
 }
 
 .header {
@@ -480,6 +500,7 @@ footer {
   }
 }
 .header__menu-link {
+  font-family: "BebasNeue-Regular", "Arial", serif;
   font-size: 1.1111rem;
 }
 .header__menu-link_logo {
@@ -939,14 +960,9 @@ footer {
 }
 .offers__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(280px, 420px) 1fr;
   gap: 1.6667rem;
   align-items: stretch;
-}
-@media (max-width: 1023px) {
-  .offers__content {
-    grid-template-columns: 1fr minmax(280px, 330px);
-  }
 }
 @media (max-width: 767px) {
   .offers__content {

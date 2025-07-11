@@ -4,15 +4,24 @@
 	max-width: 300px;
 	width: 100%;
 	display: block;
-	font-size: 1rem;
+	font-size: 0.8889rem;
 	padding: 10px;
 	border: 1px solid var.$white;
 	text-align: center;
-	color: var.$white;
 	text-transform: lowercase;
 	cursor: pointer;
+	transition: .3s;
+	background-color: var.$white;
+	color: var.$black;
 
-	@include hover;
+	&:hover {
+		color: var.$white;
+		background-color: transparent;
+	}
+
+	@include vp-767 {
+		font-size: 0.875rem;
+	}
 }
 
 .select {
