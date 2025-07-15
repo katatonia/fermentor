@@ -83,10 +83,6 @@ input[type=number] {
   text-transform: none;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .lock {
   overflow: hidden;
   -webkit-overflow-scrolling: none;
@@ -107,6 +103,15 @@ input[type=number] {
 }
 .overlay.active {
   display: flex;
+}
+
+.toggle-visible {
+  opacity: 0;
+  visibility: hidden;
+}
+.toggle-visible_visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 @font-face {
@@ -382,26 +387,7 @@ footer {
   align-items: center;
   gap: 1rem;
   margin-bottom: 2.25rem;
-}
-.video__logo {
-  display: none;
-}
-@media (max-width: 767px) {
-  .video__logo {
-    display: block;
-  }
-}
-.video__button {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-.video__button a {
-  width: 100%;
-  display: block;
-}
-.video__button:hover {
-  background-color: #FFFFFF;
-  color: #000000;
+  text-align: center;
 }
 
 .header {
@@ -413,7 +399,7 @@ footer {
   height: 90px;
 }
 .header.scrolled {
-  background-color: #1B1B1B;
+  background-color: #000000;
 }
 @media (max-width: 767px) {
   .header {
@@ -436,7 +422,7 @@ footer {
 }
 @media (max-width: 767px) {
   .header__body {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
 .header__nav {
@@ -444,7 +430,6 @@ footer {
 }
 @media (max-width: 767px) {
   .header__nav {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -455,10 +440,13 @@ footer {
     background-color: #000000;
     overflow-y: hidden;
     align-items: flex-start;
+    transform: translateX(100%);
+    transition: 0.3s;
   }
   .header__nav_active {
     display: flex;
     z-index: 2;
+    transform: translateX(0);
   }
 }
 .header__menu {
@@ -475,12 +463,20 @@ footer {
     flex-direction: column;
     top: 50%;
     transform: translateY(-50%);
+    gap: 1rem;
   }
 }
 .header__menu-group {
   display: flex;
   justify-content: space-between;
   flex: 1;
+}
+@media (max-width: 767px) {
+  .header__menu-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 .header__menu-item {
   font-family: "Oswald-SemiBold", "Arial", serif;
@@ -539,6 +535,7 @@ footer {
     gap: 10px;
     cursor: pointer;
     z-index: 3;
+    margin-left: auto;
   }
   .header__hamburger span {
     display: block;
@@ -685,6 +682,11 @@ footer {
   justify-content: center;
   gap: 1.25rem;
 }
+@media (max-width: 767px) {
+  .preview__blocks {
+    flex-direction: column;
+  }
+}
 .preview__image {
   position: relative;
   gap: 20px;
@@ -769,6 +771,11 @@ footer {
     padding: 0.8333rem;
     max-width: 100%;
     border: none;
+  }
+}
+@media (max-width: 767px) {
+  .preview__body {
+    background-color: #1B1B1B;
   }
 }
 .preview__content {

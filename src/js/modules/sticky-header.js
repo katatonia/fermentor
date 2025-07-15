@@ -1,23 +1,25 @@
 window.stickyHeader = function () {
-    const targetBlock = document.getElementById("target-block");
-    const header = document.getElementById("header");
+	const targetBlock = document.getElementById("target-block");
+	const header = document.getElementById("header");
+	const logo = document.getElementById("header__logo");
 
-    if (!targetBlock || !header) {
-        return;
-    }
+	if (!targetBlock || !header || !logo) {
+		return;
+	}
 
-    let targetHeight = targetBlock.offsetHeight - header.offsetHeight;
+	let targetHeight = targetBlock.offsetHeight - header.offsetHeight;
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > targetHeight) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
+	window.addEventListener("scroll", () => {
+		if (window.scrollY > targetHeight) {
+			header.classList.add("scrolled");
+			logo.classList.add("toggle-visible_visible");
+		} else {
+			header.classList.remove("scrolled");
+			logo.classList.remove("toggle-visible_visible");
+		}
+	});
 
-    // Обновляем высоту при изменении размера окна
-    window.addEventListener("resize", () => {
-        targetHeight = targetBlock.offsetHeight;
-    });
+	window.addEventListener("resize", () => {
+		targetHeight = targetBlock.offsetHeight - header.offsetHeight;
+	});
 };

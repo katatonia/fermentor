@@ -3,7 +3,8 @@ window.hamburger = function () {
     const nav = document.querySelector(".header__nav");
     const header = document.querySelector(".header");
     const body = document.body;
-    const menuLinks = document.querySelectorAll(".header__nav a"); // Ссылки меню
+    const menuLinks = document.querySelectorAll(".header__nav a");
+	const logo = document.querySelector(".header__logo");
 
     if (!hamburger || !nav || !header) {
         return;

@@ -52,28 +52,6 @@
 		align-items: center;
 		gap: 1rem;
 		margin-bottom: 2.25rem;
-	}
-
-	&__logo {
-		display: none;
-
-		@include vp-767 {
-			display: block;
-		}
-	}
-
-	&__button {
-		background-color: var.$black;
-		color: var.$white;
-
-		a {
-			width: 100%;
-			display: block;
-		}
-
-		&:hover {
-			background-color: var.$white;
-			color: var.$black;
-		}
+		text-align: center;
 	}
 }

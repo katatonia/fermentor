@@ -8,10 +8,6 @@
 	text-transform: none;
 }
 
-.uppercase {
-	text-transform: uppercase;
-}
-
 .lock {
 	overflow: hidden;
 	-webkit-overflow-scrolling: none;
@@ -32,5 +28,15 @@
 
 	&.active {
 		display: flex;
+	}
+}
+
+.toggle-visible {
+	opacity: 0;
+	visibility: hidden;
+
+	&_visible {
+		opacity: 1;
+		visibility: visible;
 	}
 }
