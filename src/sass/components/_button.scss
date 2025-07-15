@@ -4,11 +4,14 @@
 	max-width: 300px;
 	width: 100%;
 	display: block;
-	font-size: 0.8889rem;
+	font: {
+		size: 1rem;
+		family: var.$ff-oswald-semi-bold;
+	}
+	text-transform: uppercase;
 	padding: 10px;
 	border: 1px solid var.$white;
 	text-align: center;
-	text-transform: lowercase;
 	cursor: pointer;
 	transition: .3s;
 	background-color: var.$white;
@@ -16,7 +19,7 @@
 
 	&:hover {
 		color: var.$white;
-		background-color: transparent;
+		background-color: var.$black;
 	}
 
 	@include vp-767 {

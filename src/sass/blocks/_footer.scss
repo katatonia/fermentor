@@ -2,12 +2,18 @@
 
 .footer {
 	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	padding-bottom: 100px;
+	padding: 100px 0;
+	background-color: var.$nero;
+
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 
 	@include vp-767 {
-		grid-template-columns: 1fr;
+		&__body {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__col-1 {
@@ -69,7 +75,7 @@
 
 		img {
 			width: 100%;
-			max-width: 10.4167rem;
+			max-width: 250px
 		}
 
 		@include vp-767 {

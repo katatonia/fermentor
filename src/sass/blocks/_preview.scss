@@ -1,10 +1,11 @@
 @use "global/_var.scss";
 
 .preview {
-	padding-bottom: 8.3333rem;
+	padding: 8.3333rem 2.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.8333rem;
+	background-color: var.$white-smoke;
 
 	@include vp-767 {
 		gap: 6.25rem;
@@ -13,65 +14,16 @@
 		padding-right: 0.8333rem;
 	}
 
-	&__block-1 {
-		@media (min-width: 1024px) {
-			.preview__image-title {
-				display: flex;
-				justify-content: center;
-			}
-		}
-
-		@include vp-1023 {
-			display: flex;
-			flex-direction: column;
-		}
-
-		@include vp-767 {
-			flex-direction: column;
-			gap: 6.25rem;
-
-			.preview__content {
-				padding: 0;
-				padding-top: 0.8333rem;
-			}
-		}
+	&__title {
+		color: var.$black;
+		text-align: center;
 	}
 
-	&__block-2 {
+	&__blocks {
 		display: flex;
-		gap: 0.8333rem;
-
-		.preview__content {
-			max-width: 450px;
-			padding: 0.8333rem;
-		}
-
-		.preview__title {
-			font-size: var.$fz-subtitle;
-		}
-
-		@media (max-width: 1366px) {
-			.preview__content {
-				gap: 1rem;
-			}
-		}
-
-		@include vp-1023 {
-			.preview__content {
-				height: 100%;
-				padding-top: 0.8333rem;
-			}
-		}
-
-		@include vp-767 {
-			flex-direction: column;
-			gap: 6.25rem;
-
-			.preview__content {
-				padding: 0;
-				padding-top: 0.8333rem;
-			}
-		}
+		align-items: center;
+		justify-content: center;
+		gap: 1.25rem;
 	}
 
 	&__image {
@@ -91,6 +43,12 @@
 		display: none;
 
 		@media (min-width: 1024px) {
+			font: {
+				size: 22px;
+				family: var.$ff-oswald-semi-bold;
+			}
+
+			text-transform: uppercase;
 			display: block;
 			position: absolute;
 			bottom: 0;
@@ -101,7 +59,7 @@
 		}
 	}
 
-	&__content-wrapper {
+	&__block {
 		position: relative;
 		overflow: hidden;
 		cursor: pointer;
@@ -142,7 +100,7 @@
 		}
 	}
 
-	&__content {
+	&__body {
 		position: absolute;
 		transition: transform 0.3s ease-in-out;
 		width: 100%;
@@ -162,9 +120,28 @@
 		}
 	}
 
-	&__text {
+	&__content {
 		display: flex;
 		flex-direction: column;
 		gap: 0.8333rem;
+	}
+
+	&__paragraph {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__paragraph-title {
+		font: {
+			family: var.$ff-oswald-semi-bold;
+			size: 1.25rem;
+		}
+
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+
+	&__paragraph-text {
+		margin-bottom: 0.5rem;
 	}
 }

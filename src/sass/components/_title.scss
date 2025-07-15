@@ -2,13 +2,10 @@
 
 .title {
 	font: {
-		family: var.$ff-bebas-neue-regular;
-		size: var.$fz-title;
+		family: var.$ff-oswald-bold;
+		size: 2.25rem;
 	}
-
+	color: var.$nero;
 	text-transform: uppercase;
-}
-
-.h1 {
-	font-size: var.$h1;
+	margin-bottom: 2rem;
 }

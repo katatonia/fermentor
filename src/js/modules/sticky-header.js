@@ -6,7 +6,7 @@ window.stickyHeader = function () {
         return;
     }
 
-    let targetHeight = targetBlock.offsetHeight;
+    let targetHeight = targetBlock.offsetHeight - header.offsetHeight;
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > targetHeight) {
