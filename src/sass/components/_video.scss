@@ -45,6 +45,13 @@
 		font-size: var.$fz-subtitle;
 	}
 
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
 	&__logo {
 		display: none;
 

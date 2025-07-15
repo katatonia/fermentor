@@ -1,7 +1,8 @@
 @use "global/_var.scss";
 
 .partners {
-	padding-bottom: 8.3333rem;
+	padding: 8.3333rem 0;
+	background-color: var.$nero;
 
 	&__list {
 		display: grid;
