@@ -1,18 +1,11 @@
 @use "global/_var.scss";
 
 .preview {
-	padding: 8.3333rem 2.5rem;
+	max-width: 1920px;
+    margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	gap: 0.8333rem;
 	background-color: var.$white-smoke;
-
-	@include vp-767 {
-		gap: 6.25rem;
-		margin: 0 auto;
-		padding-left: 0.8333rem;
-		padding-right: 0.8333rem;
-	}
 
 	&__title {
 		color: var.$black;
@@ -20,12 +13,17 @@
 	}
 
 	&__blocks {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: grid;
+		align-items: start;
 		gap: 1.25rem;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+		@include vp-1023 {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
 
 		@include vp-767 {
+			display: flex;
 			flex-direction: column;
 		}
 	}
@@ -68,6 +66,7 @@
 		overflow: hidden;
 		cursor: pointer;
 		width: 100%;
+		height: 100%;
 
 		@media (min-width: 1024px) {
 			&:hover .preview__overlay {
@@ -78,6 +77,11 @@
 			&:hover .preview__image-title {
 				display: none;
 			}
+		}
+
+		@include vp-1023 {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 
@@ -99,7 +103,6 @@
 			max-width: 100%;
 			position: relative;
 			transform: translateY(0);
-			height: auto;
 			justify-content: flex-start;
 		}
 	}
@@ -115,12 +118,16 @@
 		justify-content: space-between;
 		gap: 1.6667rem;
 
-		@include vp-1023 {
+		@include vp-1365 {
 			position: relative;
 			padding: 0;
 			padding: 0.8333rem;
 			max-width: 100%;
 			border: none;
+		}
+
+		@include vp-1023 {
+			height: 100%;
 		}
 
 		@include vp-767 {
@@ -151,5 +158,11 @@
 
 	&__paragraph-text {
 		margin-bottom: 0.5rem;
+	}
+
+	&__button {
+		@include vp-1023 {
+			margin-top: auto;
+		}
 	}
 }

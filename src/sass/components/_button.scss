@@ -19,7 +19,7 @@
 
 	&:hover {
 		color: var.$white;
-		background-color: var.$black;
+		background-color: transparent;
 	}
 
 	@include vp-767 {

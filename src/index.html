@@ -37,28 +37,15 @@
 		<header class="header" id="header">
 			<div class="container">
 				<div class="header__body">
-					<img id="header__logo" class="header__logo toggle-visible" src="icons/logo.svg" width="120"
-						height="22" alt="Logo ferMENTOR"/>
 					<button class="header__hamburger" type="button" aria-label="menu-button">
 						<span></span>
 						<span></span>
 					</button>
 					<nav class="header__nav">
 						<div class="header__menu">
-							<div class="header__menu-group header__menu-group_left">
-								<div class="header__menu-item"><a href="tours.html">Brewery tours</a></div>
-								<div class="header__menu-item"><a href="contract-brewing.html">Contract brewing</a>
-								</div>
-							</div>
-							<div class="header__menu-item header__menu-item_logo">
-								<a class="header__menu-link header__menu-link_logo" href="index.html">
-									<img src="icons/logo.svg" alt="Логотип" width="250" height="47">
-								</a>
-							</div>
-							<div class="header__menu-group header__menu-group_right">
-								<div class="header__menu-item"><a href="about.html">About us</a></div>
-								<div class="header__menu-item"><a href="master-class.html">Masterclasses</a></div>
-							</div>
+							<div class="header__menu-item"><a href="tours.html">Brewery tours</a></div>
+							<div class="header__menu-item"><a href="contract-brewing.html">Contract brewing</a></div>
+							<div class="header__menu-item"><a href="master-class.html">Masterclasses</a></div>
 						</div>
 					</nav>
 				</div>
@@ -69,10 +56,10 @@
 
 			<section class="video" id="target-block">
 				<div class="video__body">
-					<h1 class="video__title title">Craft Beverage Laboratory</h1>
+					<img class="video__logo" src="icons/logo.svg" width="350" height="65"></img>
 					<p class="video__text">
 						<span class="text-normal">
-							Craft brewery from <span class="text-normal">Saint-Petersburg</span>
+							Craft brewery from Saint&#8209;Petersburg
 						</span>
 						<span>
 							We produce beer, mead, cider, and&nbsp;non&#8209;alcoholic beverages
@@ -86,8 +73,36 @@
 				</video>
 			</section>
 
-			<section id="preview" class="preview">
-				<h2 class="preview__title title container">Get Involved</h2>
+			<section class="intro section container">
+				<div class="intro__text-wrapper">
+					<p class="intro__text">
+						Born in Saint&nbsp;Petersburg in&nbsp;2018, we’re a contract brewery brewing on the historic
+						Arsenal
+						grounds.
+					</p>
+					<p class="intro__text">
+						We make bold craft beers across the spectrum&nbsp;— from clean lagers and classic ales to rich
+						stouts, hop&#8209;forward IPAs, and experimental gose.
+					</p>
+					<p class="intro__text">We also craft meads, ciders, and non&#8209;alcoholic drinks.</p>
+				</div>
+				<div class="intro__slider intro-slider">
+					<div class="intro-slider__gallery">
+						<img src="img/intro/intro-2.jpg" width="1080" height="1350" alt="">
+					</div>
+					<div class="intro-slider__nav">
+						<svg>
+							<use xlink:href="icons/sprite.svg#arrow-left"></use>
+						</svg>
+						<svg>
+							<use xlink:href="icons/sprite.svg#arrow-right"></use>
+						</svg>
+					</div>
+				</div>
+			</section>
+
+			<section id="preview" class="preview section container">
+				<h2 class="preview__title title">Get Involved</h2>
 				<div class="preview__blocks">
 					<div class="preview__block">
 						<div class="preview__image">
@@ -106,7 +121,8 @@
 										<span class="preview__paragraph-title">Discover how beer is born — from
 											grain to glass
 										</span>
-										<span class="preview__paragraph-text">Join us for a brewery tour to explore our
+										<span class="preview__paragraph-text">Join us for a brewery tour to explore
+											our
 											space, learn the craft, and taste fresh beer right where it’s made
 										</span>
 									</p>
@@ -136,7 +152,8 @@
 										</span>
 										<span class="preview__paragraph-text"> We’ll help you brew it, fine-tune the
 											recipe
-											together, and take care of the packaging. From concept to keg — we've got
+											together, and take care of the packaging. From concept to keg — we've
+											got
 											you covered.
 										</span>
 									</p>
@@ -164,7 +181,8 @@
 										<span class="preview__paragraph-text">Curious about how beer is made?
 										</span>
 										<span class="preview__paragraph-text">At our
-											hands-on workshops, you’ll learn the basics, brew your own small batch, and
+											hands-on workshops, you’ll learn the basics, brew your own small batch,
+											and
 											take home not just knowledge — but beer to share with friends.
 										</span>
 									</p>
@@ -176,7 +194,7 @@
 				</div>
 			</section>
 
-			<section class="partners">
+			<section class="partners section">
 				<div class="container">
 					<h2 class="partners__title title">Our partners</h2>
 					<ul class="partners__list">
@@ -335,7 +353,6 @@
 	<script src="js/modules/selects.js" defer></script>
 	<script src="js/modules/accordion.js" defer></script>
 	<script src="js/modules/thumbnail.js" defer></script>
-	<script src="js/modules/sticky-header.js" defer></script>
 	<script src="js/modules/change-text.js" defer></script>
 	<script src="js/modules/modal.js" defer></script>
 	<script src="js/main.js" defer></script>

@@ -1,7 +1,7 @@
 @use "global/_var.scss";
 
 .partners {
-	padding: 8.3333rem 0;
+	padding: 8.3333rem 0 8.3333rem;
 
 	&__list {
 		display: grid;
@@ -60,7 +60,7 @@
 
 	&__link {
 		display: flex;
-		width: 120px;
+		max-width: 120px;
 		height: 120px;
 	}
 }

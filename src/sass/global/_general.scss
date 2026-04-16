@@ -13,6 +13,10 @@ body {
 	background-color: var.$white-smoke;
 	color: var.$white;
 	scrollbar-width: none;
+
+	@include vp-767 {
+		font-size: 14px;
+	}
 }
 
 .container {
@@ -39,6 +43,18 @@ body {
 
 .page {
 	flex: 1 1 auto;
+}
+
+.section {
+	padding-top: 8.75rem;
+
+	@include vp-1023 {
+		padding-top: 6rem;
+	}
+
+	@include vp-767 {
+		padding-top: 4rem;
+	}
 }
 
 footer {

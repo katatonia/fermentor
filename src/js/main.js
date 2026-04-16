@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     safeCall("selects");
     safeCall("accordion");
     safeCall("thumbnail");
-    safeCall("stickyHeader");
     safeCall("changeText");
     safeCall("modal");
 });

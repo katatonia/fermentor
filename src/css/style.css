@@ -156,6 +156,12 @@ body {
   color: #FFFFFF;
   scrollbar-width: none;
 }
+@media (max-width: 767px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
 
 .container {
   width: 100%;
@@ -185,6 +191,20 @@ body {
   flex: 1 1 auto;
 }
 
+.section {
+  padding-top: 8.75rem;
+}
+@media (max-width: 1023px) {
+  .section {
+    padding-top: 6rem;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    padding-top: 4rem;
+  }
+}
+
 footer {
   display: flex;
   flex: 0;
@@ -207,7 +227,7 @@ footer {
 }
 .button:hover {
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: transparent;
 }
 @media (max-width: 767px) {
   .button {
@@ -239,18 +259,18 @@ footer {
 }
 
 .intro {
-  padding-top: 8.3333rem;
-  padding-bottom: 8.3333rem;
+  display: flex;
+  gap: 2.5rem;
+}
+.intro__text-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  max-width: 750px;
-  width: 100%;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
 }
 .intro__text {
-  text-align: center;
+  color: #1B1B1B;
 }
 
 .info-box__title {
@@ -355,7 +375,6 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
-  gap: 1rem;
 }
 .video__video {
   position: absolute;
@@ -373,9 +392,8 @@ footer {
   height: 100%;
   object-fit: cover;
 }
-.video__title {
-  text-align: center;
-  color: #FFFFFF;
+.video__logo {
+  margin-bottom: 2rem;
 }
 .video__subtitle {
   font-size: 1.3333rem;
@@ -385,9 +403,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2.25rem;
+  gap: 0.5rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .header {
@@ -401,7 +419,7 @@ footer {
 .header.scrolled {
   background-color: #000000;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header {
     border-bottom: none;
   }
@@ -420,15 +438,25 @@ footer {
   align-items: center;
   height: 90px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header__body {
     justify-content: space-between;
+  }
+}
+@media (max-width: 1023px) {
+  .header__logo {
+    width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  .header__logo {
+    width: 120px;
   }
 }
 .header__nav {
   width: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header__nav {
     position: fixed;
     top: 0;
@@ -458,23 +486,11 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header__menu {
     flex-direction: column;
     top: 50%;
     transform: translateY(-50%);
-    gap: 1rem;
-  }
-}
-.header__menu-group {
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
-}
-@media (max-width: 767px) {
-  .header__menu-group {
-    flex-direction: column;
-    align-items: center;
     gap: 1rem;
   }
 }
@@ -489,40 +505,7 @@ footer {
 .header__menu-item:hover {
   border-bottom: 1px solid #FFFFFF;
 }
-.header__menu-item_logo {
-  padding: 0;
-  border: none;
-  flex-shrink: 0;
-  margin: 5.625rem;
-}
-.header__menu-item_logo:hover {
-  border-bottom: none;
-}
-@media (max-width: 767px) {
-  .header__menu-item_logo {
-    margin: 0;
-  }
-}
-.header__menu-link_logo {
-  display: block;
-  max-width: 250px;
-  width: 100%;
-}
-.header__menu-link_logo img {
-  width: 100%;
-  max-width: 250px;
-}
-@media (max-width: 767px) {
-  .header__menu-link_logo {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .header__menu-link {
-    font-size: 1.125rem;
-  }
-}
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header__hamburger {
     position: relative;
     width: 40px;
@@ -658,32 +641,30 @@ footer {
 }
 
 .preview {
-  padding: 8.3333rem 2.5rem;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.8333rem;
   background-color: #F6F6F6;
-}
-@media (max-width: 767px) {
-  .preview {
-    gap: 6.25rem;
-    margin: 0 auto;
-    padding-left: 0.8333rem;
-    padding-right: 0.8333rem;
-  }
 }
 .preview__title {
   color: #000000;
   text-align: center;
 }
 .preview__blocks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  align-items: start;
   gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+@media (max-width: 1023px) {
+  .preview__blocks {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 @media (max-width: 767px) {
   .preview__blocks {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -720,6 +701,7 @@ footer {
   overflow: hidden;
   cursor: pointer;
   width: 100%;
+  height: 100%;
 }
 @media (min-width: 1024px) {
   .preview__block:hover .preview__overlay {
@@ -728,6 +710,12 @@ footer {
   }
   .preview__block:hover .preview__image-title {
     display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .preview__block {
+    display: flex;
+    flex-direction: column;
   }
 }
 .preview__overlay {
@@ -749,7 +737,6 @@ footer {
     max-width: 100%;
     position: relative;
     transform: translateY(0);
-    height: auto;
     justify-content: flex-start;
   }
 }
@@ -764,13 +751,18 @@ footer {
   justify-content: space-between;
   gap: 1.6667rem;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1365px) {
   .preview__body {
     position: relative;
     padding: 0;
     padding: 0.8333rem;
     max-width: 100%;
     border: none;
+  }
+}
+@media (max-width: 1023px) {
+  .preview__body {
+    height: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -795,6 +787,11 @@ footer {
 }
 .preview__paragraph-text {
   margin-bottom: 0.5rem;
+}
+@media (max-width: 1023px) {
+  .preview__button {
+    margin-top: auto;
+  }
 }
 
 .about__list {
@@ -865,7 +862,7 @@ footer {
 }
 
 .partners {
-  padding: 8.3333rem 0;
+  padding: 8.3333rem 0 8.3333rem;
 }
 .partners__list {
   display: grid;
@@ -914,7 +911,7 @@ footer {
 }
 .partners__link {
   display: flex;
-  width: 120px;
+  max-width: 120px;
   height: 120px;
 }
 
@@ -1242,6 +1239,32 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+  cursor: pointer;
+}
+
+.intro-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.intro-slider__gallery {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.intro-slider__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.intro-slider__nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+}
+.intro-slider__nav svg {
+  width: 5rem;
+  height: 0.9375rem;
   cursor: pointer;
 }
 
