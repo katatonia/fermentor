@@ -1,8 +1,13 @@
 @use "global/_var.scss";
 
 .intro {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 2.5rem;
+
+	@include vp-767 {
+		grid-template-columns: 1fr;
+	}
 
 	&__text-wrapper {
 		display: flex;

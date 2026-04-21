@@ -259,8 +259,14 @@ footer {
 }
 
 .intro {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
+}
+@media (max-width: 767px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
 }
 .intro__text-wrapper {
   display: flex;
@@ -393,6 +399,7 @@ footer {
   object-fit: cover;
 }
 .video__logo {
+  width: 21.875rem;
   margin-bottom: 2rem;
 }
 .video__subtitle {
@@ -409,7 +416,7 @@ footer {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
