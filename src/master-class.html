@@ -40,25 +40,13 @@
 						<span></span>
 					</button>
 					<nav class="header__nav">
-						<ul class="header__menu">
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="tours.html">Экскурсии</a>
-							</li>
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="contract-brewing.html">Контрактная варка</a>
-							</li>
-							<li class="header__menu-item header__menu-item_logo">
-								<a class="header__menu-link header__menu-link_logo" href="index.html">
-									<img src="icons/logo.svg" alt="Логотип" width="250" height="47">
-								</a>
-							</li>
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="about.html">Узнать о нас</a>
-							</li>
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="#">Мастер-классы</a>
-							</li>
-						</ul>
+						<div class="header__menu">
+							<div class="header__menu-item"><a href="tours.html">Brewery tours</a></div>
+							<div class="header__menu-item header__menu-item_logo">
+								<a href="index.html"><img src="icons/logo.svg" width="180" height="33" alt=""></a>
+							</div>
+							<div class="header__menu-item"><a href="contract-brewing.html">Contract brewing</a></div>
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -70,10 +58,11 @@
 
 				<section class="video" id="target-block">
 					<div class="video__body">
-						<h1 class="video__title title h1">Мастер-классы по&nbsp;пивоварению<br> в&nbsp;Санкт-Петербурге
-						</h1>
-						<span class="video__text">свари пиво сам – легко и увлекательно!</span>
-						<a class="video__button button" href="#master-class">Записаться на мастер-класс</a>
+						<div class="video__content container">
+							<h1 class="video__title title h1">Brewing masterclasses in&nbsp;Saint&nbsp;Petersburg</h1>
+							<span class="video__text">Learn the craft of&nbsp;brewing hands-on — from&nbsp;raw ingredients to&nbsp;your own finished beer.</span>
+							<a class="video__button button" href="#master-class">Sign up</a>
+						</div>
 					</div>
 					<video class="video__video" playsinline loop muted autoplay preload="auto">
 						<source src="video/master-class/master-class.webm" type="video/webm">

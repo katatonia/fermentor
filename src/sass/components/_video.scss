@@ -7,14 +7,25 @@
 	flex-direction: column;
 
 	&__body {
-		position: relative;
-		z-index: 2;
 		display: flex;
 		flex: 1 1 auto;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		position: relative;
+		z-index: 2;
 		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		color: $white;
+		text-align: center;
 	}
 
 	&__video {

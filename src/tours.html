@@ -40,25 +40,13 @@
 						<span></span>
 					</button>
 					<nav class="header__nav">
-						<ul class="header__menu">
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="#">Экскурсии</a>
-							</li>
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="contract-brewing.html">Контрактная варка</a>
-							</li>
-							<li class="header__menu-item header__menu-item_logo">
-								<a class="header__menu-link header__menu-link_logo" href="index.html">
-									<img src="icons/logo.svg" alt="Логотип" width="250" height="47">
-								</a>
-							</li>
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="about.html">Узнать о нас</a>
-							</li>
-							<li class="header__menu-item">
-								<a class="header__menu-link" href="master-class.html">Мастер-классы</a>
-							</li>
-						</ul>
+						<div class="header__menu">
+							<div class="header__menu-item"><a href="master-class.html">Masterclasses</a></div>
+							<div class="header__menu-item header__menu-item_logo">
+								<a href="index.html"><img src="icons/logo.svg" width="180" height="33" alt=""></a>
+							</div>
+							<div class="header__menu-item"><a href="contract-brewing.html">Contract brewing</a></div>
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -70,10 +58,11 @@
 
 				<section class="video" id="target-block">
 					<div class="video__body">
-						<h1 class="video__title title h1">Экскурсия на&nbsp;пивоварню с&nbsp;дегустацией<br>
-							в&nbsp;Санкт-Петербурге
-						</h1>
-						<a class="video__button button" href="#booking-block">Записаться на экскурсию</a>
+						<div class="video__content container">
+							<h1 class="video__title title h1">Discover the&nbsp;art of&nbsp;brewing in&nbsp;Saint&nbsp;Petersburg</h1>
+							<span class="video__text">With a&nbsp;guided brewery tour and&nbsp;tasting experience</span>
+							<a class="video__button button" href="#booking-block">Sign up</a>
+						</div>
 					</div>
 					<video class="video__video" playsinline loop muted autoplay preload="auto">
 						<source src="video/tours/tours.webm" type="video/webm">

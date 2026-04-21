@@ -99,7 +99,12 @@
 		border-bottom: 1px solid transparent;
 		cursor: pointer;
 
-		&:hover {
+		&_logo {
+			padding: 0;
+			border-bottom: none;
+		}
+
+		&:not(&_logo):hover {
 			border-bottom: 1px solid var.$white;
 		}
 	}
