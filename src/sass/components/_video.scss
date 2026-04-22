@@ -26,6 +26,16 @@
 	&__title {
 		color: $white;
 		text-align: center;
+
+		&_index {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__subtitle {
+		font-size: 0.8em;
+		text-transform: none;
 	}
 
 	&__video {
@@ -63,5 +73,17 @@
 		gap: 0.5rem;
 		text-align: center;
 		margin-bottom: 3rem;
+		color: $white;
+	}
+
+	&__button {
+		background-color: var.$white;
+		color: var.$black;
+		border: 1px solid $white;
+
+		&:hover {
+			color: var.$white;
+			background-color: transparent;
+		}
 	}
 }

@@ -11,7 +11,7 @@ body {
 	font-style: normal;
 	scroll-behavior: smooth;
 	background-color: var.$white-smoke;
-	color: var.$white;
+	color: $nero;
 	scrollbar-width: none;
 
 	@include vp-767 {

@@ -10,16 +10,16 @@
 	}
 	text-transform: uppercase;
 	padding: 10px;
-	border: 1px solid var.$white;
+	border: 1px solid var.$nero;
 	text-align: center;
 	cursor: pointer;
 	transition: .3s;
-	background-color: var.$white;
-	color: var.$black;
+	background-color: $nero;
+	color: $white;
 
 	&:hover {
-		color: var.$white;
 		background-color: transparent;
+		color: $nero;
 	}
 
 	@include vp-767 {

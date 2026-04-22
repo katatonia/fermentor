@@ -1,8 +1,6 @@
 @use "global/_var.scss";
 
 .preview {
-	max-width: 1920px;
-    margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	background-color: var.$white-smoke;
@@ -50,12 +48,13 @@
 				family: var.$ff-oswald-semi-bold;
 			}
 
+			color: $white;
 			text-transform: uppercase;
 			display: block;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			background-color: $nero;
+			background-color: rgba(0,0,0,.7);
 			padding: 0.8333rem;
 			text-align: center;
 		}
@@ -95,7 +94,7 @@
 		bottom: 0;
 		transform: translateY(200%);
 		transition: transform 0.3s ease-in-out;
-		background-color: $nero;
+		background-color: rgba(0,0,0,.7);
 		align-items: center;
 
 		@include vp-1023 {
@@ -144,6 +143,7 @@
 	&__paragraph {
 		display: flex;
 		flex-direction: column;
+		color: $white;
 	}
 
 	&__paragraph-title {
@@ -161,6 +161,15 @@
 	}
 
 	&__button {
+		background-color: var.$white;
+		color: var.$black;
+		border: 1px solid $white;
+
+		&:hover {
+			color: var.$white;
+			background-color: transparent;
+		}
+
 		@include vp-1023 {
 			margin-top: auto;
 		}

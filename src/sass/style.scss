@@ -7,6 +7,8 @@
 @import 'global/_general.scss';
 
 // Components
+@import "components/_header.scss";
+@import "components/_footer.scss";
 @import "components/_button.scss";
 @import "components/_title.scss";
 @import "components/_intro.scss";
@@ -15,8 +17,6 @@
 @import "components/_video.scss";
 
 // Blocks
-@import "blocks/_header.scss";
-@import "blocks/_footer.scss";
 @import "blocks/_preview.scss";
 @import "blocks/_about.scss";
 @import "blocks/_feedback.scss";

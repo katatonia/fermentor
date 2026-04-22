@@ -44,8 +44,12 @@
 					<nav class="header__nav">
 						<div class="header__menu">
 							<div class="header__menu-item"><a href="tours.html">Brewery tours</a></div>
-							<div class="header__menu-item"><a href="master-class.html">Masterclasses</a></div>
-							<div class="header__menu-item"><a href="contract-brewing.html">Contract brewing</a></div>
+							<div class="header__menu-item header__menu-item_logo">
+								<a href="index.html"><img src="icons/logo.svg" width="220" height="41"
+										alt="Fermentor logo""></a>
+							</div>
+							<div class=" header__menu-item"><a href="master-class.html">Masterclasses</a>
+							</div>
 						</div>
 					</nav>
 				</div>
@@ -56,16 +60,15 @@
 
 			<section class="video" id="target-block">
 				<div class="video__body">
-					<img class="video__logo" src="icons/logo.svg" width="350" height="65"></img>
-					<p class="video__text">
-						<span class="text-normal">
-							Craft brewery from Saint&#8209;Petersburg
-						</span>
-						<span>
+					<div class="video__content container">
+						<h1 class="video__title video__title_index title h1">Craft brewery
+							<span class="video__subtitle">from&nbsp;Saint&#8209;Petersburg</span>
+						</h1>
+						<span class="video__text">
 							We produce beer, mead, cider, and&nbsp;non&#8209;alcoholic beverages
 						</span>
-					</p>
-					<a class="video__button button" href="#preview">Explore</a>
+						<a class="video__button button" href="#preview">Explore</a>
+					</div>
 				</div>
 				<video class="video__video" playsinline loop muted autoplay preload="auto">
 					<source src="video/index/index.webm" type="video/webm">
@@ -189,8 +192,7 @@
 						<div class="info-box__desc">
 							<span class="info-box__title">Хранение</span>
 							<div class="info-box__divider"></div>
-							<span class="info-box__subtitle"> В нашем самом большом в <span
-									class="text-normal">России</span> колдруме</span>
+							<span class="info-box__subtitle"> В нашем самом большом в Россииn колдруме</span>
 						</div>
 						<div class="info-box__img">
 							<picture>
@@ -231,37 +233,6 @@
 									</p>
 								</div>
 								<a class="preview__button button" href="tours.html">Learn more</a>
-							</div>
-						</div>
-					</div>
-					<div class="preview__block">
-						<div class="preview__image">
-							<picture>
-								<source srcset="img/preview/webp/preview-2.webp" type="image/webp" width="1280"
-									height="1920">
-								<img src="img/preview//preview-2.jpg" alt="Контентное изображение" width="1920"
-									height="1080">
-							</picture>
-							<h2 class="preview__image-title">Brew Your Own Beer with ferMENTOR</h2>
-						</div>
-						<div class="preview__overlay">
-							<div class="preview__body">
-								<div class="preview__content">
-									<p class="preview__paragraph">
-										<span class="preview__paragraph-title">Bring Your Beer Idea to Life
-										</span>
-										<span class="preview__paragraph-text">Have a recipe idea or want to create
-											something from scratch?
-										</span>
-										<span class="preview__paragraph-text"> We’ll help you brew it, fine-tune the
-											recipe
-											together, and take care of the packaging. From concept to keg — we've
-											got
-											you covered.
-										</span>
-									</p>
-								</div>
-								<a class="preview__button button" href="contract-brewing.html">learn more</a>
 							</div>
 						</div>
 					</div>
@@ -459,7 +430,7 @@
 
 		<footer class="footer">
 			<div class="footer__body container">
-				<div class="footer__col-1 text-normal">
+				<div class="footer__col-1">
 					<div class="footer__contacts">
 						<span class="footer__address">Saint-Petersburg,<br> Komsomola 1-3 litera M</span>
 						<span class="footer__tel">+7 (921) 752 50 56</span>
