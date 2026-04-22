@@ -7,9 +7,10 @@
 	gap: 40px;
 
 	&__item {
+		font-family: $ff-oswald-semi-bold;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		justify-content: space-between;
 		height: 3.3333rem;
 		border-bottom: 1px solid $color-nero;
 
@@ -21,6 +22,7 @@
 		input {
 			width: 100%;
 			font: {
+				family: $ff-rubik-light;
 				size: var.$fz-default;
 			}
 			padding-right: 10px;

@@ -1,10 +1,6 @@
 @use "global/_var.scss";
 
 .intro {
-	&__title {
-		text-align: center;
-	}
-
 	&__content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

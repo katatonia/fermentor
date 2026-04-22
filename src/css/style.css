@@ -181,16 +181,16 @@ body {
 }
 
 .section {
-  padding-top: 8.75rem;
+  margin-top: 8.75rem;
 }
 @media (max-width: 1023px) {
   .section {
-    padding-top: 6rem;
+    margin-top: 6rem;
   }
 }
 @media (max-width: 767px) {
   .section {
-    padding-top: 4rem;
+    margin-top: 4rem;
   }
 }
 
@@ -484,12 +484,10 @@ footer {
   font-size: 2.25rem;
   color: #1B1B1B;
   text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.intro__title {
+  margin-bottom: 4rem;
   text-align: center;
 }
+
 .intro__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -541,9 +539,6 @@ footer {
   display: block;
 }
 
-.accordion {
-  padding-bottom: 8.3333rem;
-}
 .accordion__title {
   padding-bottom: 2.0833rem;
 }
@@ -623,7 +618,6 @@ footer {
 }
 .video__title {
   color: #FFFFFF;
-  text-align: center;
 }
 .video__title_index {
   display: flex;
@@ -683,7 +677,6 @@ footer {
 }
 .preview__title {
   color: #000000;
-  text-align: center;
 }
 .preview__blocks {
   display: grid;
@@ -846,10 +839,6 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
-.about__title {
-  text-align: center;
-  padding-bottom: 6.25rem;
-}
 .about__item {
   display: grid;
   gap: 2rem;
@@ -877,33 +866,21 @@ footer {
   }
 }
 
-.feedback {
-  padding-top: 4.1667rem;
-  padding-bottom: 8.3333rem;
-}
 .feedback__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.3333rem;
+  margin-top: 4rem;
 }
 @media (max-width: 767px) {
   .feedback__form {
     grid-template-columns: 1fr;
   }
 }
-.feedback__subtitle {
-  display: block;
-  font-size: 1.3333rem;
-  text-transform: lowercase;
-  padding: 1.0417rem 0 4.1667rem;
-}
 .feedback__button {
   margin: 3.3333rem auto 0;
 }
 
-.partners {
-  padding: 8.3333rem 0 8.3333rem;
-}
 .partners__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -915,7 +892,6 @@ footer {
   }
 }
 .partners__title {
-  text-align: center;
   color: #1B1B1B;
 }
 .partners__item {
@@ -959,10 +935,6 @@ footer {
   text-align: center;
 }
 
-.offers {
-  padding-top: 4.1667rem;
-  padding-bottom: 8.3333rem;
-}
 .offers__title {
   padding-bottom: 15px;
   border-bottom: 1px solid #CCCCCC;
@@ -1005,20 +977,12 @@ footer {
   display: block;
 }
 
-.tours {
-  padding-top: 8.3333rem;
-  padding-bottom: 8.3333rem;
-}
 .tours__list {
   display: flex;
   flex-direction: column;
   gap: 6.25rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-.tours__title {
-  text-align: center;
-  padding-bottom: 6.25rem;
 }
 .tours__item {
   display: grid;
@@ -1047,9 +1011,6 @@ footer {
   }
 }
 
-.booking {
-  padding-top: 8.3333rem;
-}
 .booking__wrapper {
   display: flex;
   flex-direction: column;
@@ -1131,9 +1092,10 @@ footer {
   gap: 40px;
 }
 .contacts__item {
+  font-family: "Oswald-SemiBold", "Arial", serif;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
   height: 3.3333rem;
   border-bottom: 1px solid #1B1B1B;
 }
@@ -1143,6 +1105,7 @@ footer {
 }
 .contacts__item input {
   width: 100%;
+  font-family: "Rubik-Light", "Arial", serif;
   font-size: 18px;
   padding-right: 10px;
   background-color: transparent;
@@ -1157,6 +1120,7 @@ footer {
   gap: 1.6667rem;
 }
 .selects__title {
+  font-family: "Oswald-SemiBold", "Arial", serif;
   padding-left: 0.4167rem;
 }
 .selects__item {
@@ -1188,7 +1152,7 @@ footer {
   outline: 1px solid #1B1B1B;
 }
 .selects__list::-webkit-scrollbar {
-  background-color: gray;
+  background-color: #000000;
   width: 10px;
 }
 .selects__list::-webkit-scrollbar-thumb {

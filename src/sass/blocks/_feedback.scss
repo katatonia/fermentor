@@ -1,24 +1,15 @@
 @use "global/_var.scss";
 
 .feedback {
-	padding-top: 4.1667rem;
-	padding-bottom: 8.3333rem;
-
 	&__form {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 3.3333rem;
+		margin-top: 4rem;
 
 		@include vp-767 {
 			grid-template-columns: 1fr;
 		}
-	}
-
-	&__subtitle {
-		display: block;
-		font-size: $fz-subtitle;
-		text-transform: lowercase;
-		padding: 1.0417rem 0 4.1667rem;
 	}
 
 	&__button {
