@@ -10,8 +10,8 @@ body {
 	line-height: 1.4;
 	font-style: normal;
 	scroll-behavior: smooth;
-	background-color: var.$white-smoke;
-	color: $nero;
+	background-color: $color-white-smoke;
+	color: $color-nero;
 	scrollbar-width: none;
 
 	@include vp-767 {

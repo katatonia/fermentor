@@ -24,7 +24,7 @@
 	}
 
 	&__title {
-		color: $white;
+		color: $color-white;
 		text-align: center;
 
 		&_index {
@@ -73,16 +73,16 @@
 		gap: 0.5rem;
 		text-align: center;
 		margin-bottom: 3rem;
-		color: $white;
+		color: $color-white;
 	}
 
 	&__button {
-		background-color: var.$white;
-		color: var.$black;
-		border: 1px solid $white;
+		background-color: $color-white;
+		color: $color-black;
+		border: 1px solid $color-white;
 
 		&:hover {
-			color: var.$white;
+			color: $color-white;
 			background-color: transparent;
 		}
 	}

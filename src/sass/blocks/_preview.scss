@@ -3,10 +3,10 @@
 .preview {
 	display: flex;
 	flex-direction: column;
-	background-color: var.$white-smoke;
+	background-color: $color-white-smoke;
 
 	&__title {
-		color: var.$black;
+		color: $color-black;
 		text-align: center;
 	}
 
@@ -48,7 +48,7 @@
 				family: var.$ff-oswald-semi-bold;
 			}
 
-			color: $white;
+			color: $color-white;
 			text-transform: uppercase;
 			display: block;
 			position: absolute;
@@ -130,7 +130,7 @@
 		}
 
 		@include vp-767 {
-			background-color: var.$nero;
+			background-color: $color-nero;
 		}
 	}
 
@@ -143,7 +143,7 @@
 	&__paragraph {
 		display: flex;
 		flex-direction: column;
-		color: $white;
+		color: $color-white;
 	}
 
 	&__paragraph-title {
@@ -161,12 +161,12 @@
 	}
 
 	&__button {
-		background-color: var.$white;
-		color: var.$black;
-		border: 1px solid $white;
+		background-color: $color-white;
+		color: $color-black;
+		border: 1px solid $color-white;
 
 		&:hover {
-			color: var.$white;
+			color: $color-white;
 			background-color: transparent;
 		}
 

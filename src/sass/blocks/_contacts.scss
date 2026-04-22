@@ -11,7 +11,7 @@
 		flex-direction: column;
 		gap: 20px;
 		height: 3.3333rem;
-		border-bottom: 1px solid $nero;
+		border-bottom: 1px solid $color-nero;
 
 		label {
 			width: fit-content;
@@ -25,7 +25,7 @@
 			}
 			padding-right: 10px;
 			background-color: transparent;
-			color: $nero;
+			color: $color-nero;
 		}
 	}
 }

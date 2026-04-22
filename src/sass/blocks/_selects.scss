@@ -20,7 +20,7 @@
 
 	&__select {
 		position: relative;
-		border: 1px solid $nero;
+		border: 1px solid $color-nero;
 	}
 
 	&__current {
@@ -37,18 +37,18 @@
 		width: 100%;
 		max-height: 180px;
 		top: 100%;
-		background-color: var.$white;
-		color: var.$black;
+		background-color: $color-white;
+		color: $color-black;
 		overflow-y: scroll;
-		outline: 1px solid var.$nero;
+		outline: 1px solid $color-nero;
 
 		&::-webkit-scrollbar {
-			background-color: gray;
+			background-color: $color-black;
 			width: 10px;
 		}
 
 		&::-webkit-scrollbar-thumb {
-			background-color: var.$very-light-grey;
+			background-color: $color-very-light-grey;
 		}
 	}
 
@@ -71,7 +71,7 @@
 
 	&__arrow {
 		position: absolute;
-		fill: $nero;
+		fill: $color-nero;
 		width: 15px;
 		height: 15px;
 		right: 10px;

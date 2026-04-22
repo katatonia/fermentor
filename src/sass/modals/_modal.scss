@@ -3,15 +3,15 @@
 .modal {
 	display: none;
 	position: relative;
-	background-color: var.$black;
+	background-color: $color-black;
 	padding: 1.6667rem 0.8333rem;
 	width: 100%;
 	max-width: 1200px;
 	max-height: 85vh;
 	overflow-y: auto;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-	color: var.$white;
-	border: 1px solid var.$white;
+	color: $color-white;
+	border: 1px solid $color-white;
 	margin: 0.8333rem;
 
 	&.active {
@@ -23,7 +23,7 @@
 		top: 10px;
 		right: 10px;
 		font-size: 1.5rem;
-		color: var.$white;
+		color: $color-white;
 		cursor: pointer;
 	}
 

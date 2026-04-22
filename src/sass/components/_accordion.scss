@@ -8,7 +8,7 @@
 	}
 
 	&__item {
-		border-bottom: 1px solid var.$white;
+		border-bottom: 1px solid $color-white;
 		margin-bottom: 10px;
 	}
 
@@ -43,7 +43,7 @@
 		width: 18px;
 		height: 1px;
 		right: 0;
-		background-color: var.$white;
+		background-color: $color-white;
 		top: 50%;
 		transform: translateY(-50%);
 
@@ -55,7 +55,7 @@
 			transform: translate(-50%, -50%) rotate(90deg);
 			width: 18px;
 			height: 1px;
-			background-color: var.$white;
+			background-color: $color-white;
 		}
 	}
 
