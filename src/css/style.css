@@ -258,25 +258,30 @@ footer {
   margin-bottom: 2rem;
 }
 
-.intro {
+.intro__title {
+  text-align: center;
+}
+.intro__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
 }
 @media (max-width: 767px) {
-  .intro {
+  .intro__content {
     grid-template-columns: 1fr;
   }
 }
-.intro__text-wrapper {
+.intro__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.25rem;
-  text-align: center;
+  gap: 0.625rem;
+  text-align: left;
 }
-.intro__text {
+.intro__ph {
   color: #1B1B1B;
+}
+.intro__button {
+  margin-top: auto;
 }
 
 .info-box__title {
@@ -852,10 +857,6 @@ footer {
   .about__item_2 .info-box__img, .about__item_4 .info-box__img {
     order: 2;
   }
-}
-
-.contract-brewing__button {
-  margin-top: 60px;
 }
 
 .feedback {
