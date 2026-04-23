@@ -4,20 +4,22 @@
 	padding-top: 8.75rem;
 
 	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 2.5rem;
-
-		@include vp-767 {
-			grid-template-columns: 1fr;
-		}
+		gap: 40px;
 	}
 
 	&__text {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: .625rem;
-		text-align: left;
+		text-align: left
 	}
 
 	&__ph {
@@ -25,6 +27,6 @@
 	}
 
 	&__button {
-		margin-top: 2.5rem;
+		margin: 2.5rem auto 0;
 	}
 }

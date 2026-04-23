@@ -1,6 +1,10 @@
 @use "global/_var.scss";
 
-.fact-box {
+.capabilities {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+
 	&__title {
 		font: {
 			size: var.$fz-subtitle;
@@ -14,9 +18,15 @@
 		}
 	}
 
+	&__item {
+		display: flex;
+		justify-content: flex-end;
+	}
+
 	&__desc {
 		display: flex;
 		flex-direction: column;
+		text-align: right;
 	}
 
 	&__divider {
@@ -24,16 +34,5 @@
 		height: 1px;
 		background-color: $color-nero;
 		margin: .3125rem 0;
-	}
-
-	&__img {
-		width: 100%;
-
-		img {
-			width: 100%;
-			height: auto;
-			object-fit: cover;
-			display: block;
-		}
 	}
 }

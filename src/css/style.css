@@ -452,32 +452,6 @@ footer {
   }
 }
 
-.intro {
-  padding-top: 8.75rem;
-}
-.intro__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-}
-@media (max-width: 767px) {
-  .intro__wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-.intro__text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  text-align: left;
-}
-.intro__ph {
-  color: #1B1B1B;
-}
-.intro__button {
-  margin-top: 2.5rem;
-}
-
 .accordion__title {
   padding-bottom: 2.0833rem;
 }
@@ -590,35 +564,6 @@ footer {
   text-align: center;
   margin-bottom: 3rem;
   color: #FFFFFF;
-}
-
-.fact-box__title {
-  font-size: 1.3333rem;
-}
-.fact-box__title sup {
-  font-size: 0.6em;
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
-}
-.fact-box__desc {
-  display: flex;
-  flex-direction: column;
-}
-.fact-box__divider {
-  width: 100%;
-  height: 1px;
-  background-color: #1B1B1B;
-  margin: 0.3125rem 0;
-}
-.fact-box__img {
-  width: 100%;
-}
-.fact-box__img img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
 }
 
 .preview {
@@ -767,21 +712,30 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.facts__wrapper {
-  max-width: 1380px;
-  margin-left: auto;
-  margin-right: auto;
+.intro {
+  padding-top: 8.75rem;
 }
-.facts__list {
-  width: 100%;
+.intro__wrapper {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
 }
-.facts__item {
+.intro__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.intro__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 0.625rem;
+  text-align: left;
+}
+.intro__ph {
+  color: #1B1B1B;
+}
+.intro__button {
+  margin: 2.5rem auto 0;
 }
 
 .feedback__form {
@@ -1170,31 +1124,34 @@ footer {
   cursor: pointer;
 }
 
-.intro-slider {
+.capabilities {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-.intro-slider__gallery {
-  aspect-ratio: 16/9;
-  overflow: hidden;
+.capabilities__title {
+  font-size: 1.3333rem;
 }
-.intro-slider__gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.capabilities__title sup {
+  font-size: 0.6em;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
 }
-.intro-slider__nav {
+.capabilities__item {
   display: flex;
-  justify-content: center;
-  gap: 1.875rem;
+  justify-content: flex-end;
 }
-.intro-slider__nav svg {
-  width: 5rem;
-  height: 0.9375rem;
-  cursor: pointer;
-  stroke: #1B1B1B;
+.capabilities__desc {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.capabilities__divider {
+  width: 100%;
+  height: 1px;
+  background-color: #1B1B1B;
+  margin: 0.3125rem 0;
 }
 
 .thumbnail-modal {
