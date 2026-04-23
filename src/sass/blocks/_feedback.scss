@@ -1,14 +1,58 @@
 @use "global/_var.scss";
 
 .feedback {
+	&__wrapper {
+		max-width: 1000px;
+	}
+
 	&__form {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 3.3333rem;
+		gap: 2.5rem;
 		margin-top: 4rem;
 
 		@include vp-767 {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	&__contacts,
+	&__selects {
+		gap: 1.25rem;
+	}
+
+
+	&__contacts {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__contacts-item {
+		font-family: $ff-oswald-semi-bold;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 4rem;
+
+		label {
+			width: fit-content;
+			padding-left: 0.4167rem;
+		}
+
+		input {
+			width: 100%;
+
+			font: {
+				family: $ff-rubik-light;
+				size: var.$fz-default;
+			}
+
+			padding-right: 10px;
+			background-color: $color-white;
+			color: $color-nero;
+			padding: .5rem;
+			border: 1px solid $color-very-light-grey;
 		}
 	}
 
