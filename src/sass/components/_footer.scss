@@ -63,15 +63,6 @@
 		gap: 10px
 	}
 
-	&__menu-item {
-		@include hover;
-	}
-
-	&__tel {
-		cursor: pointer;
-		@include hover;
-	}
-
 	&__logo {
 		display: block;
 
@@ -93,8 +84,6 @@
 	}
 
 	&__social-link {
-		@include hover;
-
 		fill: $color-white;
 		width: 30px;
 		height: 30px;

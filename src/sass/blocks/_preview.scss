@@ -3,11 +3,6 @@
 .preview {
 	display: flex;
 	flex-direction: column;
-	background-color: $color-white-smoke;
-
-	&__title {
-		color: $color-black;
-	}
 
 	&__blocks {
 		display: grid;
@@ -47,13 +42,15 @@
 				family: var.$ff-oswald-semi-bold;
 			}
 
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			color: $color-white;
 			text-transform: uppercase;
-			display: block;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			background-color: rgba(0,0,0,.7);
+			background-color: rgba(0, 0, 0, .7);
 			padding: 0.8333rem;
 			text-align: center;
 		}
@@ -93,7 +90,7 @@
 		bottom: 0;
 		transform: translateY(200%);
 		transition: transform 0.3s ease-in-out;
-		background-color: rgba(0,0,0,.7);
+		background-color: rgba(0, 0, 0, .7);
 		align-items: center;
 
 		@include vp-1023 {
@@ -157,20 +154,5 @@
 
 	&__paragraph-text {
 		margin-bottom: 0.5rem;
-	}
-
-	&__button {
-		background-color: $color-white;
-		color: $color-black;
-		border: 1px solid $color-white;
-
-		&:hover {
-			color: $color-white;
-			background-color: transparent;
-		}
-
-		@include vp-1023 {
-			margin-top: auto;
-		}
 	}
 }

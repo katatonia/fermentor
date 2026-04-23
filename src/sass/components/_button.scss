@@ -10,35 +10,12 @@
 	}
 	text-transform: uppercase;
 	padding: 10px;
-	border: 1px solid $color-nero;
 	text-align: center;
 	cursor: pointer;
-	transition: .3s;
-	background-color: $color-nero;
+	background-color: $color-buttercup;
 	color: $color-white;
-
-	&:hover {
-		background-color: transparent;
-		color: $color-nero;
-	}
 
 	@include vp-767 {
 		font-size: 0.875rem;
-	}
-}
-
-.select {
-	position: relative;
-	border: 1px solid $color-white;
-	padding: 20px;
-	cursor: pointer;
-
-	&::after {
-		position: absolute;
-		content: "";
-		width: 30px;
-		height: 20px;
-		cursor: pointer;
-		background-image: url("../../icons/arrow.svg") 0 0 no-repeat;
 	}
 }

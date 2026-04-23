@@ -23,20 +23,6 @@
 		align-items: center;
 	}
 
-	&__title {
-		color: $color-white;
-
-		&_index {
-			display: flex;
-			flex-direction: column;
-		}
-	}
-
-	&__subtitle {
-		font-size: 0.8em;
-		text-transform: none;
-	}
-
 	&__video {
 		position: absolute;
 		top: 0;
@@ -60,6 +46,10 @@
 		margin-bottom: 2rem;
 	}
 
+	&__title {
+		color: $color-white;
+	}
+
 	&__subtitle {
 		font-size: var.$fz-subtitle;
 	}
@@ -73,16 +63,5 @@
 		text-align: center;
 		margin-bottom: 3rem;
 		color: $color-white;
-	}
-
-	&__button {
-		background-color: $color-white;
-		color: $color-black;
-		border: 1px solid $color-white;
-
-		&:hover {
-			color: $color-white;
-			background-color: transparent;
-		}
 	}
 }

@@ -37,3 +37,26 @@
 		visibility: visible;
 	}
 }
+
+.section {
+	margin-top: 8.75rem;
+
+	@include vp-1023 {
+		margin-top: 6rem;
+	}
+
+	@include vp-767 {
+		margin-top: 4rem;
+	}
+}
+
+.title {
+	font: {
+		family: $ff-oswald-bold;
+		size: 2.25rem;
+	}
+	color: $color-verdun-green;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+	text-align: center;
+}

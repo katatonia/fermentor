@@ -7,21 +7,32 @@
 	justify-content: space-between;
 	gap: 1.6667rem;
 
+	&__select {
+		position: relative;
+		cursor: pointer;
+		background-color: $color-white;
+		border: 1px solid $color-nero;
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 30px;
+			height: 20px;
+			cursor: pointer;
+			background-image: url("../../icons/arrow.svg") 0 0 no-repeat;
+		}
+	}
+
 	&__title {
 		font-family: $ff-oswald-semi-bold;
 		padding-left: 0.4167rem;
 	}
 
 	&__item {
-		height: 3.3333rem;
+		height: 4rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-	}
-
-	&__select {
-		position: relative;
-		border: 1px solid $color-nero;
 	}
 
 	&__current {
@@ -29,22 +40,21 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		padding: 0.2083rem 0.8333rem 0.2083rem 0.4167rem;
+		padding: .5rem;
 	}
 
 	&__list {
 		position: absolute;
 		display: none;
 		width: 100%;
-		max-height: 180px;
+		max-height: 100px;
 		top: 100%;
 		background-color: $color-white;
-		color: $color-black;
 		overflow-y: scroll;
 		outline: 1px solid $color-nero;
 
 		&::-webkit-scrollbar {
-			background-color: $color-black;
+			background-color: $color-solitude;
 			width: 10px;
 		}
 

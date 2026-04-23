@@ -10,15 +10,14 @@
 @import "components/_header.scss";
 @import "components/_footer.scss";
 @import "components/_button.scss";
-@import "components/_title.scss";
 @import "components/_intro.scss";
-@import "components/_info-box.scss";
 @import "components/_accordion.scss";
 @import "components/_video.scss";
 
 // Blocks
+@import "blocks/_fact-box.scss";
 @import "blocks/_preview.scss";
-@import "blocks/_about.scss";
+@import "blocks/_facts.scss";
 @import "blocks/_feedback.scss";
 @import "blocks/_partners.scss";
 @import "blocks/_master-class.scss";

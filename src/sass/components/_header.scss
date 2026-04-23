@@ -6,7 +6,7 @@
 	top: 0;
 	left: 0;
 	z-index: 4;
-	height: 90px;
+	height: 120px;
 
 	&.scrolled {
 		background-color: $color-black;
@@ -29,7 +29,7 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		height: 90px;
+		height: 120px;
 
 		@include vp-1023 {
 			justify-content: space-between;
