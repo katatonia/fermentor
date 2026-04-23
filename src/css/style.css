@@ -1015,7 +1015,7 @@ footer {
 }
 .contacts__item label {
   width: fit-content;
-  padding-right: 20px;
+  padding-left: 0.4167rem;
 }
 .contacts__item input {
   width: 100%;
@@ -1025,7 +1025,7 @@ footer {
   background-color: #FFFFFF;
   color: #1B1B1B;
   padding: 0.5rem;
-  border: 1px solid #1B1B1B;
+  border: 1px solid #CCCCCC;
 }
 
 .selects {
@@ -1039,7 +1039,7 @@ footer {
   position: relative;
   cursor: pointer;
   background-color: #FFFFFF;
-  border: 1px solid #1B1B1B;
+  border: 1px solid #CCCCCC;
 }
 .selects__select::after {
   position: absolute;
@@ -1074,7 +1074,7 @@ footer {
   top: 100%;
   background-color: #FFFFFF;
   overflow-y: scroll;
-  outline: 1px solid #1B1B1B;
+  outline: 1px solid #CCCCCC;
 }
 .selects__list::-webkit-scrollbar {
   background-color: #E6E7EB;

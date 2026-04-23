@@ -15,7 +15,7 @@
 
 		label {
 			width: fit-content;
-			padding-right: 20px;
+			padding-left: 0.4167rem;
 		}
 
 		input {
@@ -28,7 +28,7 @@
 			background-color: $color-white;
 			color: $color-nero;
 			padding: .5rem;
-			border: 1px solid $color-nero;
+			border: 1px solid $color-very-light-grey;
 		}
 	}
 }

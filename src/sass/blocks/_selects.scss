@@ -11,7 +11,7 @@
 		position: relative;
 		cursor: pointer;
 		background-color: $color-white;
-		border: 1px solid $color-nero;
+		border: 1px solid $color-very-light-grey;
 
 		&::after {
 			position: absolute;
@@ -51,7 +51,7 @@
 		top: 100%;
 		background-color: $color-white;
 		overflow-y: scroll;
-		outline: 1px solid $color-nero;
+		outline: 1px solid $color-very-light-grey;
 
 		&::-webkit-scrollbar {
 			background-color: $color-solitude;
