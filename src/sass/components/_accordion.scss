@@ -1,16 +1,18 @@
 @use "global/_var.scss";
 
 .accordion {
-	&__title {
-		padding-bottom: 2.0833rem;
+	&__wrapper {
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	&__item {
-		border-bottom: 1px solid $color-white;
+		border-bottom: 1px solid $color-turtle-green;
 		margin-bottom: 10px;
 	}
 
 	&__header {
+		font-size: 1.25rem;
 		position: relative;
 		padding: 20px 30px 20px 0;
 		cursor: pointer;
@@ -26,7 +28,7 @@
 	&__content.open {
 		max-height: fit-content;
 		overflow: auto;
-		padding: 40px 20px 20px 0;
+		padding-bottom: 20px;
 	}
 
 	&__list {
@@ -41,7 +43,7 @@
 		width: 18px;
 		height: 1px;
 		right: 0;
-		background-color: $color-white;
+		background-color: $color-turtle-green;
 		top: 50%;
 		transform: translateY(-50%);
 
@@ -53,7 +55,7 @@
 			transform: translate(-50%, -50%) rotate(90deg);
 			width: 18px;
 			height: 1px;
-			background-color: $color-white;
+			background-color: $color-turtle-green;
 		}
 	}
 
@@ -62,7 +64,8 @@
 	}
 
 	&__link {
-		border-bottom: 1px solid white;
+		color: $color-buttercup;
+		border-bottom: 1px solid $color-buttercup;
 		cursor: pointer;
 	}
 }

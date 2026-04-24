@@ -1,19 +1,19 @@
 @use "global/_var.scss";
 
 @mixin vp-767 {
-	@media (max-width: (var.$vp-768 - 1px)) {
+	@media (max-width: ($vp-768 - 1px)) {
 	  @content;
 	}
 }
 
 @mixin vp-1023 {
-	@media (max-width: (var.$vp-1024 - 1px)) {
+	@media (max-width: ($vp-1024 - 1px)) {
 	  @content;
 	}
 }
 
 @mixin vp-1365 {
-	@media (max-width: (var.$vp-1366 - 1px)) {
+	@media (max-width: ($vp-1366 - 1px)) {
 	  @content;
 	}
 }

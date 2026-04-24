@@ -39,7 +39,7 @@
 		@media (min-width: 1024px) {
 			font: {
 				size: 22px;
-				family: var.$ff-oswald-semi-bold;
+				family: $ff-oswald-semi-bold;
 			}
 
 			display: flex;
@@ -144,7 +144,7 @@
 
 	&__paragraph-title {
 		font: {
-			family: var.$ff-oswald-semi-bold;
+			family: $ff-oswald-semi-bold;
 			size: 1.25rem;
 		}
 

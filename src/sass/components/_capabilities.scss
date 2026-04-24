@@ -7,7 +7,8 @@
 
 	&__title {
 		font: {
-			size: var.$fz-subtitle;
+			size: $fz-subtitle;
+			weight: bold;
 		}
 
 		sup {
