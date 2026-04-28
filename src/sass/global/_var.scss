@@ -2,12 +2,17 @@
 $color-black: 					#000000;
 $color-white: 					#FFFFFF;
 $color-nero:					#1B1B1B;
+$color-black-pearl: 			#0B161E;
 $color-very-light-grey:			#CCCCCC;
 $color-solitude:				#E6E7EB;
 $color-white-smoke:				#F6F6F6;
 $color-buttercup: 				#E19D29;
 $color-turtle-green: 			#2E3604;
 $color-verdun-green: 			#4E5E07;
+
+// #6B8E23, #4C6B2A, #5E8C31 — button
+// #2A2F2B, #3A423C — основной текст
+
 
 // Media
 $vp-320: 					320px;
@@ -16,9 +21,9 @@ $vp-1024: 					1024px;
 $vp-1366: 					1366px;
 
 // Typography
-$ff-rubik-light: 			"Rubik-Light", "Arial", serif;
-$ff-oswald-semi-bold: 		"Oswald-SemiBold", "Arial", serif;
-$ff-oswald-bold: 			"Oswald-Bold", "Arial", serif;
+$ff-gotham-light: 			"GothamLight", "Arial", serif;
+$ff-gotham-medium: 			"GothamMedium", "Arial", serif;
+$ff-gotham-black: 			"GothamBlack", "Arial", serif;
 
 // Sizes
 $fz-subtitle: 				1.125rem;

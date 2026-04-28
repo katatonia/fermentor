@@ -12,7 +12,10 @@
 	}
 
 	&__header {
-		font-size: 1.25rem;
+		font: {
+			family: $ff-gotham-medium;
+			size: $fz-subtitle;
+		}
 		position: relative;
 		padding: 20px 30px 20px 0;
 		cursor: pointer;

@@ -55,7 +55,10 @@
 	}
 
 	&__text {
-		font-size: 1.25rem;
+		font: {
+			family: $ff-gotham-black;
+			size: 3rem;
+		}
 		display: flex;
 		flex-direction: column;
 		align-items: center;

@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Вызываем все модули
-    safeCall("hamburger");
     safeCall("selects");
     safeCall("accordion");
-    safeCall("thumbnail");
-    safeCall("changeText");
     safeCall("modal");
+    safeCall("tabs");
 });

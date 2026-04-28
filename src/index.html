@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eng">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="title"
 		content="Fermentor contract brewery in St. Petersburg offers tours, master classes, and contract brewing" />
-	<meta name="description" content="Fermenror is a contract brewery in St. Petersburg, founded in 2018.
+	<meta name="description"
+		content="Fermenror is a contract brewery in St. Petersburg, founded in 2018.
 	We offer tours, master classes, contract brewing, and create craft beers, meads, ciders, and non-alcoholic beverages.">
 
 	<link rel="stylesheet" href="css/style.css" />
 
-	<link rel="preload" href="fonts/Oswald-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" href="fonts/Oswald-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="fonts/Oswald-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" href="fonts/Oswald-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="fonts/Rubik-Light.woff" as="font" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" href="fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/GothamLight.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="fonts/GothamLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/GothamMedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="fonts/GothamMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="fonts/GothamBlack.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="fonts/GothamBlack.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<link rel="icon" type="image/png" href="icons/favicons/favicon-16x16.png" sizes="16x16" />
 	<link rel="icon" type="image/png" href="icons/favicons/favicon-32x32.png" sizes="32x32" />
@@ -27,53 +28,31 @@
 	<meta name="apple-mobile-web-app-title" content="ferMENTOR" />
 	<link rel="manifest" href="/site.webmanifest" />
 
-	<title>ferMENTOR — Craft Beverage Laboratory</title>
+	<title>Fermentor — Craft Beverage Laboratory</title>
 </head>
 
 <body>
 	<div class="wrapper">
 
-		<header class="header" id="header">
-			<div class="container">
-				<div class="header__body">
-					<button class="header__hamburger" type="button" aria-label="menu-button">
-						<span></span>
-						<span></span>
-					</button>
-					<nav class="header__nav">
-						<div class="header__menu">
-							<div class="header__menu-item"><a href="tours.html">Brewery tours</a></div>
-							<div class="header__menu-item header__menu-item_logo">
-								<a href="index.html">
-									<img src="icons/logo.svg" width="280" height="52" alt="Fermentor logo">
-								</a>
-							</div>
-							<div class=" header__menu-item"><a href="master-class.html">Masterclasses</a>
-							</div>
-						</div>
-					</nav>
+		<header class="video" id="target-block">
+			<div class="video__body">
+				<div class="video__content container">
+					<h1 class="video__title video__title_index title h1">
+						<img src="icons/logo.svg" width="400" height="74" alt="fermentor logo">
+					</h1>
+					<span class="video__text">
+						Craft brewery from Saint-Petersburg
+					</span>
+					<a class="video__button button" href="#intro">Explore</a>
 				</div>
 			</div>
+			<video class="video__video" playsinline loop muted autoplay preload="auto">
+				<source src="video/index/index.webm" type="video/webm">
+				<source src="video/index/index.mp4" type="video/mp4">
+			</video>
 		</header>
 
 		<main class="page">
-
-			<section class="video" id="target-block">
-				<div class="video__body">
-					<div class="video__content container">
-						<h1 class="video__title video__title_index title h1">Craft brewery
-							from&nbsp;Saint&#8209;Petersburg</h1>
-						<span class="video__text">
-							We produce beer, mead, cider, and&nbsp;non&#8209;alcoholic beverages
-						</span>
-						<a class="video__button button" href="#intro">Explore</a>
-					</div>
-				</div>
-				<video class="video__video" playsinline loop muted autoplay preload="auto">
-					<source src="video/index/index.webm" type="video/webm">
-					<source src="video/index/index.mp4" type="video/mp4">
-				</video>
-			</section>
 
 			<section id="intro" class="intro container">
 				<h2 class="intro__title title">About us</h2>
@@ -114,25 +93,25 @@
 						</ul>
 						<div class="intro__text">
 							<p class="intro__ph">
-								Founded in&nbsp;Saint&#8209;Petersburg in&nbsp;2018, we’re a&nbsp;contract brewery
-								located on the&nbsp;grounds of&nbsp;the&nbsp;Arsenal plant.
+								Founded in St. Petersburg in 2018, we’re a contract brewery
+								located on the grounds of the Arsenal plant.
 							</p>
 							<p class="intro__ph">
-								With the&nbsp;freedom to&nbsp;experiment and&nbsp;produce batches starting
-								from&nbsp;200&nbsp;liters, we’ve built a&nbsp;brand recognized worldwide
-								and&nbsp;highly rated across the&nbsp;industry.
+								With the freedom to experiment and produce batches starting
+								from 200 liters, we’ve built a brand recognized worldwide
+								and highly rated across the industry.
 							</p>
 							<p class="intro__ph">
-								We make bold craft beers across the&nbsp;spectrum — from&nbsp;clean lagers
-								and&nbsp;classic ales to&nbsp;rich stouts, hop-forward IPAs, and&nbsp;experimental gose.
+								We make bold craft beers across the spectrum — from clean lagers
+								and classic ales to rich stouts, hop-forward IPAs, and experimental gose.
 							</p>
 							<p class="intro__ph">
-								We also craft meads, ciders, and&nbsp;non-alcoholic drinks — and&nbsp;we’re ready
-								to&nbsp;bring your boldest ideas and&nbsp;brewing experiments to&nbsp;life.
+								We also craft meads, ciders, and non-alcoholic drinks — and we’re ready
+								to bring your boldest ideas and brewing experiments to life.
 							</p>
 							<p class="intro__ph">
-								Our experienced brewers and&nbsp;state-of-the-art equipment ensure the&nbsp;highest
-								quality, whether we’re working with&nbsp;your recipes or&nbsp;developing them together.
+								Our experienced brewers and state-of-the-art equipment ensure the highest
+								quality, whether we’re working with your recipes or developing them together.
 							</p>
 						</div>
 					</div>
@@ -142,7 +121,7 @@
 				</div>
 			</section>
 
-			<section class="preview section">
+			<!-- <section class="preview section">
 				<div class="preview__wrapper container">
 					<h2 class="preview__title title">Get Involved</h2>
 					<div class="preview__blocks">
@@ -169,7 +148,7 @@
 											</span>
 										</p>
 									</div>
-									<a class="preview__button button" href="tours.html">Learn more</a>
+									<a class="preview__button button" href="#tours-section">Learn more</a>
 								</div>
 							</div>
 						</div>
@@ -198,13 +177,13 @@
 											</span>
 										</p>
 									</div>
-									<a class="preview__button button" href="master-class.html">learn more</a>
+									<a class="preview__button button" href="#master-class-section">learn more</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<section class="partners section">
 				<div class="partners__wrapper container">
@@ -247,6 +226,183 @@
 							</a>
 						</li>
 					</ul>
+				</div>
+			</section>
+
+			<section class="tours">
+				<div class="container">
+					<h2 class="tours__title title">Tours</h2>
+					<div class="tours__wrapper">
+						<div class="tours__content">
+							<ul class="tours__capabilities capabilities">
+								<li class="capabilities__item">
+									<div class="capabilities__desc">
+										<span class="capabilities__title">120 minutes</span>
+										<div class="capabilities__divider"></div>
+										<span class="capabilities__subtitle">
+											of facts, legends, jokes, and beer
+										</span>
+									</div>
+								</li>
+								<li class="capabilities__item">
+									<div class="capabilities__desc">
+										<span class="capabilities__title">5 varieties and a gastronomic set</span>
+										<div class="capabilities__divider"></div>
+										<span class="capabilities__subtitle">
+											already included in the price
+										</span>
+									</div>
+								</li>
+								<li class="capabilities__item">
+									<div class="capabilities__desc">
+										<span class="capabilities__title">up to 12 people</span>
+										<div class="capabilities__divider"></div>
+										<span class="capabilities__subtitle">in a group</span>
+									</div>
+								</li>
+								<li class="capabilities__item">
+									<div class="capabilities__desc">
+										<span class="capabilities__title">2500₽</span>
+										<div class="capabilities__divider"></div>
+										<span class="capabilities__subtitle">per person</span>
+									</div>
+								</li>
+							</ul>
+							<div class="tours__text">
+								<p class="tours__ph">
+									Step inside our brewery at the Arsenal plant.
+								</p>
+								<p class="tours__ph">
+									Walk through a working production space, get close to the process, and see how
+									each batch comes to life.
+								</p>
+								<p class="tours__ph">
+									We’ll walk you through the details: ingredients, timing, and the decisions
+									behind every style we brew.
+								</p>
+								<p class="tours__ph">
+									Expect small batches, constant experimentation, and beers you won’t find
+									anywhere else.
+								</p>
+								<p class="tours__ph">
+									Come as a guest — leave with a deeper feel for how it’s actually made.
+								</p>
+								<p class="tours__ph">
+									Tours run daily — book your visit.
+								</p>
+							</div>
+						</div>
+						<a class="tours__button button" type="button" aria-label="button" data-modal="tours">Book a
+							tour
+						</a>
+					</div>
+					<!-- <div class="tours__gallery">
+							<div class="tours__image-left">
+								<picture>
+									<source srcset="img/tours/webp/tours-1.webp" type="image/webp" width="1280"
+										height="1920">
+									<img class="tours__thumbnail" src="img/tours/tours-1.jpg" alt="Миниатюра 1"
+										data-full="img/tours/tours-1.jpg" width="1920" height="1080">
+								</picture>
+							</div>
+							<div class="tours__image-middle">
+								<div class="tours__image-middle-top">
+									<picture>
+										<source srcset="img/tours/webp/tours-2.webp" type="image/webp" width="1280"
+											height="1920">
+										<img class="tours__thumbnail" src="img/tours/tours-2.jpg" alt="Миниатюра 2"
+											data-full="img/tours/tours-2.jpg" width="1920" height="1080">
+									</picture>
+								</div>
+								<div class="tours__image-middle-bottom">
+									<picture>
+										<source srcset="img/tours/webp/tours-3.webp" type="image/webp" width="1280"
+											height="1920">
+										<img class="tours__thumbnail" src="img/tours/tours-3.jpg" alt="Миниатюра 3"
+											data-full="img/tours/tours-3.jpg" width="1920" height="1080">
+									</picture>
+								</div>
+							</div>
+							<div class="tours__image-right">
+								<div class="tours__image-right-top">
+									<picture>
+										<source srcset="img/tours/webp/tours-4.webp" type="image/webp" width="1280"
+											height="1920">
+										<img class="tours__thumbnail" src="img/tours/tours-4.jpg" alt="Миниатюра 4"
+											data-full="img/btours-4.jpg" width="1920" height="1080">
+									</picture>
+								</div>
+								<div class="tours__image-right-bottom">
+									<picture>
+										<source srcset="img/tours/webp/tours-5.webp" type="image/webp" width="1280"
+											height="1920">
+										<img class="tours__thumbnail" src="img/tours/tours-5.jpg" alt="Миниатюра 5"
+											data-full="img/tours/tours-5.jpg" width="1920" height="1080">
+									</picture>
+								</div>
+							</div>
+						</div> -->
+				</div>
+
+			</section>
+
+			<section class="masterclasses section">
+				<div class="container">
+					<h2 class="masterclassess__title title">Masterclasses</h2>
+					<div class="masterclass__tabs tabs">
+						<div class="tabs__nav">
+							<button class="tabs__btn active" data-tab="1">Group</button>
+							<button class="tabs__btn" data-tab="2">Individual</button>
+							<button class="tabs__btn" data-tab="3">Day with a brewer</button>
+						</div>
+						<div class="tabs__content">
+							<div class="tabs__panel active" data-tab="1">
+								<p class="tabs__ph">
+									Dreaming of brewing your own beer?
+								</p>
+								<p class="tabs__ph">
+									At this group masterclass, you'll not only learn all the secrets of homebrewing,
+									but also brew your first batch right away!
+								</p>
+								<p class="tabs__ph">
+									You'll master every step of the process and be able to impress your friends and
+									family with your beer.
+								</p>
+								<p class="tabs__ph">
+									The price for a group of up to 5 people is 5,000₽.
+								</p>
+							</div>
+							<div class="tabs__panel" data-tab="2">
+								<p class="tabs__ph">
+									Want a unique experience and maximum attention?
+								</p>
+								<p class="tabs__ph">
+									At a private masterclass, you'll brew beer yourself using homebrewing equipment,
+									receiving valuable advice from an experienced brewer at every step.
+								</p>
+								<p class="tabs__ph">
+									You'll leave not only with deep knowledge,
+									but also with the confidence to brew beer at home.
+								</p>
+								<p class="tabs__ph">
+									The price for a group of up to 2 people is 20,000₽.
+								</p>
+							</div>
+							<div class="tabs__panel" data-tab="3">
+								<p class="tabs__ph">
+									Already have some homebrewing experience and want to take it to
+									the next level?
+								</p>
+								<p class="tabs__ph">
+									Join our production team for a full day to brew one of our beers on professional
+									brewery equipment.
+								</p>
+								<p class="tabs__ph">
+									Price per person is negotiable.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -367,6 +523,130 @@
 				</div>
 			</section>
 
+			<section class="accordion section">
+				<div class="container">
+					<div class="accordion__wrapper">
+						<h2 class="accordion__title title">FAQ</h2>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								How do I buy tickets for a tour?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">
+								<p>You can book a convenient date and time and pay for the tour on our website.
+									<span class="accordion__link" data-modal="booking">Click here</span>
+								</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								What's included in a tour?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">Tour itinerary:
+								<ul class="accordion__list">
+									<li>
+										Welcome drink and snacks at the Hop Hunting Club bar
+									</li>
+									<li>
+										Introduction to brewing equipment and the distillation process
+										in the
+										showroom
+										«Nevskaya Vinokurnya»
+									</li>
+									<li>
+										Tour of the ferMENTOR brewery and an introduction to all
+										stages of beer
+										production, from malt to bottling line
+									</li>
+									<li>
+										Visit to one of the largest cold rooms in Russia
+									</li>
+									<li>
+										Rare facts and myth-busting about your favorite drink from our
+										guide
+									</li>
+									<li>
+										Tasting of 5 beers during the tour, including the opportunity
+										to try beer
+										straight from the tank
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								How do I purchase a gift certificate for a tour or masterclass?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">
+								<p>
+									You can purchase physical gift certificates for tours at our Hop Hunting Club
+									bar.
+								</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								Is there an age limit for participating in a tour or masterclass?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">
+								<p>
+									All visitors to the site must be 18 years of age or older.
+								</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								Is there a limit on the number of participants in a masterclass group?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">
+								<ul class="accordion__list">
+									<li>
+										A group masterclass can accommodate up to 5 people; the price
+										is per person
+									</li>
+									<li>
+										An individual masterclass is designed for one person, but you
+										can invite one friend (this is included in the price)
+									</li>
+									<li>
+										«A Day with a Brewer» is limited to one participant
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								Is there a limit on the number of participants in a tour group?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">
+								<p class="accordion__content-item">
+									Tour groups can range from 2 to 12 people. If you would like an exclusive tour
+									without outsiders, please notify us in advance by phone:
+									+7 981 762 47 43
+								</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__header">
+								What kind of beer does fermentor brew?
+								<div class="accordion__plus"></div>
+							</div>
+							<div class="accordion__content">
+								<p>
+									We brew a full line of beers for Plague Brew, and as a contract brewery, we also
+									produce beverages for breweries such as Bowl Cut, Pivoteka, Switch, Time Bomb,
+									Horror, and Mitra.
+								</p>
+							</div>
+						</div>
+					</div>
+			</section>
+
 		</main>
 
 		<footer class="footer section">
@@ -420,35 +700,261 @@
 						</li>
 					</ul>
 				</div>
-				<div class="footer__col-3">
-					<ul class="footer__menu">
-						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="tours.html">
-								Brewery tours
-							</a>
-						</li>
-						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="index.html">
-								Contract brewery
-							</a>
-						</li>
-						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="master-class.html">
-								Masterclasses
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</footer>
 	</div>
 
-	<script src="js/modules/hamburger.js" defer></script>
+	<div class="overlay">
+		<div class="modal" id="booking">
+			<button class="modal__close" id="closeModal">&times;</button>
+			<form class="modal__form" action="" method="">
+				<div class="program">
+					<h2 class="program__title title">Программа экскурсии</h2>
+					<ul class="program__list">
+						<li class="program__item">
+							&mdash;&nbsp; Разогрев welcome-дринком и&nbsp;сетом закусок в&nbsp;баре;
+						</li>
+						<li class="program__item">
+							&mdash;&nbsp; Знакомство с винокуренным оборудованием и&nbsp;магией дистилляции;
+						</li>
+						<li class="program__item">
+							&mdash;&nbsp; Изучение процесса рождения пива &mdash; от&nbsp;солода до&nbsp;линии розлива;
+						</li>
+						<li class="program__item">
+							&mdash;&nbsp; Посещение одного из&nbsp;самых больших колд-румов в&nbsp;<span
+								class="normal-text">России;</span>
+						</li>
+						<li class="program__item">
+							&mdash;&nbsp; Дегустация пяти сортов пива и&nbsp;пива прямиком из&nbsp;танка;
+						</li>
+						<li class="program__item">
+							&mdash;&nbsp; А также множество редких фактов и&nbsp;разрушение мифов о&nbsp;любимом
+							напитке;
+						</li>
+					</ul>
+					<ul class="program__details">
+						<li class="program__details-item">
+							Длительность: 2 часа
+						</li>
+						<li class="program__details-item">
+							Группы: от 2 до 12 человек
+						</li>
+						<li class="program__details-item">
+							ул. Комсомола, 1-3
+						</li>
+						<li class="program__details-item">
+							Стоимость: 2500₽
+						</li>
+					</ul>
+				</div>
+				<button class="modal__button button" type="submit">Подтвердить</button>
+			</form>
+		</div>
+
+		<div class="modal" id="master-class-group">
+			<button class="modal__close">&times;</button>
+			<form class="modal__form" action="#" method="#">
+				<div class="program">
+					<h2 class="program__title title">Групповой мастер-класс<br>по пивоварению</h2>
+					<ul class="program__desc">
+						<li class="program__desc-item">
+							Групповой практический мастер-класс на&nbsp;оборудовании для&nbsp;домашнего
+							пивоварения
+						</li>
+						<li class="program__desc-item">
+							Включает в&nbsp;себя лекционную и&nbsp;практическую части, а&nbsp;также
+							дегустацию 4&nbsp;сортов пива&nbsp;и&nbsp;гастрономического сета
+						</li>
+						<li class="program__desc-item">
+							Все участвуют в&nbsp;процессе варки, распределяя этапы между друг другом
+						</li>
+						<li class="program__desc-item">
+							Через 2-3 недели вы сможете забрать 1&nbsp;литр сваренного вами пива
+						</li>
+					</ul>
+					<ul class="program__list">
+						<li class="program__item">
+							— Техника безопасности;
+						</li>
+						<li class="program__item">
+							— Обзорная экскурсия по&nbsp;пивоварне, знакомство с&nbsp;оборудованием;
+						</li>
+						<li class="program__item">
+							— Выбор и составление рецепта;
+						</li>
+						<li class="program__item">
+							Помол солода: подготовка солода и&nbsp;воды;
+						</li>
+						<li class="program__item">
+							— Затирание и фильтрация;
+						</li>
+						<li class="program__item">
+							— Дегустации 4 сортов и&nbsp;гастрономического сета закусок;
+						</li>
+						<li class="program__item">
+							— Кипячение сусла;
+						</li>
+						<li class="program__item">
+							— Охлаждение сусла, перекачка в&nbsp;ЦКТ, задача дрожжей;
+						</li>
+					</ul>
+					<ul class="program__details">
+						<li class="program__details-item">
+							Длительность: от 4 до 5-ти часов
+						</li>
+						<li class="program__details-item">
+							Группы: от 3 до 5-ти человек
+						</li>
+						<li class="program__details-item">
+							Стоимость: 5000₽/чел
+						</li>
+					</ul>
+				</div>
+				<button class="modal__button button">Подтвердить</button>
+			</form>
+		</div>
+
+		<div class="modal" id="master-class-individual">
+			<button class="modal__close">&times;</button>
+			<form class="modal__form" action="#" method="#">
+				<div class="program">
+					<h2 class="program__title title">Индивидуальный мастер-класс<br>по домашнему пивоварению
+					</h2>
+					<ul class="program__desc">
+						<li class="program__desc-item">
+							Индивидуальная программа, где&nbsp;вы&nbsp;сможете выбрать любой сорт
+							для&nbsp;варки и&nbsp;самостоятельно сварить пиво на&nbsp;оборудовании
+							для&nbsp;домашнего пивоварения
+							под&nbsp;наблюдением опытного
+							пивовара
+						</li>
+						<li class="program__desc-item">
+							Мастер-класс включает в&nbsp;себя лекционную и&nbsp;практическую части,
+							а&nbsp;также
+							дегустацию 4&nbsp;сортов пива и&nbsp;гастрономического сета
+						</li>
+						<li class="program__desc-item">
+							Через 3 недели вы&nbsp;сможете забрать 30&nbsp;литров готового пива
+						</li>
+					</ul>
+					<ul class="program__list">
+						<li class="program__item">
+							— Техника безопасности;
+						</li>
+						<li class="program__item">
+							— Обзорная экскурсия по&nbsp;пивоварне, знакомство с&nbsp;оборудованием;
+						</li>
+						<li class="program__item">
+							— Экстрактное и зерновое пивоварение;
+						</li>
+						<li class="program__item">
+							— Выбор и составление рецепта;
+						</li>
+						<li class="program__item">
+							Помол солода: подготовка солода и&nbsp;воды;
+						</li>
+						<li class="program__item">
+							— Затирание и фильтрация;
+						</li>
+						<li class="program__item">
+							— Дегустации 4 сортов и&nbsp;гастрономического сета закусок;
+						</li>
+						<li class="program__item">
+							— Кипячение сусла;
+						</li>
+						<li class="program__item">
+							— Охлаждение сусла, перекачка в&nbsp;ЦКТ, задача дрожжей;
+						</li>
+					</ul>
+					<ul class="program__details">
+						<li class="program__details-item">
+							Длительность: от 4 до 5-ти часов
+						</li>
+						<li class="program__details-item">
+							Количество участников: 1 человек (+ можно пригласить 1&nbsp;человека
+							по&nbsp;желанию
+							бесплатно)
+						</li>
+						<li class="program__details-item">
+							Стоимость: 20000₽
+						</li>
+					</ul>
+				</div>
+				<button class="modal__button button">Подтвердить</button>
+			</form>
+		</div>
+
+		<div class="modal" id="master-class-day">
+			<button class="modal__close">&times;</button>
+			<form class="modal__form" action="#" method="#">
+				<div class="program">
+					<h2 class="program__title title">День с пивоваром
+					</h2>
+					<ul class="program__desc">
+						<li class="program__desc-item">
+							Индивидуальная программа с&nbsp;контрактной варкой 200л, на&nbsp;котором
+							вы&nbsp;сможете
+							сварить свое пиво на&nbsp;профессиональном оборудовании под руководством
+							опытного пивовара
+						</li>
+						<li class="program__desc-item">
+							Мастер-класс включает в&nbsp;себя лекционную
+							и&nbsp;практическую части, а&nbsp;также дегустацию 4&nbsp;сортов пива
+							и&nbsp;гастрономического сета
+						</li>
+						<li class="program__desc-item">
+							Через 3&ndash;4 недели вы&nbsp;сможете разлить пиво по&nbsp;банкам/бутылкам,
+							создать
+							авторскую этикетку, а&nbsp;также провести презентацию вашего пива в&nbsp;баре
+							Plague Arena
+						</li>
+					</ul>
+					<ul class="program__list">
+						<li class="program__item">&mdash;&nbsp; Техника безопасности;</li>
+						<li class="program__item">
+							&mdash;&nbsp;Обзорная экскурсия по&nbsp;пивоварне, знакомство
+							с&nbsp;оборудованием;
+						</li>
+						<li class="program__item">&mdash;&nbsp; Экстрактное и&nbsp;зерновое пивоварение;
+						</li>
+						<li class="program__item">&mdash;&nbsp; Выбор и&nbsp;составление рецепта; </li>
+						<li class="program__item">&mdash;&nbsp;Помол солода: подготовка солода
+							и&nbsp;воды;
+						</li>
+						<li class="program__item">&mdash;&nbsp; Затирание и&nbsp;фильтрация; </li>
+						<li class="program__item">&mdash;&nbsp; Дегустации 4 сортов
+							и&nbsp;гастрономического
+							сета закусок;
+						</li>
+						<li class="program__item">&mdash;&nbsp; Кипячение сусла; </li>
+						<li class="program__item">&mdash;&nbsp; Охлаждение сусла, перекачка в&nbsp;ЦКТ,
+							задача
+							дрожжей;
+						</li>
+					</ul>
+					<ul class="program__details">
+						<li class="program__details-item">
+							Длительность: от 4 до 5-ти часов
+						</li>
+						<li class="program__details-item">
+							Количество участников: 1 человек (+ можно пригласить 1 человека
+							по&nbsp;желанию
+							бесплатно)
+						</li>
+						<li class="program__details-item">
+							Стоимость: договорная
+						</li>
+					</ul>
+				</div>
+				<button class="modal__button button">Подтвердить</button>
+			</form>
+		</div>
+	</div>
+
 	<script src="js/modules/selects.js" defer></script>
 	<script src="js/modules/accordion.js" defer></script>
-	<script src="js/modules/thumbnail.js" defer></script>
-	<script src="js/modules/change-text.js" defer></script>
 	<script src="js/modules/modal.js" defer></script>
+	<script src="js/modules/tabs.js" defer></script>
 	<script src="js/main.js" defer></script>
 
 </body>

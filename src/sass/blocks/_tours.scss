@@ -90,14 +90,4 @@
 		flex: 1;
 		display: flex;
 	}
-
-	&__thumbnail {
-		width: 150px;
-		height: auto;
-		transition: transform 0.3s ease;
-
-		@include vp-767 {
-			cursor: pointer;
-		}
-	}
 }

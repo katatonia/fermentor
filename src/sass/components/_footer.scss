@@ -3,12 +3,12 @@
 .footer {
 	width: 100%;
 	padding: 100px 0;
-	background-color: $color-nero;
+	background-color: $color-black-pearl;
 	color: $color-white;
 
 	&__body {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 1.25rem;
 	}
 
@@ -38,13 +38,6 @@
 		}
 	}
 
-	&__col-3 {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-	}
-
 	&__contacts {
 		gap: 10px;
 
@@ -52,15 +45,6 @@
 			display: block;
 			text-align: center;
 		}
-	}
-
-	&__menu {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-direction: column;
-		height: 100%;
-		gap: 10px
 	}
 
 	&__logo {

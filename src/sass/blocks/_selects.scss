@@ -23,7 +23,10 @@
 	}
 
 	&__title {
-		font-family: $ff-oswald-semi-bold;
+		font: {
+			family: $ff-gotham-medium;
+			size: $fz-subtitle;
+		}
 		padding-left: 0.4167rem;
 	}
 
