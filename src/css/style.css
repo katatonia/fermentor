@@ -126,11 +126,9 @@ input[type=number] {
 
 .title {
   font-family: "GothamBlack", "Arial", serif;
-  font-size: 2.25rem;
   color: #4E5E07;
   text-transform: uppercase;
   margin-bottom: 4rem;
-  text-align: center;
 }
 
 @font-face {
@@ -385,31 +383,56 @@ footer {
   margin: 0.3125rem 0;
 }
 
-.tabs_nav {
+.tabs__nav {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
 }
 .tabs__btn {
   font-family: "GothamMedium", "Arial", serif;
   font-size: 1.125rem;
   padding: 10px 20px;
   border: none;
-  background: #eee;
+  background-color: #FFFFFF;
+  border: 1px solid #E93C35;
   cursor: pointer;
   transition: 0.3s;
 }
+.tabs__btn:first-child {
+  position: relative;
+  border-bottom: none;
+}
+.tabs__btn:first-child::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  background-color: #E93C35;
+}
 .tabs__btn.active {
-  background: #0B161E;
-  color: #fff;
+  background: #E93C35;
+  color: #FFFFFF;
+}
+.tabs__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  border-left: 1px solid #E93C35;
+  border-bottom: 1px solid #E93C35;
+  padding: 1.875rem 1.25rem;
+}
+.tabs__ph_bold {
+  font-family: "GothamMedium", "Arial", serif;
+  margin-top: auto;
 }
 .tabs__panel {
   display: none;
 }
 .tabs__panel.active {
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
 }
 
 .preview {
@@ -905,6 +928,10 @@ footer {
 .program__details-item svg {
   width: 20px;
   height: 20px;
+}
+
+.masterclasses__title {
+  font-size: 7.5rem;
 }
 
 .video {

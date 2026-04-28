@@ -1,8 +1,7 @@
 .tabs {
-	&_nav {
+	&__nav {
 		display: flex;
 		gap: 10px;
-		margin-bottom: 20px;
 	}
 
 	&__btn {
@@ -10,16 +9,56 @@
 			family: $ff-gotham-medium;
 			size: $fz-subtitle;
 		}
+
 		padding: 10px 20px;
 		border: none;
-		background: #eee;
+		background-color: $color-white;
+		border: 1px solid $color-cinnabar;
 		cursor: pointer;
 		transition: 0.3s;
+
+		&:first-child {
+			position: relative;
+			border-bottom: none;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100vw;
+				height: 1px;
+				bottom: 0;
+				right: 0;
+				background-color: $color-cinnabar;
+			}
+		}
 	}
 
 	&__btn.active {
-		background: #0B161E;
-		color: #fff;
+		background: $color-cinnabar;
+		color: $color-white;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: .875rem;
+
+		border: {
+			left: 1px solid $color-cinnabar;
+			bottom: 1px solid $color-cinnabar;
+		}
+
+		padding: 1.875rem 1.25rem
+	}
+
+	&__ph {
+		&_bold {
+			font: {
+				family: $ff-gotham-medium;
+			}
+
+			margin-top: auto;
+		}
 	}
 
 	&__panel {
@@ -27,8 +66,8 @@
 	}
 
 	&__panel.active {
-		display: flex;
-		flex-direction: column;
-		gap: .625rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.25rem;
 	}
 }
