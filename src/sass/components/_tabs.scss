@@ -31,6 +31,21 @@
 				background-color: $color-cinnabar;
 			}
 		}
+
+		&:last-child {
+			position: relative;
+			border-top: none;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100vw;
+				height: 1px;
+				top: 0;
+				left: 0;
+				background-color: $color-cinnabar;
+			}
+		}
 	}
 
 	&__btn.active {
@@ -42,12 +57,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: .875rem;
-
-		border: {
-			left: 1px solid $color-cinnabar;
-			bottom: 1px solid $color-cinnabar;
-		}
-
+		border-left: 1px solid $color-cinnabar;
 		padding: 1.875rem 1.25rem
 	}
 
@@ -68,6 +78,5 @@
 	&__panel.active {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1.25rem;
 	}
 }

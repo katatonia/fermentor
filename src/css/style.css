@@ -126,6 +126,7 @@ input[type=number] {
 
 .title {
   font-family: "GothamBlack", "Arial", serif;
+  font-size: 7.5rem;
   color: #4E5E07;
   text-transform: uppercase;
   margin-bottom: 4rem;
@@ -410,6 +411,19 @@ footer {
   right: 0;
   background-color: #E93C35;
 }
+.tabs__btn:last-child {
+  position: relative;
+  border-top: none;
+}
+.tabs__btn:last-child::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #E93C35;
+}
 .tabs__btn.active {
   background: #E93C35;
   color: #FFFFFF;
@@ -419,7 +433,6 @@ footer {
   flex-direction: column;
   gap: 0.875rem;
   border-left: 1px solid #E93C35;
-  border-bottom: 1px solid #E93C35;
   padding: 1.875rem 1.25rem;
 }
 .tabs__ph_bold {
@@ -432,7 +445,6 @@ footer {
 .tabs__panel.active {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
 }
 
 .preview {
@@ -614,8 +626,9 @@ footer {
   margin: 2.5rem auto 0;
 }
 
-.feedback__wrapper {
-  max-width: 1000px;
+.feedback__title {
+  font-size: 4rem;
+  text-align: right;
 }
 .feedback__form {
   display: grid;
@@ -638,7 +651,6 @@ footer {
 }
 .feedback__contacts-item {
   font-family: "GothamMedium", "Arial", serif;
-  font-size: 1.125rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -651,6 +663,7 @@ footer {
 .feedback__contacts-item input {
   width: 100%;
   font-family: "GothamLight", "Arial", serif;
+  font-size: 0.875rem;
   padding-right: 10px;
   background-color: #FFFFFF;
   color: #1B1B1B;
@@ -828,6 +841,7 @@ footer {
   cursor: pointer;
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
+  font-size: 0.875rem;
 }
 .selects__select::after {
   position: absolute;
@@ -839,7 +853,6 @@ footer {
 }
 .selects__title {
   font-family: "GothamMedium", "Arial", serif;
-  font-size: 1.125rem;
   padding-left: 0.4167rem;
 }
 .selects__item {
@@ -928,10 +941,6 @@ footer {
 .program__details-item svg {
   width: 20px;
   height: 20px;
-}
-
-.masterclasses__title {
-  font-size: 7.5rem;
 }
 
 .video {

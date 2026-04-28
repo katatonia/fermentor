@@ -1,8 +1,9 @@
 @use "global/_var.scss";
 
 .feedback {
-	&__wrapper {
-		max-width: 1000px;
+	&__title {
+		font-size: 4rem;
+		text-align: right;
 	}
 
 	&__form {
@@ -29,11 +30,7 @@
 	}
 
 	&__contacts-item {
-		font: {
-			family: $ff-gotham-medium;
-			size: $fz-subtitle;
-		}
-
+		font-family: $ff-gotham-medium;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -49,6 +46,7 @@
 
 			font: {
 				family: $ff-gotham-light;
+				size: .875rem;
 			}
 
 			padding-right: 10px;

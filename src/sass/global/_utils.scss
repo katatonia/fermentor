@@ -51,7 +51,11 @@
 }
 
 .title {
-	font-family: $ff-gotham-black;
+	font: {
+		family: $ff-gotham-black;
+		size: 7.5rem;
+	}
+
 	color: $color-verdun-green;
 	text-transform: uppercase;
 	margin-bottom: 4rem;

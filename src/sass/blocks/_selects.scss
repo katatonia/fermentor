@@ -11,6 +11,7 @@
 		cursor: pointer;
 		background-color: $color-white;
 		border: 1px solid $color-very-light-grey;
+		font-size: .875rem;
 
 		&::after {
 			position: absolute;
@@ -23,10 +24,7 @@
 	}
 
 	&__title {
-		font: {
-			family: $ff-gotham-medium;
-			size: $fz-subtitle;
-		}
+		font-family: $ff-gotham-medium;
 		padding-left: 0.4167rem;
 	}
 
